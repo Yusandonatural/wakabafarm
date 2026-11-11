@@ -41,7 +41,7 @@ IMAGES: dict = {}
 CACHE = ROOT / ".cache" / "html"
 
 
-def get(url, binary=False, tries=4):
+def get(url, binary=False, tries=6):
     """HTML はローカルにキャッシュし、再実行時に旧サーバーへ再アクセスしない。"""
     cfile = None
     if not binary:
@@ -64,7 +64,7 @@ def get(url, binary=False, tries=4):
             if i == tries - 1:
                 print(f"  ! failed {url}: {e}", file=sys.stderr)
                 return None
-            time.sleep(2 ** (i + 1))
+            time.sleep(5 * 2 ** i)
 
 
 def sitemap(name):
@@ -243,7 +243,7 @@ def scrape_topic(url):
     }
 
 
-def run_parallel(fn, urls, label, workers=4):
+def run_parallel(fn, urls, label, workers=2):
     results = []
     done = 0
 
@@ -431,7 +431,7 @@ def main():
     results = {}
     if args.images:
         urls = sorted(IMAGES)
-        for url, dest, ok in run_parallel(download_image, urls, "images", workers=6):
+        for url, dest, ok in run_parallel(download_image, urls, "images", workers=2):
             results[url] = (dest, ok)
     with open(OUT / "images_manifest.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)

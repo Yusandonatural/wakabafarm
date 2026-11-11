@@ -1,0 +1,772 @@
+[
+  {
+    "post_id": 13,
+    "url": "https://www.wakaba.jpn.com/archives/13/",
+    "handle_hint": "sudachi-ponzu",
+    "name": "すだちポン酢",
+    "price_display": "¥2,160",
+    "catch_copy": "隠し味まで自然栽培にこだわっています。",
+    "description": "醤油の主原料である小麦、大豆もすだちも自然栽培でできたものです。隠し味に使う砂糖も自然栽培でできたサトウキビからできた黒糖を使用しています。",
+    "meta": {
+      "原材料": "醤油　黒糖（さとうきび（フィリピン））　すだち（四国産自然栽培）鰹だし",
+      "内容量": "200ml"
+    },
+    "skus": [
+      {
+        "sku_code": "A001",
+        "sku_name": "ponzu",
+        "price": 2160,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/10.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/1cf95c3b2ab37b21a9ee4792c4f6819f-3.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/ffbe4aba0671ad4664f6339a49de3c01-1.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<h2 class=\"color-success\"><span style=\"font-size: 12pt; color: #000000;\">徳島の特産の柑橘”スダチ”、自然栽培で収穫できたものの高級な付け合わせのイメージが強く実での販売が進みませんでした。そこへ弊社の醤油と合わせたところ絶妙な味わいに歓喜！ぜひいろいろなお料理にお試しください。</span></h2>\n<p> </p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "徳島の特産の柑橘”スダチ”、自然栽培で収穫できたものの高級な付け合わせのイメージが強く実での販売が進みませんでした。そこへ弊社の醤油と合わせたところ絶妙な味わいに歓喜！ぜひいろいろなお料理にお試しください。",
+    "wp_classes": [
+      "category-item",
+      "tag-11"
+    ]
+  },
+  {
+    "post_id": 21,
+    "url": "https://www.wakaba.jpn.com/archives/21/",
+    "handle_hint": "mugityaT",
+    "name": "麦茶ティーバッグ",
+    "price_display": "¥1,440",
+    "catch_copy": "自然栽培の自社製大麦100％",
+    "description": "しっかりとした焙煎により、絶妙の色合いとコク、味わいをお楽しみいただけます。 真夏の水分補給に安心してお勧めしたい逸品です。 お手軽に水出しも煮出すこともできます。",
+    "meta": {
+      "原材料": "大麦（自社農場産自然栽培）",
+      "内容量": "10ｇ×18袋"
+    },
+    "skus": [
+      {
+        "sku_code": "A001",
+        "sku_name": "",
+        "price": 1440,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/13.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/62db491aa2ec5bc9c7523661c6bbeb01.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/aafec1b1387dcefa77deee5928ba567a.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>数年前まで若葉農園では、米以外の穀類は栽培していなかったのですが、土づくりや麦わら利用で数年前から栽培を始めたのが大麦栽培を始めたきっかけです。実の利用は考えてなかったのですが、実ってきた大麦は収穫しないわけにはいかず模索していたところ徳島県内の隣町に老舗の焙煎工場が見つかり、少量ながら弊社の大麦の焙煎、麦茶の製品化を請け負ってくれました。絶妙の焙煎技術により深いコクと味わいを実現していただきました。もちろん自然栽培100％ですので安心してすっきりとした深いコクをお楽しみください。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "数年前まで若葉農園では、米以外の穀類は栽培していなかったのですが、土づくりや麦わら利用で数年前から栽培を始めたのが大麦栽培を始めたきっかけです。実の利用は考えてなかったのですが、実ってきた大麦は収穫しないわけにはいかず模索していたところ徳島県内の隣町に老舗の焙煎工場が見つかり、少量ながら弊社の大麦の焙煎、麦茶の製品化を請け負ってくれました。絶妙の焙煎技術により深いコクと味わいを実現していただきました。もちろん自然栽培100％ですので安心してすっきりとした深いコクをお楽しみください。",
+    "wp_classes": [
+      "category-item",
+      "tag-11"
+    ]
+  },
+  {
+    "post_id": 68,
+    "url": "https://www.wakaba.jpn.com/archives/68/",
+    "handle_hint": "mugitya",
+    "name": "麦茶（粒）",
+    "price_display": "¥1,260",
+    "catch_copy": "自然栽培の自社製大麦100％",
+    "description": "しっかりとした焙煎により、絶妙の色合いとコク、味わいをお楽しみいただけます。 真夏の水分補給に安心してお勧めしたい逸品です。 オーソドックスに煮だしたい方に最適。",
+    "meta": {
+      "原材料": "大麦（自社農場産自然栽培）",
+      "内容量": "240ｇ"
+    },
+    "skus": [
+      {
+        "sku_code": "4",
+        "sku_name": "",
+        "price": 1260,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/12.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/e07f9744685cfb91308c194e54fefa03.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/20ca04cc2417b2972e490427471b4b3e.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>数年前まで若葉農園では、米以外の穀類は栽培していなかったのですが、土づくりや麦わら利用で数年前から栽培を始めたのが大麦栽培を始めたきっかけです。実の利用は考えてなかったのですが、実ってきた大麦は収穫しないわけにはいかず模索していたところ徳島県内の隣町に老舗の焙煎工場が見つかり、少量ながら弊社の大麦の焙煎、麦茶の製品化を請け負ってくれました。絶妙の焙煎技術により深いコクと味わいを実現していただきました。もちろん自然栽培100％ですので安心してすっきりとした深いコクをお楽しみください。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "数年前まで若葉農園では、米以外の穀類は栽培していなかったのですが、土づくりや麦わら利用で数年前から栽培を始めたのが大麦栽培を始めたきっかけです。実の利用は考えてなかったのですが、実ってきた大麦は収穫しないわけにはいかず模索していたところ徳島県内の隣町に老舗の焙煎工場が見つかり、少量ながら弊社の大麦の焙煎、麦茶の製品化を請け負ってくれました。絶妙の焙煎技術により深いコクと味わいを実現していただきました。もちろん自然栽培100％ですので安心してすっきりとした深いコクをお楽しみください。",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 415,
+    "url": "https://www.wakaba.jpn.com/archives/415/",
+    "handle_hint": "sauce",
+    "name": "中濃ソース",
+    "price_display": "¥2,160",
+    "catch_copy": "本物の素材が織りなす完熟フルーツのような深いコクと味わいをお楽しみください。",
+    "description": "トマト、玉葱、人参、ニンニクなどの野菜類はもちろん、砂糖、お酢、醤油などの調味料まで自然栽培の素材にこだわっています。 本物の素材が織りなす完熟フルーツのような深いコクと味わいをお楽しみください。 ※リニューアルいたしました。今回限定生産で、唐辛子が若干強めの大人向けの味になっておりますので、ぜひお試しください！",
+    "meta": {
+      "原材料": "黒糖（さとうきび（フィリピン））野菜（トマト（自然栽培）玉葱（自社農場産自然栽培）人参（自社農場産自然栽培）ニンニク（自社農場産自然栽培））米酢、食塩、醤油（一部に大豆小麦を含む）、ジャガイモでんぷん、香辛料",
+      "内容量": "200ml"
+    },
+    "skus": [
+      {
+        "sku_code": "sauce",
+        "sku_name": "sauce",
+        "price": 2160,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/9.jpg"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 850,
+    "url": "https://www.wakaba.jpn.com/archives/850/",
+    "handle_hint": "Worcester sauce",
+    "name": "ウスターソース",
+    "price_display": "¥2,160",
+    "catch_copy": "若葉農園の野菜の旨味がいっぱい詰まったソースです。",
+    "description": "トマト、玉葱、ニンニク、生姜などの野菜類はもちろん、黒糖、米酢、醤油などの調味料まで自然栽培の素材にこだわっています。 野菜の旨味がたっぷり詰まったウスターソースです。フライや卵焼きとの相性は抜群です。",
+    "meta": {
+      "原材料": "黒糖（さとうきび（フィリピン））、米酢、野菜（玉葱（自社農場産自然栽培）生姜（自社農場産自然栽培）ニンニク（自社農場産自然栽培）トマト（自然栽培））、食塩、醤油（一部に大豆小麦を含む）、香辛料",
+      "内容量": "200ml"
+    },
+    "skus": [
+      {
+        "sku_code": "Worcester+sauce",
+        "sku_name": "Worcester sauce",
+        "price": 2160,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/7.jpg"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 1436,
+    "url": "https://www.wakaba.jpn.com/archives/1436/",
+    "handle_hint": "sudachisu",
+    "name": "すだち酢",
+    "price_display": "¥1,800",
+    "catch_copy": "自然栽培にこだわっています。",
+    "description": "本物の素材が織りなす奥深いコクと味わいをお楽しみください。",
+    "meta": {
+      "原材料": "すだち（四国産自然栽培）",
+      "内容量": "180ml"
+    },
+    "skus": [
+      {
+        "sku_code": "",
+        "sku_name": "すだち酢",
+        "price": null,
+        "stock_status": "入荷待ち"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/11.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/9708c918b4070c4644ba8ae6df1f8a01.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>徳島の特産の柑橘”スダチ”、自然栽培で収穫したものです。是非いろいろなお料理にお試しください。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "徳島の特産の柑橘”スダチ”、自然栽培で収穫したものです。是非いろいろなお料理にお試しください。",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 1799,
+    "url": "https://www.wakaba.jpn.com/archives/1799/",
+    "handle_hint": "dashi-shyoyu",
+    "name": "だし醤油",
+    "price_display": "¥2,160",
+    "catch_copy": "隠し味まで自然栽培にこだわっています。",
+    "description": "醤油の主原料である小麦、大豆も自然栽培でできたものです。隠し味に使う砂糖も自然栽培のサトウキビからできた黒糖を使用しています。",
+    "meta": {
+      "原材料": "醤油　黒糖（さとうきび（フィリピン））　鰹だし",
+      "内容量": "200ml"
+    },
+    "skus": [
+      {
+        "sku_code": "A002",
+        "sku_name": "dashi-shyoyu",
+        "price": 2160,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/8.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/2105c9a53208b649b82c407fa64cb23b.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/818ceb9c369fcaead8a5ddc9b5913574.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/01/2e941d77d0ae58a70e8f24bd8798d3e7.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<h2 class=\"color-success\"><span style=\"font-size: 12pt; color: #000000;\">醤油の原料である大豆や小麦、黒糖の原料であるサトウキビは自然農法で育てたものを使用しています！</span></h2>\n<h2 class=\"color-success\"><span style=\"font-size: 12pt; color: #000000;\">ぜひいろいろなお料理にお試しください。</span></h2>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "醤油の原料である大豆や小麦、黒糖の原料であるサトウキビは自然農法で育てたものを使用しています！\nぜひいろいろなお料理にお試しください。",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 2210,
+    "url": "https://www.wakaba.jpn.com/archives/2210/",
+    "handle_hint": "brown cider",
+    "name": "ブラウンサイダー",
+    "price_display": "¥720",
+    "catch_copy": "自然農法の黒糖蜜の甘味にすだち香るブラウンサイダー！",
+    "description": "自然農法の糖蜜の甘味に、すだちの爽やかな香りが広がるブラウンサイダーです。 自然農法のサトウキビから作った糖蜜のやさしく奥行きのある甘さと、四国産すだち果汁の爽やかな酸味と香りがバランスよく調和しています。 後味はすっきりとしており、甘すぎず、暑い季節にも飲みやすい仕上がりです。 自然素材ならではの味わいで、夏のリフレッシュや食事のお供にもおすすめです。 暑い夏にぜひ飲んでいただきたい一本です。",
+    "meta": {
+      "原材料": "糖蜜（沖縄県製造)、すだち果汁（四国産）",
+      "内容量": "250ml"
+    },
+    "skus": [
+      {
+        "sku_code": "9",
+        "sku_name": "ブラウンサイダー",
+        "price": 720,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/03/14.jpg"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 3367,
+    "url": "https://www.wakaba.jpn.com/archives/3367/",
+    "handle_hint": "hakumai2021-6",
+    "name": "白米4.5kg 無酸素パック(自然農法転換後6年目以上)",
+    "price_display": "¥6,966",
+    "catch_copy": "自然本来の美味しさが味わえる。肥料・農薬を使わずに育てた自慢のお米です。",
+    "description": "【商品説明】 肥料・農薬を使わずに、手間暇かけて育てた若葉農園自慢のお米です。自然農法に転換後、6年目以上の田んぼから収穫されたお米を無酸素パックでお届けします。無酸素パックですと開封するまで、虫付きの心配がないので安心です。 【注文数・在庫】 ご用意できる数量に限りがございますので、ご購入は、お1人様につき、8パックまでとさせて頂きます。",
+    "meta": {
+      "内容量": "4.5kg"
+    },
+    "skus": [
+      {
+        "sku_code": "",
+        "sku_name": "白米4.5kg 無酸素パック(自然農法転換後6年目以上)",
+        "price": null,
+        "stock_status": "売り切れ"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2025/01/hakumai-soldout.png"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 3408,
+    "url": "https://www.wakaba.jpn.com/archives/3408/",
+    "handle_hint": "2021-hakumai3-5",
+    "name": "白米4.5kg 無酸素パック(自然農法転換後3-5年目)",
+    "price_display": "¥6,480",
+    "catch_copy": "自然本来の美味しさが味わえる。肥料・農薬を使わずに育てた自慢のお米です。",
+    "description": "【商品説明】 肥料・農薬を使わずに、手間暇かけて育てた若葉農園自慢のお米です。自然農法に転換後、3~5年目以上の田んぼから収穫されたお米を無酸素パックでお届けします。無酸素パックですと開封するまで、虫付きの心配がないので安心です。 【注文数・在庫】 ご用意できる数量に限りがございますので、ご購入は、お1人様につき、8パックまでとさせて頂きます。",
+    "meta": {
+      "内容量": "4.5kg"
+    },
+    "skus": [
+      {
+        "sku_code": "",
+        "sku_name": "白米4.5kg 無酸素パック(自然農法歴3-5年目)",
+        "price": null,
+        "stock_status": "売り切れ"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2025/01/hakumai-soldout-2.png"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 3412,
+    "url": "https://www.wakaba.jpn.com/archives/3412/",
+    "handle_hint": "hakumai2021-1",
+    "name": "白米4.5kg 無酸素パック(自然農法転換後1-2年目)",
+    "price_display": "¥5,670",
+    "catch_copy": "自然本来の美味しさが味わえる。肥料・農薬を使わずに育てた自慢のお米です。",
+    "description": "【商品説明】 肥料・農薬を使わずに、手間暇かけて育てた若葉農園自慢のお米です。自然農法に転換後、1~2年目の田んぼから収穫されたお米を無酸素パックでお届けします。無酸素パックですと開封するまで、虫付きの心配がないので安心です。 【注文数・在庫】 ご用意できる数量に限りがございますので、ご購入は、お1人様につき、8パックまでとさせて頂きます。",
+    "meta": {
+      "内容量": "4.5kg"
+    },
+    "skus": [
+      {
+        "sku_code": "",
+        "sku_name": "白米4.5kg 無酸素パック(自然農法転換後1-2年目)",
+        "price": null,
+        "stock_status": "売り切れ"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2025/01/hakumai-soldout-1.png"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 3418,
+    "url": "https://www.wakaba.jpn.com/archives/3418/",
+    "handle_hint": "genmai2021-1",
+    "name": "玄米5kg 無酸素パック(自然農法転換後1-2年目)",
+    "price_display": "¥5,346",
+    "catch_copy": "自然本来の美味しさが味わえる。肥料・農薬を使わずに育てた自慢のお米です。",
+    "description": "【商品説明】 肥料・農薬を使わずに、手間暇かけて育てた若葉農園自慢のお米です。自然農法に転換後、1~2年目の田んぼから収穫されたお米を無酸素パックでお届けします。無酸素パックですと開封するまで、虫付きの心配がないので安心です。 【注文数・在庫】 ご用意できる数量に限りがございますので、ご購入は、お1人様につき、8パックまでとさせて頂きます。",
+    "meta": {
+      "内容量": "5kg"
+    },
+    "skus": [
+      {
+        "sku_code": "",
+        "sku_name": "玄米5kg 無酸素パック(自然農法転換後1-2年目)",
+        "price": null,
+        "stock_status": "売り切れ"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2025/01/genmai-soldout-2.png"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 3420,
+    "url": "https://www.wakaba.jpn.com/archives/3420/",
+    "handle_hint": "2021-genmai3-5",
+    "name": "玄米5kg 無酸素パック(自然農法転換後3-5年目)",
+    "price_display": "¥6,156",
+    "catch_copy": "自然本来の美味しさが味わえる。肥料・農薬を使わずに育てた自慢のお米です。",
+    "description": "【商品説明】 肥料・農薬を使わずに、手間暇かけて育てた若葉農園自慢のお米です。自然農法に転換後、3~5年目の田んぼから収穫されたお米を無酸素パックでお届けします。無酸素パックですと開封するまで、虫付きの心配がないので安心です。 【注文数・在庫】 ご用意できる数量に限りがございますので、ご購入は、お1人様につき、8パックまでとさせて頂きます。",
+    "meta": {
+      "内容量": "5kg"
+    },
+    "skus": [
+      {
+        "sku_code": "",
+        "sku_name": "玄米5kg 無酸素パック(自然農法転換後3-5年目)",
+        "price": null,
+        "stock_status": "売り切れ"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2025/01/genmai-soldout-1.png"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 3424,
+    "url": "https://www.wakaba.jpn.com/archives/3424/",
+    "handle_hint": "2021-genmai6",
+    "name": "玄米5kg 無酸素パック(自然農法転換後6年目以上)",
+    "price_display": "¥6,642",
+    "catch_copy": "自然本来の美味しさが味わえる。肥料・農薬を使わずに育てた自慢のお米です。",
+    "description": "【商品説明】 肥料・農薬を使わずに、手間暇かけて育てた若葉農園自慢のお米です。自然農法に転換後、6年目以上の田んぼから収穫されたお米を無酸素パックでお届けします。無酸素パックですと開封するまで、虫付きの心配がないので安心です。 【注文数・在庫】 ご用意できる数量に限りがございますので、ご購入は、お1人様につき、8パックまでとさせて頂きます。",
+    "meta": {
+      "内容量": "5kg"
+    },
+    "skus": [
+      {
+        "sku_code": "",
+        "sku_name": "玄米5kg 無酸素パック(自然農法歴6年目以上)",
+        "price": null,
+        "stock_status": "売り切れ"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2025/01/genmai-soldout.png"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 4229,
+    "url": "https://www.wakaba.jpn.com/archives/4229/",
+    "handle_hint": "ninjin-juice-s",
+    "name": "プレミアム人参ジュース 350mlサイズ",
+    "price_display": "¥1,530",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "飲み切りやすい350mlサイズ！ 原材料は、自然農法で手間暇かけて育てた人参とPH調整用のすだちだけ！ 人参の美味しさがギュッと詰まった、甘くて濃厚な味わいに、一度飲んだら病みつきになること間違いなしです！ 皆さまからのご注文お待ちしております！",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "350ml"
+    },
+    "skus": [
+      {
+        "sku_code": "ninjin-juice-s",
+        "sku_name": "プレミアム人参ジュース350mlサイズ",
+        "price": 1530,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/5.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種子は改良を繰り返し肥料や農薬なしでは育たなくなっています。ですが若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返した種を使用しています。このことにより肥料や農薬を投入しなくても人参がしっかりと美味しく育ちます。若葉農園のプレミアム人参ジュースはそうやって長い年月をかけて育てられた人参からできたプレミアムなジュースです。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種子は改良を繰り返し肥料や農薬なしでは育たなくなっています。ですが若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返した種を使用しています。このことにより肥料や農薬を投入しなくても人参がしっかりと美味しく育ちます。若葉農園のプレミアム人参ジュースはそうやって長い年月をかけて育てられた人参からできたプレミアムなジュースです。",
+    "wp_classes": [
+      "category-item",
+      "tag-13",
+      "tag-12"
+    ]
+  },
+  {
+    "post_id": 4578,
+    "url": "https://www.wakaba.jpn.com/archives/4578/",
+    "handle_hint": "ninjin1000",
+    "name": "プレミアム人参ジュース 1,000ml",
+    "price_display": "¥3,240",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "肥料、農薬を使わずに育てた安全で美味しい人参からできたジュースです。 添加物は使用せずに㏗調整は自然栽培の”すだち”を使用しています。",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "1000ml"
+    },
+    "skus": [
+      {
+        "sku_code": "2",
+        "sku_name": "プレミアム人参ジュース1000",
+        "price": 3240,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/3.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2021/09/006.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2021/02/IMG_1744.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種子は改良を繰り返し肥料や農薬なしでは育たなくなっています。ですが若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返した種を使用しています。このことにより肥料や農薬を投入しなくても人参がしっかりと美味しく育ちます。若葉農園のプレミアム人参ジュースはそうやって長い年月をかけて育てられた人参からできたプレミアムなジュースです。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種子は改良を繰り返し肥料や農薬なしでは育たなくなっています。ですが若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返した種を使用しています。このことにより肥料や農薬を投入しなくても人参がしっかりと美味しく育ちます。若葉農園のプレミアム人参ジュースはそうやって長い年月をかけて育てられた人参からできたプレミアムなジュースです。",
+    "wp_classes": [
+      "category-item",
+      "tag-13",
+      "tag-12"
+    ]
+  },
+  {
+    "post_id": 4717,
+    "url": "https://www.wakaba.jpn.com/archives/4717/",
+    "handle_hint": "2021夏野菜パック",
+    "name": "お試し野菜セット 冷蔵便（4月~10月）",
+    "price_display": "¥4,328",
+    "catch_copy": "「自然農法」で育てた季節のお野菜8品目前後をセットにしました。",
+    "description": "11月以降もお届けに2日かかる地域のお客様にはクール便での発送をオススメしております。 若葉農園のお野菜を中心に、自然農法生産者が育てた肥料、農薬を使用しない野菜セットです。 お野菜本来の味をお楽しみください。 定期購入ご希望の方は、「定期宅配」のページからお申し込みください。 野菜セットは月・水・金曜日発送、翌日着となります。 （北海道・東北・沖縄・山梨・新潟・関東は2日後着） 価格にはクール便代が含まれております。",
+    "meta": {},
+    "skus": [
+      {
+        "sku_code": "2",
+        "sku_name": "お試し野菜セット 冷蔵便（4月~10月）(お届けまで2日かかる地域の方)",
+        "price": 4328,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2021/07/image0-9.png",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2019/12/5c0ad4aee313d2137988708e603a7750.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/06/20200612.jpg"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-itemreco",
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 4723,
+    "url": "https://www.wakaba.jpn.com/archives/4723/",
+    "handle_hint": "otameshiyasaiset",
+    "name": "お試し野菜セット 常温便(11月~3月）",
+    "price_display": "¥3,888",
+    "catch_copy": "無肥料・無農薬「自然農法」で育てた季節のお野菜8品目前後をセットにしました。",
+    "description": "若葉農園のお野菜を中心に、自然農法生産者が育てた肥料、農薬を使用しない野菜セットです。 お野菜本来の味をお楽しみください。 定期購入ご希望の方は、「定期宅配」のページからお申し込みください。 野菜セットは月・水・金曜日発送、翌日着となります。（北海道・東北・沖縄・山梨・新潟・関東は2日後着） ※お届けに2日かかる地域の方は、季節を問わず、冷蔵便での発送をおススメしております。",
+    "meta": {},
+    "skus": [
+      {
+        "sku_code": "1",
+        "sku_name": "お試し野菜セット 常温便(11月~3月）",
+        "price": 3888,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2020/04/41e75201f9c4b0f09ba4c69dcf8d45fd-1.jpg"
+    ],
+    "content_html": "",
+    "content_text": "",
+    "wp_classes": [
+      "category-itemreco",
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 6027,
+    "url": "https://www.wakaba.jpn.com/archives/6027/",
+    "handle_hint": "ninjin1000-12",
+    "name": "【大変お得な12本セット】プレミアム人参ジュース 1,000ml",
+    "price_display": "¥32,400",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "【大変お得な12本セット！（1本2,700円相当）】 肥料、農薬を使わずに育てた安全で美味しい人参からできたジュースです。 添加物は使用せずに㏗調整は自然栽培の”すだち”を使用しています。",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "1000ml"
+    },
+    "skus": [
+      {
+        "sku_code": "ninjin1000-12",
+        "sku_name": "プレミアム人参ジュース1000ｍｌ（12本セット）",
+        "price": 32400,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/4.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種子は改良を繰り返し肥料や農薬なしでは育たなくなっています。ですが若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返した種を使用しています。このことにより肥料や農薬を投入しなくても人参がしっかりと美味しく育ちます。若葉農園のプレミアム人参ジュースはそうやって長い年月をかけて育てられた人参からできたプレミアムなジュースです。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種子は改良を繰り返し肥料や農薬なしでは育たなくなっています。ですが若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返した種を使用しています。このことにより肥料や農薬を投入しなくても人参がしっかりと美味しく育ちます。若葉農園のプレミアム人参ジュースはそうやって長い年月をかけて育てられた人参からできたプレミアムなジュースです。",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 6036,
+    "url": "https://www.wakaba.jpn.com/archives/6036/",
+    "handle_hint": "ninjin-juice-s20",
+    "name": "【大変お得な20本セット】プレミアム人参ジュース 350mlサイズ",
+    "price_display": "¥25,920",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "【大変お得な20本セット！（1本1,296円相当）】 原材料は、自然農法で手間暇かけて育てた人参とPH調整用のすだちだけ！ 人参の美味しさがギュッと詰まった、甘くて濃厚な味わいに、一度飲んだら病みつきになること間違いなしです！ 皆さまからのご注文お待ちしております！",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "350ml"
+    },
+    "skus": [
+      {
+        "sku_code": "ninjin-juice-s20",
+        "sku_name": "プレミアム人参ジュース 350ml（20本セット）",
+        "price": 25920,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/02/6.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種子は改良を繰り返し肥料や農薬なしでは育たなくなっています。ですが若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返した種を使用しています。このことにより肥料や農薬を投入しなくても人参がしっかりと美味しく育ちます。若葉農園のプレミアム人参ジュースはそうやって長い年月をかけて育てられた人参からできたプレミアムなジュースです。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種子は改良を繰り返し肥料や農薬なしでは育たなくなっています。ですが若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返した種を使用しています。このことにより肥料や農薬を投入しなくても人参がしっかりと美味しく育ちます。若葉農園のプレミアム人参ジュースはそうやって長い年月をかけて育てられた人参からできたプレミアムなジュースです。",
+    "wp_classes": [
+      "category-item"
+    ]
+  },
+  {
+    "post_id": 6518,
+    "url": "https://www.wakaba.jpn.com/archives/6518/",
+    "handle_hint": "hahanohi-ninjin1000-1",
+    "name": "【冬のギフト】プレミアム人参ジュース 1,000ml 1本",
+    "price_display": "¥3,500",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "肥料、農薬を使わずに育てた安全で美味しい人参からできたジュースです。添加物は使用せずに㏗調整は自然栽培の”すだち”を使用しています。",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "1000ml"
+    },
+    "skus": [
+      {
+        "sku_code": "1",
+        "sku_name": "【冬のギフト】プレミアム人参ジュース1000ml　１本",
+        "price": 3500,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/19.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/10.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/30-1.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/31-1.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>大切な方へ、一年の感謝を込めて。</p>\n<p>冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。</p>\n<p>若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。</p>\n<p>「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。</p>\n<p>砂糖・香料・保存料は不使用。濃縮還元もしていません。<br/>\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。</p>\n<p>毎日の食卓で気軽に楽しんでいただけるからこそ、<br/>\n大切な方への想いを込めた贈り物におすすめです。</p>\n<p>若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "大切な方へ、一年の感謝を込めて。\n冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。\n若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。\n「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。\n砂糖・香料・保存料は不使用。濃縮還元もしていません。\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。\n毎日の食卓で気軽に楽しんでいただけるからこそ、\n大切な方への想いを込めた贈り物におすすめです。\n若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。",
+    "wp_classes": [
+      "category-itemreco",
+      "category-item",
+      "category-itemnew",
+      "tag-13",
+      "tag-12"
+    ]
+  },
+  {
+    "post_id": 6597,
+    "url": "https://www.wakaba.jpn.com/archives/6597/",
+    "handle_hint": "hahanohi-ninjin350",
+    "name": "【冬の日ギフト】プレミアム人参ジュース 350ml 1本",
+    "price_display": "¥2,500",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "肥料、農薬を使わずに育てた安全で美味しい人参からできたジュースです。添加物は使用せずに㏗調整は自然栽培の”すだち”を使用しています。",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "350ml"
+    },
+    "skus": [
+      {
+        "sku_code": "1",
+        "sku_name": "【冬のギフト】プレミアム人参ジュース　350ml　１本",
+        "price": 2500,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/22.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/11.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/30.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/33-1.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>大切な方へ、一年の感謝を込めて。</p>\n<p>冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。</p>\n<p>若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。</p>\n<p>「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。</p>\n<p>砂糖・香料・保存料は不使用。濃縮還元もしていません。<br/>\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。</p>\n<p>毎日の食卓で気軽に楽しんでいただけるからこそ、<br/>\n大切な方への想いを込めた贈り物におすすめです。</p>\n<p>若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "大切な方へ、一年の感謝を込めて。\n冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。\n若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。\n「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。\n砂糖・香料・保存料は不使用。濃縮還元もしていません。\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。\n毎日の食卓で気軽に楽しんでいただけるからこそ、\n大切な方への想いを込めた贈り物におすすめです。\n若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。",
+    "wp_classes": [
+      "category-itemreco",
+      "category-item",
+      "category-itemnew",
+      "tag-13",
+      "tag-12"
+    ]
+  },
+  {
+    "post_id": 6606,
+    "url": "https://www.wakaba.jpn.com/archives/6606/",
+    "handle_hint": "hahanohi-ninjin1000-2",
+    "name": "【冬のギフト】プレミアム人参ジュース 1,000ml 2本セット",
+    "price_display": "¥6,500",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "肥料、農薬を使わずに育てた安全で美味しい人参からできたジュースです。添加物は使用せずに㏗調整は自然栽培の”すだち”を使用しています。",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "1000ml"
+    },
+    "skus": [
+      {
+        "sku_code": "1",
+        "sku_name": "【冬のギフト】プレミアム人参ジュース1000ml　2本",
+        "price": 6500,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/18.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/14.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/27.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/31.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>大切な方へ、一年の感謝を込めて。</p>\n<p>冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。</p>\n<p>若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。</p>\n<p>「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。</p>\n<p>砂糖・香料・保存料は不使用。濃縮還元もしていません。<br/>\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。</p>\n<p>毎日の食卓で気軽に楽しんでいただけるからこそ、<br/>\n大切な方への想いを込めた贈り物におすすめです。</p>\n<p>若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "大切な方へ、一年の感謝を込めて。\n冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。\n若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。\n「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。\n砂糖・香料・保存料は不使用。濃縮還元もしていません。\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。\n毎日の食卓で気軽に楽しんでいただけるからこそ、\n大切な方への想いを込めた贈り物におすすめです。\n若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。",
+    "wp_classes": [
+      "category-itemreco",
+      "category-item",
+      "category-itemnew",
+      "tag-13",
+      "tag-12"
+    ]
+  },
+  {
+    "post_id": 6609,
+    "url": "https://www.wakaba.jpn.com/archives/6609/",
+    "handle_hint": "hahanohi-ninjin350-2",
+    "name": "【冬の日ギフト】プレミアム人参ジュース 350ml 2本セット",
+    "price_display": "¥3,500",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "肥料、農薬を使わずに育てた安全で美味しい人参からできたジュースです。添加物は使用せずに㏗調整は自然栽培の”すだち”を使用しています。",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "350ml"
+    },
+    "skus": [
+      {
+        "sku_code": "1",
+        "sku_name": "【冬のギフト】プレミアム人参ジュース　350ml　2本セット",
+        "price": 3500,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/21.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/12.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/29-1.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/34.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>大切な方へ、一年の感謝を込めて。</p>\n<p>冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。</p>\n<p>若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。</p>\n<p>「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。</p>\n<p>砂糖・香料・保存料は不使用。濃縮還元もしていません。<br/>\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。</p>\n<p>毎日の食卓で気軽に楽しんでいただけるからこそ、<br/>\n大切な方への想いを込めた贈り物におすすめです。</p>\n<p>若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "大切な方へ、一年の感謝を込めて。\n冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。\n若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。\n「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。\n砂糖・香料・保存料は不使用。濃縮還元もしていません。\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。\n毎日の食卓で気軽に楽しんでいただけるからこそ、\n大切な方への想いを込めた贈り物におすすめです。\n若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。",
+    "wp_classes": [
+      "category-itemreco",
+      "category-item",
+      "category-itemnew",
+      "tag-13",
+      "tag-12"
+    ]
+  },
+  {
+    "post_id": 6611,
+    "url": "https://www.wakaba.jpn.com/archives/6611/",
+    "handle_hint": "hahanohi-ninjin350-3",
+    "name": "【冬のギフト】プレミアム人参ジュース 350ml 3本セット",
+    "price_display": "¥5,500",
+    "catch_copy": "自然栽培の“人参\"100％",
+    "description": "肥料、農薬を使わずに育てた安全で美味しい人参からできたジュースです。添加物は使用せずに㏗調整は自然栽培の”すだち”を使用しています。",
+    "meta": {
+      "原材料": "人参（自社農場産自然栽培）\nすだち（四国産自然栽培）",
+      "内容量": "350ml"
+    },
+    "skus": [
+      {
+        "sku_code": "1",
+        "sku_name": "【冬のギフト】プレミアム人参ジュース　350ml　3本",
+        "price": 5500,
+        "stock_status": "在庫有り"
+      }
+    ],
+    "images": [
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/20.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/29.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/33.jpg",
+      "https://www.wakaba.jpn.com/wp-content/uploads/2026/11/13.jpg"
+    ],
+    "content_html": "<div class=\"item__content entry-content cf\" id=\"item-content\">\n<span class=\"spacer_xs\"></span>\n<p>大切な方へ、一年の感謝を込めて。</p>\n<p>冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。</p>\n<p>若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。</p>\n<p>「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。</p>\n<p>砂糖・香料・保存料は不使用。濃縮還元もしていません。<br/>\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。</p>\n<p>毎日の食卓で気軽に楽しんでいただけるからこそ、<br/>\n大切な方への想いを込めた贈り物におすすめです。</p>\n<p>若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。</p>\n<span class=\"spacer_xxs\"></span>\n</div>",
+    "content_text": "大切な方へ、一年の感謝を込めて。\n冬の贈り物に、若葉農園のプレミアム人参ジュースはいかがでしょうか。\n若葉農園のプレミアム人参ジュースは、農薬・肥料を一切使わずに育てた人参と、香り豊かなすだちだけで仕上げた、ストレートジュースです。\n「本当に人参だけでこんなに甘いの？」と驚かれるほど、自然農法で育った人参のやさしい甘みと豊かな風味を、そのままお楽しみいただけます。\n砂糖・香料・保存料は不使用。濃縮還元もしていません。\n原材料は、人参とすだちだけ。余計なものを加えず、素材そのもののおいしさを大切にしました。\n毎日の食卓で気軽に楽しんでいただけるからこそ、\n大切な方への想いを込めた贈り物におすすめです。\n若葉農園が丁寧に育てた人参のおいしさを、ぜひ贈り物としてお届けください。",
+    "wp_classes": [
+      "category-itemreco",
+      "category-item",
+      "category-itemnew",
+      "tag-13",
+      "tag-12"
+    ]
+  }
+]
