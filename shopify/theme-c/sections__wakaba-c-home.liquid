@@ -1,0 +1,292 @@
+{%- comment -%}
+  若葉農園 C案（訴求型・旧サイト調）トップページ用セクション
+  文言・写真・価格・リンクはテーマエディタで編集できます。
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+<style>
+  .wkc{--g:#163729;--leaf:#82BC3F;--leaf2:#77A33F;--ink:#454545;--mute:#666;--line:#DEDEDE;--soft:#F9F9F9;--peach:#FFECDF;
+    font-family:'Noto Sans JP',sans-serif;color:var(--ink);font-size:16px;line-height:1.85;letter-spacing:.03em}
+  .wkc *{box-sizing:border-box}
+  .wkc a{color:var(--g)}
+  .wkc__in{max-width:1240px;margin:0 auto;padding:0 24px}
+  .wkc__sec{padding:96px 0}
+  .wkc__soft{background:var(--soft)} .wkc__peach{background:var(--peach)}
+  .wkc__lbl{margin:0;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--g)}
+  .wkc__h2{margin:8px 0 24px;font-family:'Sawarabi Mincho',serif;font-weight:400;color:var(--g);font-size:clamp(28px,4vw,44px);line-height:1.4}
+  .wkc__lead{margin:0 0 48px;max-width:760px;color:#555}
+  .wkc__btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 32px;background:var(--g);color:#fff!important;text-decoration:none;font-weight:700;font-size:17px}
+  .wkc__btn:hover{background:#0f2a1f}
+  .wkc__hero{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding:64px 0 88px}
+  .wkc__hero-tx{flex:1.15 1 460px;min-width:0}
+  .wkc__badge{display:inline-block;margin:0 0 20px;padding:4px 14px;border:1px solid var(--g);color:var(--g);font-size:13px;font-weight:700;letter-spacing:.12em}
+  .wkc__h1{margin:0;font-family:'Sawarabi Mincho',serif;font-weight:400;color:var(--g);font-size:clamp(40px,6vw,72px);line-height:1.25}
+  .wkc__h1 em{font-style:normal;color:var(--leaf2)}
+  .wkc__hero-p{margin:28px 0 36px;font-size:18px;max-width:520px;color:#555}
+  .wkc__note{margin:20px 0 0;font-size:13px;color:#888}
+  .wkc__hero-img{flex:1 1 380px;min-width:0;position:relative}
+  .wkc__hero-img img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+  .wkc__stat{position:absolute;left:-24px;bottom:32px;background:#fff;padding:20px 24px;max-width:260px;box-shadow:0 12px 32px rgba(0,0,0,.12)}
+  .wkc__stat small{display:block;font-size:12px;font-weight:700;color:var(--mute)}
+  .wkc__stat b{display:block;font-size:44px;line-height:1.1;color:var(--g)}
+  .wkc__nums{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .wkc__nums .wkc__in{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;padding-top:40px;padding-bottom:40px}
+  .wkc__num b{display:block;font-size:40px;line-height:1.2;color:var(--g)} .wkc__num b span{font-size:18px}
+  .wkc__num p{margin:4px 0 0;font-size:14px;color:#555}
+  .wkc__split{display:flex;flex-wrap:wrap;gap:64px}
+  .wkc__split>*{flex:1 1 360px;min-width:0}
+  .wkc__bar{margin-bottom:28px}
+  .wkc__bar-h{display:flex;justify-content:space-between;gap:12px;margin-bottom:8px}
+  .wkc__bar-h b{font-size:17px} .wkc__bar-h span{font-size:13px;color:var(--mute)}
+  .wkc__row{display:flex;align-items:center;gap:12px;margin-bottom:6px;font-size:13px}
+  .wkc__row>span:first-child{width:92px;flex:none}
+  .wkc__track{flex:1;height:22px;background:#ECECEC}
+  .wkc__fill{height:100%}
+  .wkc__row>span:last-child{width:72px;flex:none;text-align:right;font-weight:700}
+  .wkc__steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+  .wkc__step{border:1px solid var(--line);padding:32px;display:flex;flex-direction:column;gap:14px;background:#fff}
+  .wkc__step h3{margin:0;font-family:'Sawarabi Mincho',serif;font-weight:400;color:var(--g);font-size:24px}
+  .wkc__step p{margin:0;font-size:15px;color:#555}
+  .wkc__voices{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+  .wkc__voice{margin:0;background:#fff;padding:36px;display:flex;flex-direction:column;gap:20px}
+  .wkc__voice blockquote{margin:0;font-family:'Sawarabi Mincho',serif;font-size:19px;line-height:1.9}
+  .wkc__voice figcaption{font-size:13px;color:var(--mute)}
+  .wkc__flow{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+  .wkc__flow li{display:flex;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+  .wkc__flow b{font-size:28px;color:var(--g);width:44px;flex:none}
+  .wkc__flow p{margin:4px 0 0;font-size:15px;color:#555}
+  .wkc__cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+  .wkc__mon{border:1px solid var(--line);padding:20px;background:#fff}
+  .wkc__mon.is-now{background:#EEF6E4;border-color:var(--leaf)}
+  .wkc__mon b{display:block;margin-bottom:10px;font-size:26px;line-height:1;color:var(--g)} .wkc__mon b span{font-size:14px}
+  .wkc__mon p{margin:0;font-size:14px;color:#555}
+  .wkc__offer{background:var(--leaf);color:var(--g)}
+  .wkc__offer .wkc__h2,.wkc__offer .wkc__lbl{color:var(--g)}
+  .wkc__plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:920px;margin:0 auto}
+  .wkc__plan{background:#fff;padding:40px;display:flex;flex-direction:column;gap:12px}
+  .wkc__plan h3{margin:0;font-family:'Sawarabi Mincho',serif;font-weight:400;font-size:26px;color:var(--g)}
+  .wkc__price{margin:0;font-size:48px;font-weight:700;line-height:1.1;color:var(--g)} .wkc__price span{font-size:14px;font-weight:500}
+  .wkc__checks{margin:32px auto 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 32px;font-size:14px;font-weight:500}
+  .wkc__faq{max-width:880px;margin:0 auto;border-top:1px solid var(--line)}
+  .wkc__faq details{border-bottom:1px solid var(--line)}
+  .wkc__faq summary{cursor:pointer;padding:22px 0;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  .wkc__faq summary::-webkit-details-marker{display:none}
+  .wkc__faq summary span{color:var(--leaf2)}
+  .wkc__faq p{margin:0 0 22px;color:#555}
+  .wkc__sticky{display:none}
+  @media (max-width:749px){
+    .wkc__sec{padding:64px 0}
+    .wkc__stat{left:auto;right:12px;bottom:-24px;padding:12px 16px}
+    .wkc__stat b{font-size:30px}
+    .wkc__sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 16px 14px;background:#fff;border-top:1px solid var(--line)}
+    .wkc__sticky .wkc__btn{width:100%;min-height:52px;font-size:16px}
+    .wkc{padding-bottom:84px}
+  }
+</style>
+
+{%- assign leaf = '#82BC3F' -%}
+<div class="wkc">
+  <div class="wkc__in">
+    <div class="wkc__hero">
+      <div class="wkc__hero-tx">
+        <p class="wkc__badge">{{ section.settings.badge }}</p>
+        <h1 class="wkc__h1">{{ section.settings.heading_1 }}<br><em>{{ section.settings.heading_2 }}</em></h1>
+        <p class="wkc__hero-p">{{ section.settings.hero_text }}</p>
+        <a class="wkc__btn" href="{{ section.settings.cta_link | default: '#wkc-offer' }}">{{ section.settings.cta_label }}
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="wkc__note">{{ section.settings.hero_note }}</p>
+      </div>
+      <div class="wkc__hero-img">
+        {%- if section.settings.hero_image != blank -%}
+          {{ section.settings.hero_image | image_url: width: 1400 | image_tag: loading: 'eager', alt: section.settings.hero_image.alt, widths: '600,900,1200,1400' }}
+        {%- endif -%}
+        <div class="wkc__stat"><small>若葉農園のほうれん草 糖度</small><b>12.3<span style="font-size:20px">%</span></b><small>全国平均 8.2%（青果物メディカル研究所 調べ）</small></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="wkc__nums" aria-label="実績">
+    <div class="wkc__in">
+      <div class="wkc__num"><b>1998<span>年〜</span></b><p>肥料も農薬も使わない栽培を続けて28年</p></div>
+      <div class="wkc__num"><b>約40<span>品目</span></b><p>季節ごとに多品目を栽培</p></div>
+      <div class="wkc__num"><b>約500<span>名</span></b><p>全国の購入会員さま</p></div>
+      <div class="wkc__num"><b>約1,000<span>パック／月</span></b><p>スタッフが一つずつ詰めて出荷</p></div>
+    </div>
+  </section>
+
+  <section class="wkc__sec wkc__soft" id="wkc-proof">
+    <div class="wkc__in wkc__split">
+      <div>
+        <p class="wkc__lbl">REASON 01</p>
+        <h2 class="wkc__h2">違いは、<br>数字にも出ています。</h2>
+        <p>青果物メディカル研究所に、若葉農園のほうれん草の成分検査をしていただきました。全国平均（2006〜2010年）と比べた結果です。</p>
+        <p style="font-size:14px;color:#666">味の評価でも「葉に厚みがあり食感が強く、甘味が非常に強くえぐ味が少ない」という講評をいただいています。</p>
+      </div>
+      <div style="flex-grow:1.4">
+        {%- assign bars = '糖度|％|12.3|8.2|100|67,抗酸化力|TE mg/100g|197.1|88.3|100|45,ビタミンC|mg/100g|87.7|65.9|100|75,硝酸イオン|mg/L・少ないほどえぐみが少ない|5未満|2111.7|1|100' | split: ',' -%}
+        {%- for b in bars -%}{%- assign v = b | split: '|' -%}
+          <div class="wkc__bar">
+            <div class="wkc__bar-h"><b>{{ v[0] }}</b><span>{{ v[1] }}</span></div>
+            <div class="wkc__row"><span><strong>若葉農園</strong></span><div class="wkc__track"><div class="wkc__fill" style="width:{{ v[4] }}%;background:{{ leaf }}"></div></div><span>{{ v[2] }}</span></div>
+            <div class="wkc__row"><span style="color:#666">全国平均</span><div class="wkc__track"><div class="wkc__fill" style="width:{{ v[5] }}%;background:#BABABA"></div></div><span style="font-weight:400;color:#666">{{ v[3] }}</span></div>
+          </div>
+        {%- endfor -%}
+        <p style="margin:0;font-size:12px;color:#666">※硝酸イオンは機械の最低計測値（5mg/L）未満のため計測されませんでした。数値は単一サンプルの検査結果です。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wkc__sec">
+    <div class="wkc__in">
+      <p class="wkc__lbl">REASON 02</p>
+      <h2 class="wkc__h2">種から、自分たちでつなぐ。</h2>
+      <p class="wkc__lead">今、ほとんどの農家は種を買っています。その多くは、肥料や農薬を前提に改良されてきた種です。若葉農園は在来の種から自家採種を繰り返し、肥料に頼らなくても育つ力を、畑で受け継いできました。</p>
+      <ol class="wkc__steps">
+        <li class="wkc__step">
+          <svg role="img" aria-label="種のイラスト" width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#82BC3F" stroke-width="2.2" stroke-linecap="round"><ellipse cx="48" cy="56" rx="18" ry="24" transform="rotate(-20 48 56)"/><path d="M42 40c6 6 10 16 10 28"/><path d="M20 84h56" stroke="#BABABA"/></svg>
+          <span class="wkc__lbl">STEP 1</span><h3>種を採る</h3><p>育った野菜の中から、元気な株を選んで種を採ります。</p></li>
+        <li class="wkc__step">
+          <svg role="img" aria-label="土から芽が出るイラスト" width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#82BC3F" stroke-width="2.2" stroke-linecap="round"><path d="M48 76V44"/><path d="M48 50c0-12 9-20 22-20 0 12-9 20-22 20z"/><path d="M48 58c0-10-8-16-18-16 0 10 8 16 18 16z"/><path d="M14 78c10-4 22-4 34-2s24 2 34-2" stroke="#BABABA"/></svg>
+          <span class="wkc__lbl">STEP 2</span><h3>土の力で育てる</h3><p>化学肥料も動物性の有機肥料も使いません（植物性の堆肥のみ部分的に使用）。</p></li>
+        <li class="wkc__step">
+          <svg role="img" aria-label="収穫した人参のイラスト" width="96" height="96" viewBox="0 0 96 96" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M40 34l22 4-14 46z" stroke="#E07A2E"/><path d="M46 52l8 1M44 62l7 1" stroke="#E07A2E"/><path d="M50 34c-2-10 2-18 10-22M50 34c4-8 12-12 22-10M50 34c-8-6-10-14-8-22" stroke="#82BC3F"/></svg>
+          <span class="wkc__lbl">STEP 3</span><h3>収穫して、また種へ</h3><p>食卓へ届けるぶんを収穫し、残した株からまた種を採る。この循環を28年。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="wkc__sec wkc__peach">
+    <div class="wkc__in">
+      <p class="wkc__lbl">REASON 03</p>
+      <h2 class="wkc__h2">食べた人が、驚いています。</h2>
+      <div class="wkc__voices">
+        {%- for block in section.blocks -%}{%- if block.type == 'voice' -%}
+          <figure class="wkc__voice" {{ block.shopify_attributes }}>
+            <svg aria-hidden="true" width="32" height="24" viewBox="0 0 32 24" fill="#82BC3F"><path d="M0 24V14C0 6 4 1 12 0l1 4c-4 1-6 4-6 8h6v12zm18 0V14c0-8 4-13 12-14l1 4c-4 1-6 4-6 8h6v12z"/></svg>
+            <blockquote>{{ block.settings.text }}</blockquote>
+            <figcaption>{{ block.settings.name }}</figcaption>
+          </figure>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <section class="wkc__sec wkc__soft" id="wkc-how">
+    <div class="wkc__in wkc__split" style="align-items:center">
+      <div style="display:flex;justify-content:center">
+        <svg role="img" aria-label="季節の野菜が詰まった箱のイラスト" viewBox="0 0 420 340" fill="none" stroke-linecap="round" stroke-linejoin="round" style="width:100%;max-width:420px;height:auto">
+          <path d="M70 150l140-40 140 40-140 40z" fill="#ECECEC" stroke="#163729" stroke-width="2.5"/>
+          <path d="M120 128c-10-40 10-80 40-90M150 120c4-42 30-70 64-72M230 118c10-36 40-60 74-56M108 136c-18-20-20-46-4-64M262 126c18-26 46-34 70-24" stroke="#82BC3F" stroke-width="3"/>
+          <path d="M176 118l26-6-6 52z" fill="#E07A2E" stroke="#163729" stroke-width="2"/>
+          <circle cx="258" cy="128" r="20" fill="#fff" stroke="#163729" stroke-width="2.5"/>
+          <path d="M70 150v110l140 40V190z" fill="#E8DDBF" stroke="#163729" stroke-width="2.5"/>
+          <path d="M350 150v110l-140 40V190z" fill="#D9CBA3" stroke="#163729" stroke-width="2.5"/>
+          <text x="232" y="246" fill="#163729" font-size="18" font-weight="700" font-family="Noto Sans JP, sans-serif">若葉農園</text>
+          <text x="232" y="270" fill="#163729" font-size="13" font-family="Noto Sans JP, sans-serif">季節の野菜 約8品目</text>
+        </svg>
+      </div>
+      <div style="flex-grow:1.2">
+        <p class="wkc__lbl">HOW IT WORKS</p>
+        <h2 class="wkc__h2">畑から、あなたの台所へ。</h2>
+        <ol class="wkc__flow">
+          <li><b>01</b><div><strong>ご注文</strong><p>お届け日の指定はご注文日から4日目以降。指定がなければ4日以内に発送します。</p></div></li>
+          <li><b>02</b><div><strong>その日いちばんの野菜を収穫</strong><p>いちばん状態の良い季節の野菜を約8品目選びます（品目の指定はできません）。</p></div></li>
+          <li><b>03</b><div><strong>月・水・金に出荷</strong><p>近県は翌日、北海道・東北・関東・山梨・新潟・沖縄は2日後に届きます。</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="wkc__sec" id="wkc-season">
+    <div class="wkc__in">
+      <p class="wkc__lbl">SEASON CALENDAR</p>
+      <h2 class="wkc__h2">箱を開けるたび、季節が変わる。</h2>
+      <p class="wkc__lead">これまでに出荷した約1,100回分の野菜セットの記録から、月ごとによく届く野菜をまとめました。</p>
+      {%- assign now_m = 'now' | date: '%-m' | plus: 0 -%}
+      {%- assign cal = '大根・人参・小松菜・白菜・チンゲン菜|人参・レタス・大根・カブ・葉玉ねぎ|小松菜・レタス・人参・チンゲン菜・カブ|人参・小松菜・レタス・葉玉ねぎ・じゃがいも|人参・ズッキーニ・レタス・玉ねぎ・三度豆|人参・枝豆・玉ねぎ・じゃがいも・きゅうり|玉ねぎ・オクラ・じゃがいも・空芯菜・ナス|オクラ・きゅうり・ナス・空芯菜・ミニトマト|冬瓜・オクラ・空芯菜・ゴボウ・すだち|冬瓜・里芋・大根葉・サツマイモ・生姜|小松菜・レタス・里芋・人参・春菊|小松菜・人参・ねぎ・ブロッコリー・カブ' | split: '|' -%}
+      <div class="wkc__cal">
+        {%- for veg in cal -%}
+          <div class="wkc__mon{% if forloop.index == now_m %} is-now{% endif %}"><b>{{ forloop.index }}<span>月</span></b><p>{{ veg }}</p></div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <section class="wkc__sec wkc__offer" id="wkc-offer">
+    <div class="wkc__in">
+      <div style="text-align:center;margin-bottom:48px">
+        <p class="wkc__lbl">FIRST BOX</p>
+        <h2 class="wkc__h2" style="margin-bottom:12px">まずは一箱、確かめてください。</h2>
+        <p style="margin:0;font-size:17px">定期購入の前に、1回だけのお試しセットをご用意しています。</p>
+      </div>
+      <div class="wkc__plans">
+        {%- for p in (1..2) -%}
+          {%- if p == 1 -%}{%- assign prod = section.settings.product_1 -%}{%- assign cap = section.settings.plan_1_caption -%}{%- assign fname = section.settings.plan_1_name -%}{%- assign fprice = section.settings.plan_1_price -%}{%- else -%}{%- assign prod = section.settings.product_2 -%}{%- assign cap = section.settings.plan_2_caption -%}{%- assign fname = section.settings.plan_2_name -%}{%- assign fprice = section.settings.plan_2_price -%}{%- endif -%}
+          <div class="wkc__plan">
+            <p style="margin:0;font-size:13px;font-weight:700">{{ cap }}</p>
+            <h3>{% if prod != blank %}{{ prod.title }}{% else %}{{ fname }}{% endif %}</h3>
+            <p class="wkc__price">{% if prod != blank %}{{ prod.price | money_without_trailing_zeros }}{% else %}{{ fprice }}{% endif %}<span>（税込・送料別）</span></p>
+            <p style="margin:0;font-size:14px;color:#555">季節の野菜 約8品目</p>
+            <a class="wkc__btn" href="{% if prod != blank %}{{ prod.url }}{% else %}#{% endif %}" style="margin-top:8px">詳しく見る・申し込む</a>
+          </div>
+        {%- endfor -%}
+      </div>
+      <ul class="wkc__checks">
+        <li>✓ 発送日の4日前までキャンセル可</li>
+        <li>✓ 5,000円以上で送料無料</li>
+        <li>✓ 気に入ったら毎週・隔週・月1回の定期便へ</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wkc__sec wkc__soft" id="wkc-faq">
+    <div class="wkc__in">
+      <h2 class="wkc__h2" style="text-align:center;margin-bottom:40px">よくあるご質問</h2>
+      <div class="wkc__faq">
+        {%- for block in section.blocks -%}{%- if block.type == 'faq' -%}
+          <details {{ block.shopify_attributes }}><summary>{{ block.settings.q }}<span aria-hidden="true">＋</span></summary><p>{{ block.settings.a }}</p></details>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <div class="wkc__sticky"><a class="wkc__btn" href="{{ section.settings.cta_link | default: '#wkc-offer' }}">{{ section.settings.sticky_label }}</a></div>
+</div>
+
+{% schema %}
+{
+  "name": "若葉農園 C案トップ",
+  "tag": "section",
+  "class": "section-wakaba-c",
+  "settings": [
+    { "type": "header", "content": "ファーストビュー" },
+    { "type": "text", "id": "badge", "label": "バッジ", "default": "徳島・石井町　自然農法 28年" },
+    { "type": "text", "id": "heading_1", "label": "見出し 1行目", "default": "その甘さには、" },
+    { "type": "text", "id": "heading_2", "label": "見出し 2行目（若葉色）", "default": "理由がある。" },
+    { "type": "textarea", "id": "hero_text", "label": "説明文", "default": "肥料も、農薬も使わない。種は自分たちで採ってつなぐ。1998年から続けてきたやり方で育てた野菜を、畑から直接お届けします。" },
+    { "type": "image_picker", "id": "hero_image", "label": "写真" },
+    { "type": "text", "id": "cta_label", "label": "ボタンの文言", "default": "まずはお試しセットで味わう" },
+    { "type": "url", "id": "cta_link", "label": "ボタンのリンク（空欄でお試しセット欄へ移動）" },
+    { "type": "text", "id": "hero_note", "label": "補足", "default": "季節の野菜 約8品目｜発送は月・水・金｜5,000円以上で送料無料" },
+    { "type": "text", "id": "sticky_label", "label": "スマホ下部の固定ボタン", "default": "お試しセットを見る" },
+    { "type": "header", "content": "お試しセット" },
+    { "type": "product", "id": "product_1", "label": "商品 1" },
+    { "type": "text", "id": "plan_1_caption", "label": "商品 1 の補足", "default": "11月〜3月" },
+    { "type": "text", "id": "plan_1_name", "label": "商品 1 の名前（商品が非公開のときの表示）", "default": "お試しセット 常温便" },
+    { "type": "text", "id": "plan_1_price", "label": "商品 1 の価格（商品が非公開のときの表示）", "default": "¥3,833" },
+    { "type": "product", "id": "product_2", "label": "商品 2" },
+    { "type": "text", "id": "plan_2_caption", "label": "商品 2 の補足", "default": "4月〜10月／2日かかる地域" },
+    { "type": "text", "id": "plan_2_name", "label": "商品 2 の名前（商品が非公開のときの表示）", "default": "お試しセット 冷蔵便" },
+    { "type": "text", "id": "plan_2_price", "label": "商品 2 の価格（商品が非公開のときの表示）", "default": "¥4,328" }
+  ],
+  "blocks": [
+    { "type": "voice", "name": "会員さまの声", "settings": [
+      { "type": "textarea", "id": "text", "label": "本文" },
+      { "type": "text", "id": "name", "label": "お名前・肩書き", "default": "定期購入会員さま" } ] },
+    { "type": "faq", "name": "よくある質問", "settings": [
+      { "type": "text", "id": "q", "label": "質問" },
+      { "type": "textarea", "id": "a", "label": "回答" } ] }
+  ],
+  "presets": [ { "name": "若葉農園 C案トップ" } ]
+}
+{% endschema %}

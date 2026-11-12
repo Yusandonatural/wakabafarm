@@ -1,0 +1,53 @@
+{
+ "name": "t:sections.header.name",
+ "type": "header",
+ "sections": {
+  "announcement-bar": {
+   "type": "announcement-bar",
+   "blocks": {
+    "announcement-bar-0": {
+     "type": "announcement",
+     "settings": {
+      "text": "5,000円以上のお買い上げで送料無料｜発送は月・水・金曜日",
+      "link": ""
+     }
+    }
+   },
+   "block_order": [
+    "announcement-bar-0"
+   ],
+   "settings": {
+    "auto_rotate": false,
+    "change_slides_speed": 5,
+    "color_scheme": "scheme-4",
+    "show_line_separator": false,
+    "show_social": false,
+    "enable_country_selector": false,
+    "enable_language_selector": false
+   }
+  },
+  "header": {
+   "type": "header",
+   "settings": {
+    "logo_position": "middle-left",
+    "mobile_logo_position": "center",
+    "menu": "main-menu-2026",
+    "menu_type_desktop": "dropdown",
+    "sticky_header_type": "always",
+    "show_line_separator": true,
+    "color_scheme": "scheme-1",
+    "menu_color_scheme": "scheme-1",
+    "enable_country_selector": false,
+    "enable_language_selector": false,
+    "enable_customer_avatar": true,
+    "margin_bottom": 0,
+    "padding_top": 20,
+    "padding_bottom": 20
+   }
+  }
+ },
+ "order": [
+  "announcement-bar",
+  "header"
+ ]
+}

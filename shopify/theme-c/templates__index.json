@@ -1,0 +1,122 @@
+{
+ "sections": {
+  "main": {
+   "type": "wakaba-c-home",
+   "blocks": {
+    "v0": {
+     "type": "voice",
+     "settings": {
+      "text": "ほうれん草を「おひたし」にして一口食べたら、甘みが増して美味しい。生で食べても甘みを感じびっくりしました。",
+      "name": "定期購入会員さま"
+     }
+    },
+    "v1": {
+     "type": "voice",
+     "settings": {
+      "text": "昔は苦くて好きではなかった小松菜。自然農法の小松菜は甘みがあり、今では大好きになりました。",
+      "name": "定期購入会員さま"
+     }
+    },
+    "v2": {
+     "type": "voice",
+     "settings": {
+      "text": "人参を切っていたら、ピカピカと美味しそうで思わず生のままパクッと。ホント甘くて感動しました。",
+      "name": "定期購入会員さま"
+     }
+    },
+    "f0": {
+     "type": "faq",
+     "settings": {
+      "q": "野菜の品目は選べますか？",
+      "a": "選べません。その時いちばん状態の良い季節の野菜を、約8品目お選びしてお届けします。"
+     }
+    },
+    "f1": {
+     "type": "faq",
+     "settings": {
+      "q": "いつ届きますか？",
+      "a": "発送は月・水・金曜日です。近県は発送の翌日、北海道・東北・関東・山梨・新潟・沖縄は2日後のお届け予定です。"
+     }
+    },
+    "f2": {
+     "type": "faq",
+     "settings": {
+      "q": "お届け日は指定できますか？",
+      "a": "ご注文日より4日目以降でご指定ください。指定がない場合は4日以内に発送します。"
+     }
+    },
+    "f3": {
+     "type": "faq",
+     "settings": {
+      "q": "キャンセルはできますか？",
+      "a": "発送日の4日前まで承ります。発送準備に入っている場合はキャンセル料をいただく場合があります。"
+     }
+    },
+    "f4": {
+     "type": "faq",
+     "settings": {
+      "q": "送料はいくらですか？",
+      "a": "地域により660円〜3,355円（税込）です。5,000円以上のお買い上げで送料無料になります。"
+     }
+    }
+   },
+   "block_order": [
+    "v0",
+    "v1",
+    "v2",
+    "f0",
+    "f1",
+    "f2",
+    "f3",
+    "f4"
+   ],
+   "settings": {
+    "hero_image": "shopify://shop_images/wakaba-top-carrots.jpg",
+    "product_1": "otameshi-yasai-set-joon",
+    "product_2": "otameshi-yasai-set-reizo",
+    "cta_link": ""
+   }
+  },
+  "shop": {
+   "type": "featured-collection",
+   "settings": {
+    "collection": "all",
+    "products_to_show": 4,
+    "title": "若葉農園の加工品",
+    "heading_size": "h1",
+    "columns_desktop": 4,
+    "show_view_all": true,
+    "view_all_style": "link",
+    "color_scheme": "scheme-1",
+    "image_ratio": "square",
+    "show_secondary_image": true,
+    "quick_add": "none",
+    "columns_mobile": "2",
+    "padding_top": 72,
+    "padding_bottom": 72
+   }
+  },
+  "journal": {
+   "type": "featured-blog",
+   "settings": {
+    "blog": "ニュース",
+    "post_limit": 3,
+    "heading": "畑だより",
+    "heading_size": "h1",
+    "columns_desktop": 3,
+    "show_view_all": true,
+    "show_image": true,
+    "show_date": true,
+    "show_author": false,
+    "color_scheme": "scheme-2",
+    "padding_top": 72,
+    "padding_bottom": 72
+   }
+  }
+ },
+ "order": [
+  "main",
+  "shop",
+  "journal"
+ ]
+}
