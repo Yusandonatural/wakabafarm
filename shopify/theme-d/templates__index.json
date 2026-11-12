@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "main": {
+      "type": "wakaba-d-home",
+      "blocks": {
+        "v0": {
+          "type": "voice",
+          "settings": {
+            "text": "ほうれん草を「おひたし」にして一口食べたら、甘みが増して美味しい。生で食べても甘みを感じびっくりしました。",
+            "name": "定期購入会員さま"
+          }
+        },
+        "v1": {
+          "type": "voice",
+          "settings": {
+            "text": "昔は苦くて好きではなかった小松菜。自然農法の小松菜は甘みがあり、今では大好きになりました。",
+            "name": "定期購入会員さま"
+          }
+        },
+        "v2": {
+          "type": "voice",
+          "settings": {
+            "text": "大変甘みがあって美味しいです。調味料が少しでも十分で、薄味で調理できるので体調が違います。",
+            "name": "定期購入会員さま"
+          }
+        },
+        "f0": {
+          "type": "faq",
+          "settings": {
+            "q": "野菜の品目は選べますか？",
+            "a": "選べません。その時いちばん状態の良い季節の野菜を、約8品目お選びしてお届けします。"
+          }
+        },
+        "f1": {
+          "type": "faq",
+          "settings": {
+            "q": "お試しのあと、定期のお申し込みが必要ですか？",
+            "a": "いいえ、必要ありません。お試しは1回だけのお届けです。気に入っていただけたら、定期宅配のページからお申し込みください。"
+          }
+        },
+        "f2": {
+          "type": "faq",
+          "settings": {
+            "q": "いつ届きますか？",
+            "a": "発送は月・水・金曜日です。近県は発送の翌日、北海道・東北・関東・山梨・新潟・沖縄は2日後のお届け予定です。"
+          }
+        },
+        "f3": {
+          "type": "faq",
+          "settings": {
+            "q": "お届け日は指定できますか？",
+            "a": "ご注文日より4日目以降でご指定ください。指定がない場合は4日以内に発送します。"
+          }
+        },
+        "f4": {
+          "type": "faq",
+          "settings": {
+            "q": "キャンセルはできますか？",
+            "a": "発送日の4日前まで承ります。発送準備に入っている場合はキャンセル料をいただく場合があります。"
+          }
+        },
+        "f5": {
+          "type": "faq",
+          "settings": {
+            "q": "届いた野菜が傷んでいたら？",
+            "a": "生鮮食品のため原則として返品はご遠慮いただいていますが、当園の過失による場合は返品を承り、送料も当園が負担します。お問い合わせフォームからご連絡ください。"
+          }
+        }
+      },
+      "block_order": [
+        "v0",
+        "v1",
+        "v2",
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5"
+      ],
+      "settings": {
+        "hero_image": "shopify://shop_images/wakaba-top-carrots.jpg",
+        "hero_image_2": "shopify://shop_images/wakaba-c-tomato.jpg",
+        "week_image": "shopify://shop_images/wakaba-top-basket.jpg",
+        "seed_image": "shopify://shop_images/wakaba-c-seedling.jpg",
+        "flow_image_1": "shopify://shop_images/wakaba-c-greenhouse.jpg",
+        "flow_image_2": "shopify://shop_images/wakaba-c-harvest.jpg",
+        "flow_image_3": "shopify://shop_images/wakaba-c-box.jpg",
+        "flow_image_4": "shopify://shop_images/wakaba-c-greens.jpg",
+        "people_image": "shopify://shop_images/wakaba-c-sunset.jpg",
+        "final_image": "shopify://shop_images/wakaba-c-eggplant.jpg",
+        "trial_product": "otameshi-yasai-set-joon",
+        "addon_handles": "carrotjuice350,mugichatb,sudachiponzu,chunosauce"
+      }
+    },
+    "journal": {
+      "type": "featured-blog",
+      "settings": {
+        "blog": "ニュース",
+        "post_limit": 3,
+        "heading": "畑だより・レシピ",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "main",
+    "journal"
+  ]
+}

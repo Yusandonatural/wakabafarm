@@ -1,0 +1,582 @@
+{%- comment -%}
+  若葉農園 D案（競合研究版）トップページ用セクション
+  坂ノ途中・ナチュラル・ハーモニーなど、自然栽培・有機野菜の宅配サイトを参考に、
+  「はじめての人が迷わず申し込める」流れと「栽培基準をはっきり見せる」ことを重視した構成。
+  文言・写真・今週のお野菜・プラン・声・質問はテーマエディタで編集できます。
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  .wkd{--g:#163729;--g2:#2A5A40;--leaf:#82BC3F;--leaf2:#5E8F2A;--ink:#3E3A34;--mute:#77706A;--bg:#FFFFFF;--soft:#F6F4EE;--cream:#FBF6EC;--line:#E6E1D6;--carrot:#E07A2E;--mint:#EEF5E4;
+    background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;line-height:1.9;letter-spacing:.03em}
+  .wkd *{box-sizing:border-box}
+  .wkd a{color:var(--g)}
+  .wkd img{display:block;width:100%;height:100%;object-fit:cover}
+  .wkd__in{max-width:1180px;margin:0 auto;padding:0 24px}
+  .wkd__sec{padding:96px 0}
+  .wkd__sec--soft{background:var(--soft)}
+  .wkd__sec--cream{background:var(--cream)}
+  .wkd__eyebrow{margin:0;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--leaf2)}
+  .wkd__h2{margin:8px 0 18px;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--g);font-size:clamp(26px,3.4vw,38px);line-height:1.5}
+  .wkd__lead{margin:0 0 44px;max-width:700px;color:var(--mute)}
+  .wkd__center{text-align:center}.wkd__center .wkd__lead{margin-left:auto;margin-right:auto}
+  .wkd__btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 32px;border-radius:12px;background:var(--carrot);color:#fff!important;text-decoration:none;font-weight:700;font-size:17px;box-shadow:0 4px 0 #B85D1C;transition:transform .15s,box-shadow .15s}
+  .wkd__btn:hover{transform:translateY(2px);box-shadow:0 2px 0 #B85D1C}
+  .wkd__btn--g{background:var(--g);box-shadow:0 4px 0 #0B2117}
+  .wkd__btn--line{background:#fff;color:var(--g)!important;border:1.5px solid var(--g);box-shadow:none}
+  .wkd__btn--line:hover{transform:none;background:var(--mint)}
+  .wkd__btn svg{flex:none}
+  .wkd__ph{border-radius:16px;overflow:hidden;background:var(--soft)}
+  .wkd__ic{flex:none;color:var(--leaf2)}
+
+  /* hero */
+  .wkd__hero{background:linear-gradient(180deg,var(--cream) 0%,#fff 100%);padding:48px 0 72px}
+  .wkd__hero-g{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+  .wkd__tag{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:6px 14px;border-radius:999px;background:var(--mint);color:var(--g);font-size:13px;font-weight:700}
+  .wkd__h1{margin:0;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--g);font-size:clamp(34px,4.8vw,56px);line-height:1.4}
+  .wkd__h1 em{font-style:normal;color:var(--leaf2)}
+  .wkd__hero-p{margin:20px 0 28px;font-size:17px;max-width:520px}
+  .wkd__offer{background:#fff;border:2px solid var(--g);border-radius:20px;padding:22px 24px;max-width:520px;box-shadow:0 12px 28px rgba(22,55,41,.10);position:relative}
+  .wkd__offer-flag{position:absolute;top:-14px;left:20px;background:var(--g);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;letter-spacing:.08em}
+  .wkd__offer-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .wkd__offer-name{margin:0;font-weight:700;color:var(--g);font-size:17px}
+  .wkd__offer-name small{display:block;font-weight:500;color:var(--mute);font-size:13px}
+  .wkd__offer-price{margin:0;font-size:36px;font-weight:700;color:var(--g);line-height:1.1}
+  .wkd__offer-price span{font-size:13px;font-weight:500;color:var(--mute);margin-left:4px}
+  .wkd__offer ul{margin:14px 0 18px;padding:0;list-style:none;display:grid;gap:6px;font-size:14px}
+  .wkd__offer li{display:flex;gap:8px;align-items:flex-start}
+  .wkd__offer .wkd__btn{width:100%}
+  .wkd__offer-sub{margin:10px 0 0;font-size:13px;text-align:center}
+  .wkd__hero-ph{position:relative}
+  .wkd__hero-ph .wkd__ph{aspect-ratio:5/4;border-radius:24px}
+  .wkd__hero-mini{position:absolute;left:-28px;bottom:-28px;width:38%;aspect-ratio:1;border:6px solid #fff;border-radius:20px}
+  .wkd__trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:56px}
+  .wkd__trust div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 12px;text-align:center}
+  .wkd__trust b{display:block;font-size:28px;line-height:1.2;color:var(--g)} .wkd__trust b span{font-size:14px}
+  .wkd__trust p{margin:4px 0 0;font-size:13px;color:var(--mute);line-height:1.5}
+
+  /* promises */
+  .wkd__prom{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .wkd__prom>div{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:16px;padding:20px;border:1px solid var(--line)}
+  .wkd__prom b{display:block;color:var(--g);font-size:16px;line-height:1.5}
+  .wkd__prom p{margin:4px 0 0;font-size:13px;color:var(--mute);line-height:1.7}
+  .wkd__prom .wkd__ic{width:40px;height:40px;padding:8px;border-radius:12px;background:var(--mint)}
+
+  /* weekly */
+  .wkd__week{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(62,58,52,.08)}
+  .wkd__week .wkd__ph{border-radius:0;min-height:360px}
+  .wkd__week-b{padding:44px}
+  .wkd__week-date{display:inline-block;margin:0 0 14px;padding:4px 12px;border-radius:8px;background:var(--cream);font-size:13px;font-weight:700;color:var(--carrot)}
+  .wkd__chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+  .wkd__chips span{padding:8px 16px;border-radius:999px;background:var(--mint);color:var(--g);font-weight:700;font-size:15px}
+  .wkd__chips span.more{background:transparent;border:1.5px dashed var(--leaf2)}
+  .wkd__week-note{font-size:14px;color:var(--mute);margin:0 0 20px}
+
+  /* standards */
+  .wkd__std{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+  .wkd__table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+  .wkd__table th,.wkd__table td{padding:16px 18px;text-align:left;font-size:15px;border-bottom:1px solid var(--line);vertical-align:top}
+  .wkd__table tr:last-child th,.wkd__table tr:last-child td{border-bottom:0}
+  .wkd__table th{width:42%;font-weight:700;color:var(--g);background:#FCFBF8}
+  .wkd__yes,.wkd__no,.wkd__part{display:inline-flex;align-items:center;gap:6px;font-weight:700}
+  .wkd__no{color:var(--g2)} .wkd__yes{color:var(--carrot)} .wkd__part{color:#9A7B2F}
+  .wkd__table small{display:block;font-weight:400;color:var(--mute);font-size:13px;margin-top:2px}
+  .wkd__std-note{margin:14px 0 0;font-size:13px;color:var(--mute)}
+  .wkd__seed{background:var(--g);color:#fff;border-radius:20px;padding:32px}
+  .wkd__seed h3{margin:0 0 12px;font-family:'Shippori Mincho',serif;font-weight:600;font-size:22px;color:#fff}
+  .wkd__seed p{margin:0 0 14px;font-size:15px;color:#E4EEE0}
+  .wkd__seed .wkd__ph{aspect-ratio:16/10;margin-top:8px}
+
+  /* lab */
+  .wkd__lab{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .wkd__labc{background:#fff;border-radius:18px;padding:24px 20px;border:1px solid var(--line)}
+  .wkd__labc h3{margin:0 0 2px;font-size:16px;color:var(--g)}
+  .wkd__labc .u{font-size:12px;color:var(--mute)}
+  .wkd__labc .big{margin:12px 0 14px;font-size:30px;font-weight:700;color:var(--carrot);line-height:1.1}
+  .wkd__labc .big span{font-size:14px;color:var(--mute);font-weight:500}
+  .wkd__lrow{display:flex;align-items:center;gap:8px;font-size:12px;margin-top:8px}
+  .wkd__lrow>span:first-child{width:52px;flex:none;color:var(--mute)}
+  .wkd__ltrack{flex:1;height:12px;border-radius:999px;background:var(--soft);overflow:hidden}
+  .wkd__lfill{display:block!important;height:100%;border-radius:999px;background:var(--leaf)}
+  .wkd__ph:empty{display:block}
+  .wkd__lfill.avg{background:#CFC8BB}
+  .wkd__lrow>span:last-child{width:48px;flex:none;text-align:right;font-weight:700}
+  .wkd__src{margin:18px 0 0;font-size:13px;color:var(--mute)}
+
+  /* plans */
+  .wkd__plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:960px;margin:0 auto}
+  .wkd__plan{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px;display:flex;flex-direction:column;position:relative}
+  .wkd__plan--rec{border:2px solid var(--carrot)}
+  .wkd__plan-flag{position:absolute;top:-14px;right:24px;background:var(--carrot);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px}
+  .wkd__plan h3{margin:0;font-size:20px;color:var(--g)}
+  .wkd__plan .who{margin:4px 0 16px;font-size:14px;color:var(--mute)}
+  .wkd__plan .pr{margin:0 0 16px;font-size:32px;font-weight:700;color:var(--g);line-height:1.2}
+  .wkd__plan .pr span{font-size:13px;font-weight:500;color:var(--mute)}
+  .wkd__plan ul{margin:0 0 24px;padding:0;list-style:none;display:grid;gap:8px;font-size:15px;flex:1}
+  .wkd__plan li{display:flex;gap:8px;align-items:flex-start}
+  .wkd__freq{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+  .wkd__freq span{padding:4px 12px;border-radius:8px;background:var(--soft);font-size:13px;font-weight:700;color:var(--g)}
+  .wkd__ship{max-width:960px;margin:32px auto 0;background:#fff;border-radius:18px;border:1px solid var(--line);padding:24px 28px}
+  .wkd__ship h3{margin:0 0 12px;font-size:16px;color:var(--g)}
+  .wkd__ship-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 20px;font-size:14px}
+  .wkd__ship-g div{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding:4px 0}
+  .wkd__ship p{margin:12px 0 0;font-size:13px;color:var(--mute)}
+
+  /* flow */
+  .wkd__flow{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:f}
+  .wkd__flow li{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);counter-increment:f;position:relative}
+  .wkd__flow .wkd__ph{border-radius:0;aspect-ratio:4/3}
+  .wkd__flow li::before{content:"STEP " counter(f);position:absolute;top:12px;left:12px;z-index:1;background:#fff;color:var(--g);font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px}
+  .wkd__flow div.t{padding:18px 20px 22px}
+  .wkd__flow b{display:block;color:var(--g);font-size:16px}
+  .wkd__flow p{margin:6px 0 0;font-size:14px;color:var(--mute);line-height:1.75}
+
+  /* products */
+  .wkd__prods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+  .wkd__prod{text-decoration:none;color:var(--ink)!important;background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);transition:transform .2s}
+  .wkd__prod:hover{transform:translateY(-3px)}
+  .wkd__prod .wkd__ph{border-radius:0;aspect-ratio:1}
+  .wkd__prod div.t{padding:14px 16px 18px}
+  .wkd__prod b{display:block;font-size:15px;line-height:1.5;color:var(--g)}
+  .wkd__prod span{font-size:14px;font-weight:700}
+
+  /* people */
+  .wkd__people{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .wkd__people .wkd__ph{aspect-ratio:4/3;border-radius:24px}
+  .wkd__time{margin:0;padding:0;list-style:none;border-left:2px solid var(--leaf);padding-left:22px;display:grid;gap:18px}
+  .wkd__time li{position:relative}
+  .wkd__time li::before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--leaf)}
+  .wkd__time b{color:var(--g);font-size:15px}
+  .wkd__time p{margin:2px 0 0;font-size:14px;color:var(--mute)}
+  .wkd__links{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+  /* voices */
+  .wkd__voices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .wkd__voice{background:#fff;border-radius:18px;padding:28px;border:1px solid var(--line);margin:0}
+  .wkd__stars{color:#E9A93A;letter-spacing:2px;font-size:15px}
+  .wkd__voice p{margin:10px 0 14px;font-size:15px}
+  .wkd__voice cite{font-style:normal;font-size:13px;color:var(--mute)}
+
+  /* faq */
+  .wkd__faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+  .wkd__faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 22px}
+  .wkd__faq summary{cursor:pointer;list-style:none;padding:18px 28px 18px 0;font-weight:700;color:var(--g);position:relative}
+  .wkd__faq summary::-webkit-details-marker{display:none}
+  .wkd__faq summary::before{content:"Q.";color:var(--carrot);margin-right:8px}
+  .wkd__faq summary::after{content:"+";position:absolute;right:0;top:14px;font-size:22px;color:var(--leaf2)}
+  .wkd__faq details[open] summary::after{content:"−"}
+  .wkd__faq details p{margin:0 0 18px;color:var(--ink);font-size:15px}
+
+  /* final */
+  .wkd__final{background:var(--g);color:#fff;border-radius:28px;padding:56px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  .wkd__final h2{margin:0 0 12px;font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(24px,3vw,34px);color:#fff;line-height:1.5}
+  .wkd__final p{margin:0;color:#DCE8D6}
+  .wkd__final .wkd__ph{aspect-ratio:1;border-radius:50%;max-width:260px;margin-left:auto;border:6px solid rgba(255,255,255,.15)}
+  .wkd__final-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+  /* sticky */
+  .wkd__sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:none;align-items:center;justify-content:space-between;gap:12px}
+  .wkd__sticky p{margin:0;font-size:13px;line-height:1.4;color:var(--g)} .wkd__sticky b{font-size:16px}
+  .wkd__sticky .wkd__btn{min-height:46px;padding:0 20px;font-size:15px}
+
+  @media (max-width:989px){
+    .wkd__sec{padding:72px 0}
+    .wkd__hero-g,.wkd__std,.wkd__people,.wkd__week,.wkd__final{grid-template-columns:1fr}
+    .wkd__hero-ph{order:-1}
+    .wkd__hero-mini{left:auto;right:12px;bottom:-20px;width:32%}
+    .wkd__trust,.wkd__prom,.wkd__lab,.wkd__prods{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .wkd__flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .wkd__voices{grid-template-columns:1fr}
+    .wkd__ship-g{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .wkd__week-b{padding:28px}
+    .wkd__week .wkd__ph{min-height:240px}
+    .wkd__final{padding:36px 24px}
+    .wkd__final .wkd__ph{display:none}
+    .wkd__sticky{display:flex}
+    .wkd{padding-bottom:72px}
+  }
+  @media (max-width:640px){
+    .wkd__in{padding:0 16px}
+    .wkd__plans{grid-template-columns:1fr}
+    .wkd__flow{grid-template-columns:1fr}
+    .wkd__table th{width:38%}
+    .wkd__table th,.wkd__table td{padding:14px 12px;font-size:14px}
+    .wkd__offer{padding:20px 18px}
+    .wkd__trust b{font-size:24px}
+  }
+</style>
+
+{%- liquid
+  assign s = section.settings
+  assign trial = all_products[s.trial_product]
+  assign trial_url = s.trial_link
+  if trial_url == blank and trial != blank
+    assign trial_url = trial.url
+  endif
+  if trial_url == blank
+    assign trial_url = '/collections/all'
+  endif
+  assign trial_price = s.trial_price
+  if trial != blank
+    assign trial_price = trial.price | money_without_trailing_zeros
+  endif
+  assign delivery_url = s.delivery_link | default: '/pages/delivery'
+  assign week_url = s.week_link
+  if week_url == blank
+    assign week_url = blogs['ニュース'].url | default: '/blogs'
+  endif
+-%}
+
+{%- capture ic_check -%}<svg class="wkd__ic" aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:4px"><path d="M4 10.5l4 4 8-9"/></svg>{%- endcapture -%}
+{%- capture ic_arrow -%}<svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>{%- endcapture -%}
+
+<div class="wkd">
+
+  {%- comment -%} 1. ヒーロー：お試しの条件を最初に見せる {%- endcomment -%}
+  <section class="wkd__hero">
+    <div class="wkd__in">
+      <div class="wkd__hero-g">
+        <div>
+          <p class="wkd__tag"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27V15"/><path d="M16 17c0-5 3.6-8.5 8.5-8.5 0 5-3.6 8.5-8.5 8.5z"/><path d="M16 21c0-4-3-7-7-7 0 4 3 7 7 7z"/></svg>{{ s.hero_tag }}</p>
+          <h1 class="wkd__h1">{{ s.hero_title }}</h1>
+          <p class="wkd__hero-p">{{ s.hero_text }}</p>
+          <div class="wkd__offer">
+            <span class="wkd__offer-flag">はじめての方へ</span>
+            <div class="wkd__offer-row">
+              <p class="wkd__offer-name">{{ s.trial_name }}<small>{{ s.trial_sub }}</small></p>
+              <p class="wkd__offer-price">{{ trial_price }}<span>税込・送料別</span></p>
+            </div>
+            <ul>
+              <li>{{ ic_check }}定期のお申し込みは不要。1回だけのお届けです</li>
+              <li>{{ ic_check }}その時いちばんおいしい季節の野菜を約8品目</li>
+              <li>{{ ic_check }}月・水・金曜日に発送（近県は翌日のお届け）</li>
+            </ul>
+            <a class="wkd__btn" href="{{ trial_url }}">{{ s.cta_label }}{{ ic_arrow }}</a>
+            <p class="wkd__offer-sub"><a href="{{ delivery_url }}">定期宅配（毎週・隔週・月1回）はこちら</a></p>
+          </div>
+        </div>
+        <div class="wkd__hero-ph">
+          <div class="wkd__ph">{% if s.hero_image != blank %}{{ s.hero_image | image_url: width: 1300 | image_tag: loading: 'eager', widths: '600,900,1300', alt: s.hero_image.alt }}{% endif %}</div>
+          <div class="wkd__ph wkd__hero-mini">{% if s.hero_image_2 != blank %}{{ s.hero_image_2 | image_url: width: 500 | image_tag: widths: '300,500', alt: s.hero_image_2.alt }}{% endif %}</div>
+        </div>
+      </div>
+      <div class="wkd__trust">
+        <div><b>1998<span>年</span></b><p>創業。徳島県石井町で<br>自然農法ひとすじ</p></div>
+        <div><b>約500<span>名</span></b><p>全国の定期購入会員さま</p></div>
+        <div><b>約40<span>品目</span></b><p>季節ごとに育てる<br>野菜の種類</p></div>
+        <div><b>約1,000<span>パック</span></b><p>毎月お届けしている<br>野菜セット</p></div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} 2. 安心の約束（不安を先に消す） {%- endcomment -%}
+  <section class="wkd__sec wkd__sec--soft" style="padding:56px 0">
+    <div class="wkd__in">
+      <div class="wkd__prom">
+        <div><svg class="wkd__ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8" width="17" height="12" rx="2"/><path d="M3.5 12h17M12 8v12M8 8c-2 0-3-1.2-3-2.5S6 3 7.5 3C10 3 12 8 12 8s2-5 4.5-5C18 3 19 4.2 19 5.5S18 8 16 8"/></svg><div><b>お試しは1回だけ</b><p>定期のお申し込みは不要。まずは味をたしかめてください。</p></div></div>
+        <div><svg class="wkd__ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2"/></svg><div><b>頻度を選べる定期宅配</b><p>毎週・隔週・月に1回から、暮らしに合わせて。</p></div></div>
+        <div><svg class="wkd__ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><div><b>収穫してすぐ発送</b><p>月・水・金曜日に出荷。必要に応じてクール便で。</p></div></div>
+        <div><svg class="wkd__ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>万一のときも安心</b><p>当園の過失による不良は返品を承り、送料も当園が負担します。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} 3. 今週のお野菜セット（毎週更新） {%- endcomment -%}
+  <section class="wkd__sec">
+    <div class="wkd__in">
+      <div class="wkd__center">
+        <p class="wkd__eyebrow">THIS WEEK</p>
+        <h2 class="wkd__h2">今週は、こんなお野菜が届きます</h2>
+        <p class="wkd__lead">野菜セットの中身は、畑のようすを見て毎回決めています。発送ごとのラインナップは「畑だより」でもお知らせしています。</p>
+      </div>
+      <div class="wkd__week">
+        <div class="wkd__ph">{% if s.week_image != blank %}{{ s.week_image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500,1000', alt: s.week_image.alt }}{% endif %}</div>
+        <div class="wkd__week-b">
+          <p class="wkd__week-date">{{ s.week_date }}</p>
+          <h3 class="wkd__h2" style="font-size:26px;margin:0">{{ s.week_title }}</h3>
+          <div class="wkd__chips">
+            {%- assign veg = s.week_items | split: '、' -%}
+            {%- for v in veg -%}<span>{{ v | strip }}</span>{%- endfor -%}
+            {%- if s.week_more != blank -%}<span class="more">{{ s.week_more }}</span>{%- endif -%}
+          </div>
+          <p class="wkd__week-note">{{ s.week_note }}</p>
+          <a class="wkd__btn wkd__btn--line" href="{{ week_url }}">これまでのラインナップを見る{{ ic_arrow }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} 4. 栽培基準をはっきり示す {%- endcomment -%}
+  <section class="wkd__sec wkd__sec--cream">
+    <div class="wkd__in">
+      <p class="wkd__eyebrow">OUR STANDARD</p>
+      <h2 class="wkd__h2">若葉農園の栽培基準</h2>
+      <p class="wkd__lead">「無農薬」「自然栽培」という言葉には、はっきりした決まりがありません。だから私たちは、何を使って、何を使わないのかを、そのままお伝えします。</p>
+      <div class="wkd__std">
+        <div>
+          <table class="wkd__table">
+            <tr><th>農薬</th><td><span class="wkd__no">{{ ic_check }}使いません</span></td></tr>
+            <tr><th>化学肥料</th><td><span class="wkd__no">{{ ic_check }}使いません</span></td></tr>
+            <tr><th>動物性の有機肥料・油かす</th><td><span class="wkd__no">{{ ic_check }}使いません</span><small>窒素が多すぎると、えぐみのもとになる硝酸態窒素がたまるためです。</small></td></tr>
+            <tr><th>植物性の堆肥</th><td><span class="wkd__part">一部の畑でのみ使用</span><small>必要なところに限って使っています。</small></td></tr>
+            <tr><th>種</th><td><span class="wkd__yes">在来種から自家採種</span><small>あまり改良されていない在来の種から、種採りをくり返しています。</small></td></tr>
+            <tr><th>農法</th><td><span class="wkd__yes">秀明自然農法</span><small>水田 約400a・畑 約800a（有機率100％）</small></td></tr>
+          </table>
+          <p class="wkd__std-note">※野菜セットには、若葉農園の野菜を中心に、同じく肥料・農薬を使わない自然農法の生産者が育てた野菜が入ることがあります。</p>
+        </div>
+        <div class="wkd__seed">
+          <h3>種から、つないでいく。</h3>
+          <p>今は99.9％以上の農家が、種を種屋さんから買っています。改良を重ねた種は、育つためにたくさんの肥料や農薬を必要とします。</p>
+          <p>若葉農園は、多くの方の想いのこもった種から野菜を育て、そこからまた種を採る。肥料や農薬に頼らなくても、しっかり育つ野菜になっていきます。</p>
+          <div class="wkd__ph">{% if s.seed_image != blank %}{{ s.seed_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,800', alt: s.seed_image.alt }}{% endif %}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} 5. 成分検査（数字の根拠） {%- endcomment -%}
+  <section class="wkd__sec">
+    <div class="wkd__in">
+      <div class="wkd__center">
+        <p class="wkd__eyebrow">LAB TEST</p>
+        <h2 class="wkd__h2">「おいしい」を、数字でもたしかめました</h2>
+        <p class="wkd__lead">若葉農園のほうれん草を成分検査に出したところ、甘さも栄養も全国平均を大きく上回り、えぐみのもとになる硝酸イオンは測定できないほど少ない結果でした。</p>
+      </div>
+      <div class="wkd__lab">
+        <div class="wkd__labc"><h3>糖度</h3><span class="u">％</span><p class="big">約1.5<span>倍</span></p>
+          <div class="wkd__lrow"><span>若葉農園</span><div class="wkd__ltrack"><div class="wkd__lfill" style="width:100%"></div></div><span>12.3</span></div>
+          <div class="wkd__lrow"><span>全国平均</span><div class="wkd__ltrack"><div class="wkd__lfill avg" style="width:67%"></div></div><span>8.2</span></div></div>
+        <div class="wkd__labc"><h3>抗酸化力</h3><span class="u">TE mg/100g</span><p class="big">約2.2<span>倍</span></p>
+          <div class="wkd__lrow"><span>若葉農園</span><div class="wkd__ltrack"><div class="wkd__lfill" style="width:100%"></div></div><span>197.1</span></div>
+          <div class="wkd__lrow"><span>全国平均</span><div class="wkd__ltrack"><div class="wkd__lfill avg" style="width:45%"></div></div><span>88.3</span></div></div>
+        <div class="wkd__labc"><h3>ビタミンC</h3><span class="u">mg/100g</span><p class="big">約1.3<span>倍</span></p>
+          <div class="wkd__lrow"><span>若葉農園</span><div class="wkd__ltrack"><div class="wkd__lfill" style="width:100%"></div></div><span>87.7</span></div>
+          <div class="wkd__lrow"><span>全国平均</span><div class="wkd__ltrack"><div class="wkd__lfill avg" style="width:75%"></div></div><span>65.9</span></div></div>
+        <div class="wkd__labc"><h3>硝酸イオン</h3><span class="u">mg/L（少ないほど良い）</span><p class="big">5未満<span>（測定下限）</span></p>
+          <div class="wkd__lrow"><span>若葉農園</span><div class="wkd__ltrack"><div class="wkd__lfill" style="width:1%;min-width:4px"></div></div><span>5未満</span></div>
+          <div class="wkd__lrow"><span>全国平均</span><div class="wkd__ltrack"><div class="wkd__lfill avg" style="width:100%;background:#D9A27A"></div></div><span>2,111.7</span></div></div>
+      </div>
+      <p class="wkd__src wkd__center">青果物メディカル研究所によるほうれん草の成分検査。全国平均は2006〜2010年のデータ。</p>
+    </div>
+  </section>
+
+  {%- comment -%} 6. プラン（お試し と 定期） {%- endcomment -%}
+  <section class="wkd__sec wkd__sec--soft" id="plans">
+    <div class="wkd__in">
+      <div class="wkd__center">
+        <p class="wkd__eyebrow">PLAN</p>
+        <h2 class="wkd__h2">お届けの方法を選ぶ</h2>
+        <p class="wkd__lead">はじめての方はお試し1回から。気に入っていただけたら、定期宅配で季節の移ろいを毎回のお届けで感じてください。</p>
+      </div>
+      <div class="wkd__plans">
+        <div class="wkd__plan wkd__plan--rec">
+          <span class="wkd__plan-flag">はじめての方に</span>
+          <h3>お試し1回</h3>
+          <p class="who">まずは一度、味わってみたい方に</p>
+          <p class="pr">{{ trial_price }}<span> 税込・送料別</span></p>
+          <ul>
+            <li>{{ ic_check }}季節の野菜 約8品目</li>
+            <li>{{ ic_check }}定期の申し込みは不要</li>
+            <li>{{ ic_check }}11〜3月は常温便、4〜10月は冷蔵便</li>
+          </ul>
+          <a class="wkd__btn" href="{{ trial_url }}">お試しセットを申し込む{{ ic_arrow }}</a>
+        </div>
+        <div class="wkd__plan">
+          <h3>定期宅配</h3>
+          <p class="who">毎日の食卓を、自然農法の野菜で</p>
+          <p class="pr">{{ s.teiki_price }}<span> /1回 税込・送料別</span></p>
+          <div class="wkd__freq"><span>毎週</span><span>隔週</span><span>月に1回</span></div>
+          <ul>
+            <li>{{ ic_check }}お届けの頻度を選べます</li>
+            <li>{{ ic_check }}発送曜日（月・水・金）を選べます</li>
+            <li>{{ ic_check }}全国約500名の会員さまがご利用中</li>
+          </ul>
+          <a class="wkd__btn wkd__btn--g" href="{{ delivery_url }}">定期宅配の詳細を見る{{ ic_arrow }}</a>
+        </div>
+      </div>
+      <div class="wkd__ship">
+        <h3>送料（1箱・税込）</h3>
+        <div class="wkd__ship-g">
+          <div><span>四国</span><b>660円</b></div>
+          <div><span>関西・中国</span><b>770円</b></div>
+          <div><span>関東・信越・北陸・中部</span><b>880円</b></div>
+          <div><span>九州</span><b>880円</b></div>
+          <div><span>東北</span><b>1,100円</b></div>
+          <div><span>北海道</span><b>3,025円</b></div>
+          <div><span>沖縄</span><b>3,355円</b></div>
+          <div><span>クール便</span><b>＋440円</b></div>
+        </div>
+        <p>※加工品などのお買い物は、5,000円以上で送料無料です。詳しくは<a href="/pages/guide">ご利用ガイド</a>をご覧ください。</p>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} 7. お届けまでの流れ {%- endcomment -%}
+  <section class="wkd__sec">
+    <div class="wkd__in">
+      <div class="wkd__center">
+        <p class="wkd__eyebrow">FLOW</p>
+        <h2 class="wkd__h2">畑から食卓まで</h2>
+      </div>
+      <ol class="wkd__flow">
+        <li><div class="wkd__ph">{% if s.flow_image_1 != blank %}{{ s.flow_image_1 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}{% endif %}</div><div class="t"><b>お申し込み</b><p>お届け日は、ご注文日から4日目以降でご指定いただけます。</p></div></li>
+        <li><div class="wkd__ph">{% if s.flow_image_2 != blank %}{{ s.flow_image_2 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}{% endif %}</div><div class="t"><b>畑で収穫・箱詰め</b><p>その時いちばん状態の良い野菜を、スタッフが選んで詰めます。</p></div></li>
+        <li><div class="wkd__ph">{% if s.flow_image_3 != blank %}{{ s.flow_image_3 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}{% endif %}</div><div class="t"><b>月・水・金に発送</b><p>近県は翌日、北海道・東北・関東・山梨・新潟・沖縄は2日後のお届けです。</p></div></li>
+        <li><div class="wkd__ph">{% if s.flow_image_4 != blank %}{{ s.flow_image_4 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}{% endif %}</div><div class="t"><b>食卓へ</b><p>まずはシンプルに。おひたしや生のままで、野菜本来の甘さを。</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  {%- comment -%} 8. 一緒に頼める加工品 {%- endcomment -%}
+  <section class="wkd__sec wkd__sec--cream">
+    <div class="wkd__in">
+      <p class="wkd__eyebrow">ADD ON</p>
+      <h2 class="wkd__h2">野菜と一緒に、畑の恵みを</h2>
+      <p class="wkd__lead">自社の畑で育てた人参・大麦・すだちなどから作った加工品も、あわせてお届けできます。</p>
+      <div class="wkd__prods">
+        {%- assign handles = s.addon_handles | split: ',' -%}
+        {%- for h in handles -%}
+          {%- assign hs = h | strip -%}
+          {%- assign p = all_products[hs] -%}
+          {%- if p != blank -%}
+          <a class="wkd__prod" href="{{ p.url }}">
+            <div class="wkd__ph">{% if p.featured_image %}{{ p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', widths: '300,500', alt: p.title }}{% endif %}</div>
+            <div class="t"><b>{{ p.title }}</b><span>{{ p.price | money_without_trailing_zeros }}</span></div>
+          </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <p class="wkd__center" style="margin:32px 0 0"><a class="wkd__btn wkd__btn--line" href="/collections/all">すべての商品を見る{{ ic_arrow }}</a></p>
+    </div>
+  </section>
+
+  {%- comment -%} 9. 育てている人たち {%- endcomment -%}
+  <section class="wkd__sec">
+    <div class="wkd__in">
+      <div class="wkd__people">
+        <div class="wkd__ph">{% if s.people_image != blank %}{{ s.people_image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500,1000', alt: s.people_image.alt }}{% endif %}</div>
+        <div>
+          <p class="wkd__eyebrow">FARM</p>
+          <h2 class="wkd__h2">畑に立つ人が、毎日見て、感じて。</h2>
+          <ul class="wkd__time">
+            <li><b>1998年</b><p>徳島県名西郡石井町で、有限会社若葉農園を創業。</p></li>
+            <li><b>いま</b><p>水田約400a・畑約800aで、肥料・農薬を使わずに約40品目を栽培。</p></li>
+            <li><b>研修生の受け入れ</b><p>自然農法を学びたい人を受け入れ、次の担い手を育てています。</p></li>
+          </ul>
+          <div class="wkd__links">
+            <a class="wkd__btn wkd__btn--line" href="/pages/about">若葉農園について{{ ic_arrow }}</a>
+            <a class="wkd__btn wkd__btn--line" href="https://www.instagram.com/wakabanouen/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} 10. お客さまの声 {%- endcomment -%}
+  <section class="wkd__sec wkd__sec--soft">
+    <div class="wkd__in">
+      <div class="wkd__center">
+        <p class="wkd__eyebrow">VOICE</p>
+        <h2 class="wkd__h2">定期購入会員さまの声</h2>
+      </div>
+      <div class="wkd__voices">
+        {%- for block in section.blocks -%}{%- if block.type == 'voice' -%}
+        <figure class="wkd__voice" {{ block.shopify_attributes }}>
+          <span class="wkd__stars" aria-hidden="true">★★★★★</span>
+          <p>{{ block.settings.text }}</p>
+          <cite>{{ block.settings.name }}</cite>
+        </figure>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} 11. よくある質問 {%- endcomment -%}
+  <section class="wkd__sec">
+    <div class="wkd__in">
+      <div class="wkd__center">
+        <p class="wkd__eyebrow">FAQ</p>
+        <h2 class="wkd__h2">よくあるご質問</h2>
+      </div>
+      <div class="wkd__faq">
+        {%- for block in section.blocks -%}{%- if block.type == 'faq' -%}
+        <details {{ block.shopify_attributes }}><summary>{{ block.settings.q }}</summary><p>{{ block.settings.a }}</p></details>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} 12. 最後のひと押し {%- endcomment -%}
+  <section class="wkd__sec" style="padding-top:0">
+    <div class="wkd__in">
+      <div class="wkd__final">
+        <div>
+          <h2>まずは一箱、畑の味を。</h2>
+          <p>甘さ、香り、歯ごたえ。肥料も農薬も使わずに育った野菜の「本来の味」を、ご家庭でたしかめてください。</p>
+          <div class="wkd__final-cta">
+            <a class="wkd__btn" href="{{ trial_url }}">{{ s.cta_label }}{{ ic_arrow }}</a>
+            <a class="wkd__btn wkd__btn--line" href="/pages/contact" style="background:transparent;color:#fff!important;border-color:rgba(255,255,255,.6)">お問い合わせ</a>
+          </div>
+        </div>
+        <div class="wkd__ph">{% if s.final_image != blank %}{{ s.final_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600', alt: s.final_image.alt }}{% endif %}</div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} スマホ用：画面下に固定の申し込みボタン {%- endcomment -%}
+  <div class="wkd__sticky">
+    <p>お試し1回 <b>{{ trial_price }}</b><br>定期申し込み不要</p>
+    <a class="wkd__btn" href="{{ trial_url }}">申し込む</a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "若葉農園 D案トップ",
+  "tag": "div",
+  "settings": [
+    { "type": "header", "content": "ヒーロー" },
+    { "type": "text", "id": "hero_tag", "label": "小見出し", "default": "肥料も農薬も使わない、自然農法の野菜" },
+    { "type": "textarea", "id": "hero_title", "label": "大見出し", "default": "種から育てた、本来の味。" },
+    { "type": "textarea", "id": "hero_text", "label": "説明文", "default": "徳島の若葉農園から、季節の野菜セットをお届けします。" },
+    { "type": "image_picker", "id": "hero_image", "label": "メイン写真" },
+    { "type": "image_picker", "id": "hero_image_2", "label": "小さい写真" },
+    { "type": "header", "content": "お試しセット" },
+    { "type": "text", "id": "trial_product", "label": "お試し商品のハンドル", "default": "otameshi-yasai-set-joon" },
+    { "type": "url", "id": "trial_link", "label": "申し込みボタンのリンク（空欄なら上の商品へ）" },
+    { "type": "text", "id": "trial_name", "label": "名前", "default": "お試し野菜セット" },
+    { "type": "text", "id": "trial_sub", "label": "補足", "default": "季節の野菜 約8品目" },
+    { "type": "text", "id": "trial_price", "label": "価格（商品が見つからない時の表示）", "default": "¥3,888" },
+    { "type": "text", "id": "cta_label", "label": "ボタンの文言", "default": "お試しセットを申し込む" },
+    { "type": "url", "id": "delivery_link", "label": "定期宅配ページ" },
+    { "type": "text", "id": "teiki_price", "label": "定期宅配の価格", "default": "¥3,888" },
+    { "type": "header", "content": "今週のお野菜" },
+    { "type": "image_picker", "id": "week_image", "label": "写真" },
+    { "type": "text", "id": "week_date", "label": "発送日", "default": "11月11日発送" },
+    { "type": "text", "id": "week_title", "label": "見出し", "default": "今週のお野菜セット" },
+    { "type": "text", "id": "week_items", "label": "野菜（「、」区切り）", "default": "冬瓜、人参、大根葉" },
+    { "type": "text", "id": "week_more", "label": "その他", "default": "＋5品目" },
+    { "type": "textarea", "id": "week_note", "label": "ひとこと", "default": "寒さで甘みがのってきた人参が入りはじめました。" },
+    { "type": "url", "id": "week_link", "label": "ラインナップ一覧へのリンク" },
+    { "type": "header", "content": "写真" },
+    { "type": "image_picker", "id": "seed_image", "label": "種・苗の写真" },
+    { "type": "image_picker", "id": "flow_image_1", "label": "流れ1" },
+    { "type": "image_picker", "id": "flow_image_2", "label": "流れ2" },
+    { "type": "image_picker", "id": "flow_image_3", "label": "流れ3" },
+    { "type": "image_picker", "id": "flow_image_4", "label": "流れ4" },
+    { "type": "image_picker", "id": "people_image", "label": "畑の写真" },
+    { "type": "image_picker", "id": "final_image", "label": "最後の写真" },
+    { "type": "header", "content": "加工品" },
+    { "type": "text", "id": "addon_handles", "label": "商品ハンドル（「,」区切り・4つ）", "default": "carrotjuice350,mugichatb,sudachiponzu,chunosauce" }
+  ],
+  "blocks": [
+    { "type": "voice", "name": "お客さまの声", "settings": [
+      { "type": "textarea", "id": "text", "label": "本文" },
+      { "type": "text", "id": "name", "label": "お名前", "default": "定期購入会員さま" } ] },
+    { "type": "faq", "name": "よくある質問", "settings": [
+      { "type": "text", "id": "q", "label": "質問" },
+      { "type": "textarea", "id": "a", "label": "答え" } ] }
+  ],
+  "presets": [ { "name": "若葉農園 D案トップ" } ]
+}
+{% endschema %}

@@ -6,35 +6,35 @@
     "p0": {
      "type": "photo",
      "settings": {
-      "image": "shopify://shop_images/wakaba-c-sunset.jpeg",
+      "image": "shopify://shop_images/wakaba-c-sunset.jpg",
       "caption": "夕暮れのネギ畑"
      }
     },
     "p1": {
      "type": "photo",
      "settings": {
-      "image": "shopify://shop_images/wakaba-c-frog.jpeg",
+      "image": "shopify://shop_images/wakaba-c-frog.jpg",
       "caption": "畑で出会った小さな仲間"
      }
     },
     "p2": {
      "type": "photo",
      "settings": {
-      "image": "shopify://shop_images/wakaba-c-greenhouse.jpeg",
+      "image": "shopify://shop_images/wakaba-c-greenhouse.jpg",
       "caption": "苗づくり"
      }
     },
     "p3": {
      "type": "photo",
      "settings": {
-      "image": "shopify://shop_images/wakaba-c-eggplant.jpeg",
+      "image": "shopify://shop_images/wakaba-c-eggplant.jpg",
       "caption": "秋のナス"
      }
     },
     "p4": {
      "type": "photo",
      "settings": {
-      "image": "shopify://shop_images/wakaba-c-mugicha.jpeg",
+      "image": "shopify://shop_images/wakaba-c-mugicha.jpg",
       "caption": "自社の大麦でつくる麦茶"
      }
     },
@@ -48,7 +48,7 @@
     "p6": {
      "type": "photo",
      "settings": {
-      "image": "shopify://shop_images/wakaba-c-juice-basket.jpeg",
+      "image": "shopify://shop_images/wakaba-c-juice-basket.jpg",
       "caption": "人参ジュース"
      }
     },
@@ -139,19 +139,19 @@
     "product_1": "otameshi-yasai-set-joon",
     "product_2": "otameshi-yasai-set-reizo",
     "cta_link": "",
-    "hero_image_2": "shopify://shop_images/wakaba-c-tomato.jpeg",
-    "hero_image_3": "shopify://shop_images/wakaba-c-frog.jpeg",
+    "hero_image_2": "shopify://shop_images/wakaba-c-tomato.jpg",
+    "hero_image_3": "shopify://shop_images/wakaba-c-frog.jpg",
     "proof_image": "shopify://shop_images/wakaba-c-greens.jpg",
     "step_image_1": "shopify://shop_images/wakaba-c-seedling.jpg",
     "step_image_2": "shopify://shop_images/wakaba-c-field-people.jpg",
     "step_image_3": "shopify://shop_images/wakaba-c-harvest.jpg",
-    "voice_image": "shopify://shop_images/wakaba-c-basket.jpeg",
+    "voice_image": "shopify://shop_images/wakaba-c-basket.jpg",
     "box_image": "shopify://shop_images/wakaba-c-box.jpg",
     "box_image_2": "shopify://shop_images/wakaba-c-juice-field.jpg",
     "season_1": "shopify://shop_images/wakaba-c-greens.jpg",
-    "season_2": "shopify://shop_images/wakaba-c-tomato.jpeg",
+    "season_2": "shopify://shop_images/wakaba-c-tomato.jpg",
     "season_3": "shopify://shop_images/wakaba-c-shishito.jpg",
-    "season_4": "shopify://shop_images/wakaba-c-basket.jpeg",
+    "season_4": "shopify://shop_images/wakaba-c-basket.jpg",
     "offer_image": "shopify://shop_images/wakaba-top-basket.jpg",
     "cta_label": "お試しセットで味わう"
    }
