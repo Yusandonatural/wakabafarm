@@ -85,7 +85,7 @@
   /* voices */
   .wlp__voices{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
   .wlp__voice{margin:0;background:#fff;border-radius:18px;padding:26px;border:1px solid var(--line)}
-  .wlp__voice::before{content:"★★★★★";color:#C98A1E;letter-spacing:2px;font-size:14px}
+  .wlp__voices--stars .wlp__voice::before{content:"★★★★★";color:#C98A1E;letter-spacing:2px;font-size:14px}
   .wlp__voice p{margin:8px 0 12px;font-size:15px}
   .wlp__voice cite{font-style:normal;font-size:13px;color:var(--mute)}
   /* faq */
@@ -225,7 +225,7 @@
   {%- when 'voices' -%}
     <section class="wlp__sec{{ bg }}" {{ block.shopify_attributes }}><div class="wlp__in">
       <div class="wlp__c">{%- if b.eyebrow != blank -%}<p class="wlp__eb">{{ b.eyebrow }}</p>{%- endif -%}<h2 class="wlp__h2">{{ b.title }}</h2></div>
-      <div class="wlp__voices">{%- for it in items -%}{%- assign kv = it | split: '｜' -%}{%- if kv[0] != blank -%}<figure class="wlp__voice"><p>{{ kv[0] | strip }}</p><cite>{{ kv[1] | strip | default: 'お客さま' }}</cite></figure>{%- endif -%}{%- endfor -%}</div>
+      <div class="wlp__voices{% if b.stars %} wlp__voices--stars{% endif %}">{%- for it in items -%}{%- assign kv = it | split: '｜' -%}{%- if kv[0] != blank -%}<figure class="wlp__voice"><p>{{ kv[0] | strip }}</p><cite>{{ kv[1] | strip | default: 'お客さま' }}</cite></figure>{%- endif -%}{%- endfor -%}</div>
     </div></section>
 
   {%- when 'faq' -%}
@@ -332,6 +332,7 @@
       { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "soft" },
       { "type": "text", "id": "eyebrow", "label": "小見出し", "default": "VOICE" },
       { "type": "text", "id": "title", "label": "見出し" },
+      { "type": "checkbox", "id": "stars", "label": "星マークを表示", "default": true },
       { "type": "textarea", "id": "items", "label": "声（1行に「本文｜お名前」）" } ] },
     { "type": "faq", "name": "よくある質問", "settings": [
       { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "white" },
