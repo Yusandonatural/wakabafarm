@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>若葉農園 トップページ案</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F4EC}
+a{color:#3E5B3A}a:hover{color:#2A3F27}
+</style>
+</helmet>
+<div style="background: #F7F4EC; color: #23291F; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; line-height: 1.9; letter-spacing: 0.04em">
+
+  <div style="background: {{accent}}; color: #F7F4EC; text-align: center; font-size: 13px; padding: 8px 16px; letter-spacing: 0.08em">5,000円以上のお買い上げで送料無料　｜　発送は月・水・金曜日</div>
+
+  <header style="border-bottom: 1px solid #DDD6C6; background: #F7F4EC">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#" style="text-decoration: none; color: #23291F; display: flex; flex-direction: column; line-height: 1.3">
+        <span style="font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 700; letter-spacing: 0.12em">若葉農園</span>
+        <span style="font-size: 11px; color: #5F6457; letter-spacing: 0.2em">WAKABA FARM ／ 徳島・石井町</span>
+      </a>
+      <nav aria-label="メインメニュー" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px">
+        <a href="About.dc.html" style="color: #23291F; text-decoration: none; padding: 10px 0">若葉農園について</a>
+        <a href="#shop" style="color: #23291F; text-decoration: none; padding: 10px 0">オンラインショップ</a>
+        <a href="Delivery.dc.html" style="color: #23291F; text-decoration: none; padding: 10px 0">定期宅配</a>
+        <a href="#journal" style="color: #23291F; text-decoration: none; padding: 10px 0">畑だより</a>
+        <a href="#" style="color: #23291F; text-decoration: none; padding: 10px 0">ご利用ガイド</a>
+      </nav>
+      <div style="display: flex; gap: 8px">
+        <a href="#" aria-label="アカウント" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #23291F">
+          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+        </a>
+        <a href="#" aria-label="カート" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #23291F">
+          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2l2.4 11h11l2-8H6.2"></path><circle cx="9.5" cy="19.5" r="1.3"></circle><circle cx="17" cy="19.5" r="1.3"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section style="position: relative; min-height: 640px; display: flex; align-items: flex-end; overflow: hidden">
+    <img src="/_blob/42b65d158bb3c5ceee4a0af6ef3ee66a" alt="若葉農園の畑で採れた季節の野菜" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,24,18,0.72), rgba(20,24,18,0.05) 60%)"></div>
+    <div style="position: relative; max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 24px 72px; box-sizing: border-box; color: #FFFFFF">
+      <p style="margin: 0 0 12px; font-size: 14px; letter-spacing: 0.2em">肥料も、農薬も使わない。種から自分たちで。</p>
+      <h1 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 56px; line-height: 1.4; letter-spacing: 0.08em">大地から考えよう<br>子どもたちの未来</h1>
+      <p style="margin: 20px 0 32px; max-width: 560px; font-size: 16px">徳島・石井町で1998年から自然農法を続ける農園です。自家採種の種から育てた季節のお野菜と、その恵みから生まれた加工品をお届けします。</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px">
+        <a href="Delivery.dc.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; background: #F7F4EC; color: #23291F; text-decoration: none; font-weight: 500">お試し野菜セットを見る</a>
+        <a href="#shop" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-weight: 500">オンラインショップ</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="pillars" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px 96px">
+    <p style="margin: 0; color: {{accent}}; font-size: 13px; letter-spacing: 0.24em">OUR FARMING</p>
+    <h2 id="pillars" style="margin: 8px 0 48px; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 36px; line-height: 1.5">若葉農園の野菜づくり</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <img src="/_blob/ea0add1d89d19596c85507fda18bed0e" alt="自家採種の種から育った人参" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover">
+        <h3 style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 600">自家採種</h3>
+        <p style="margin: 0; font-size: 15px">あまり改良されていない在来の種子から、自分たちで種を採り、つないでいます。想いのこもった種から育てる野菜です。</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <img src="/_blob/9b4aa24ed8a018b6e597b7eee07ef9c4" alt="畑で作業するスタッフ" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover">
+        <h3 style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 600">肥料・農薬を使わない</h3>
+        <p style="margin: 0; font-size: 15px">化学肥料も動物性の有機肥料も使わず、土と野菜が本来持つ力で育てています。（植物性の堆肥のみ部分的に使用）</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <img src="/_blob/b642435e187ccb9ff6dad9ab5c4bdf54" alt="かごに盛られた季節の野菜" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover">
+        <h3 style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 600">全国の食卓へ</h3>
+        <p style="margin: 0; font-size: 15px">全国約500名の会員さまへ、月間約1,000パックの野菜セットを、スタッフ一人ひとりが心を込めて出荷しています。</p>
+      </div>
+    </div>
+    <div style="margin-top: 48px">
+      <a href="About.dc.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #23291F; text-decoration: none; border-bottom: 1px solid #23291F; font-weight: 500">若葉農園について詳しく<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </section>
+
+  <section aria-labelledby="teiki" style="background: #EEE8DA">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+      <img src="/_blob/e29110a32d0023b1ca5ee361dadaa9fa" alt="畑から掘り出したさつまいも" style="flex: 1 1 380px; min-width: 0; width: 100%; max-height: 560px; aspect-ratio: 4 / 5; object-fit: cover">
+      <div style="flex: 1.2 1 420px; min-width: 0">
+        <p style="margin: 0; color: {{accent}}; font-size: 13px; letter-spacing: 0.24em">VEGETABLE BOX</p>
+        <h2 id="teiki" style="margin: 8px 0 24px; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 36px; line-height: 1.5">季節のお野菜を、<br>8品目前後セットでお届け</h2>
+        <p style="margin: 0 0 32px">若葉農園のお野菜を中心に、同じ想いで自然農法に取り組む生産者の野菜を合わせたセットです。内容はその時いちばん状態の良いものをお選びします。</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 32px">
+          <div style="background: #F7F4EC; padding: 24px">
+            <p style="margin: 0; font-size: 13px; color: #5F6457">まずは一度</p>
+            <p style="margin: 4px 0 8px; font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 600">お試しセット</p>
+            <p style="margin: 0; font-size: 14px">常温便 ¥3,833／冷蔵便 ¥4,328<br>（税込・送料別）</p>
+          </div>
+          <div style="background: #F7F4EC; padding: 24px">
+            <p style="margin: 0; font-size: 13px; color: #5F6457">続けて楽しむ</p>
+            <p style="margin: 4px 0 8px; font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 600">定期宅配</p>
+            <p style="margin: 0; font-size: 14px">毎週／隔週／月に1回<br>出荷日は月・水・金から</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px">
+          <a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; background: {{accent}}; color: #F7F4EC; text-decoration: none; font-weight: 500">お試しセットを購入する</a>
+          <a href="Delivery.dc.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border: 1px solid #23291F; color: #23291F; text-decoration: none; font-weight: 500">定期宅配について</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" aria-labelledby="products" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px 96px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px">
+      <div>
+        <p style="margin: 0; color: {{accent}}; font-size: 13px; letter-spacing: 0.24em">ONLINE SHOP</p>
+        <h2 id="products" style="margin: 8px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 36px; line-height: 1.5">自然栽培の素材から生まれた品</h2>
+      </div>
+      <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #23291F; font-weight: 500">すべての商品を見る</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 32px 24px">
+      <sc-for list="{{products}}" as="p" hint-placeholder-count="4">
+        <a href="#" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #23291F">
+          <img src="{{p.img}}" alt="{{p.name}}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #EEE8DA">
+          <span style="font-size: 15px; font-weight: 500; line-height: 1.6">{{p.name}}</span>
+          <span style="font-size: 15px">{{p.price}}<span style="font-size: 12px; color: #5F6457">（税込）</span></span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section aria-labelledby="voices" style="background: {{accent}}; color: #F7F4EC">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
+      <p style="margin: 0; font-size: 13px; letter-spacing: 0.24em; opacity: 0.85">VOICES</p>
+      <h2 id="voices" style="margin: 8px 0 48px; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 36px; line-height: 1.5">定期購入会員さまの声</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
+        <figure style="margin: 0; padding-top: 24px; border-top: 1px solid rgba(247,244,236,0.4)">
+          <blockquote style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 2">ほうれん草を「おひたし」にして一口食べたら、甘みが増して美味しいです。調理せず生で食べても甘みを感じびっくりしました。</blockquote>
+        </figure>
+        <figure style="margin: 0; padding-top: 24px; border-top: 1px solid rgba(247,244,236,0.4)">
+          <blockquote style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 2">昔は小松菜は苦くて好きではなかったのですが、自然農法の小松菜は甘みがあり今では大好きになりました。</blockquote>
+        </figure>
+        <figure style="margin: 0; padding-top: 24px; border-top: 1px solid rgba(247,244,236,0.4)">
+          <blockquote style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 2">人参を乱切りにしていたら、ピカピカと美味しそうで思わず生のままパクッと。ホント甘くて感動しました。</blockquote>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="journal" aria-labelledby="journal-h" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px 96px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px">
+      <div>
+        <p style="margin: 0; color: {{accent}}; font-size: 13px; letter-spacing: 0.24em">JOURNAL</p>
+        <h2 id="journal-h" style="margin: 8px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 36px; line-height: 1.5">畑だより</h2>
+      </div>
+      <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #23291F; font-weight: 500">記事一覧へ</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
+      <sc-for list="{{posts}}" as="b" hint-placeholder-count="3">
+        <a href="#" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #23291F">
+          <img src="{{b.img}}" alt="" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover">
+          <span style="font-size: 13px; color: #5F6457">{{b.date}}　{{b.cat}}</span>
+          <span style="font-family: 'Shippori Mincho', serif; font-size: 19px; font-weight: 600; line-height: 1.6">{{b.title}}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section aria-labelledby="farmvisit" style="border-top: 1px solid #DDD6C6">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+      <div style="flex: 1 1 480px; min-width: 0">
+        <h2 id="farmvisit" style="margin: 0 0 8px; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 26px">自然栽培を学びたい方へ</h2>
+        <p style="margin: 0; font-size: 15px">若葉農園では研修生を受け入れています。研修生ストーリーや募集のご案内はこちらから。</p>
+      </div>
+      <a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border: 1px solid #23291F; color: #23291F; text-decoration: none; font-weight: 500">研修について</a>
+    </div>
+  </section>
+
+  <footer style="background: #23291F; color: #E8E3D6; font-size: 14px">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 40px; display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between">
+      <div style="flex: 1 1 320px; min-width: 0; line-height: 2">
+        <p style="margin: 0 0 12px; font-family: 'Shippori Mincho', serif; font-size: 24px; font-weight: 700; letter-spacing: 0.12em; color: #F7F4EC">若葉農園</p>
+        <p style="margin: 0">有限会社若葉農園<br>〒779-3244 徳島県名西郡石井町浦庄字下浦326-6<br>TEL 088-675-2512　FAX 088-603-1052</p>
+      </div>
+      <nav aria-label="フッターメニュー" style="flex: 1 1 360px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 24px">
+        <a href="About.dc.html" style="color: #E8E3D6; text-decoration: none; padding: 8px 0">若葉農園について</a>
+        <a href="#" style="color: #E8E3D6; text-decoration: none; padding: 8px 0">ご利用ガイド</a>
+        <a href="#" style="color: #E8E3D6; text-decoration: none; padding: 8px 0">オンラインショップ</a>
+        <a href="#" style="color: #E8E3D6; text-decoration: none; padding: 8px 0">特定商取引法に基づく表記</a>
+        <a href="Delivery.dc.html" style="color: #E8E3D6; text-decoration: none; padding: 8px 0">定期宅配</a>
+        <a href="#" style="color: #E8E3D6; text-decoration: none; padding: 8px 0">プライバシーポリシー</a>
+        <a href="#" style="color: #E8E3D6; text-decoration: none; padding: 8px 0">畑だより</a>
+        <a href="#" style="color: #E8E3D6; text-decoration: none; padding: 8px 0">お問い合わせ</a>
+      </nav>
+      <div style="flex: 0 1 200px; display: flex; gap: 8px; align-items: flex-start">
+        <a href="#" aria-label="Instagram" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #5F6457; color: #E8E3D6">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg>
+        </a>
+        <a href="#" aria-label="Facebook" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #5F6457; color: #E8E3D6">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"></path></svg>
+        </a>
+      </div>
+    </div>
+    <p style="margin: 0; text-align: center; padding: 20px 24px; border-top: 1px solid #3A4135; font-size: 12px; color: #B9B4A6">© 若葉農園 WAKABA FARM</p>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#3E5B3A","options":["#3E5B3A","#5A4632","#2F4F5A"]},"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#3E5B3A',
+      products: [
+        { name: 'プレミアム人参ジュース 350ml', price: '¥1,530', img: '/_blob/c7894b7dd4d0e73119f61dfa8d5a00ac' },
+        { name: 'プレミアム人参ジュース 1000ml', price: '¥3,240', img: '/_blob/b18514c742c7856a5c927356869ffd65' },
+        { name: 'すだちポン酢', price: '¥2,160', img: '/_blob/451384416ea49a4e9c9e2a8cb114272f' },
+        { name: 'だし醤油', price: '¥2,160', img: '/_blob/d7244065ec8e402ed19a584f24596d33' }
+      ],
+      posts: [
+        { date: '2026.09.14', cat: '畑情報', title: '同じ畑でも一つ一つ違う。シシトウの不思議', img: '/_blob/b8d0b4d661bb3004a7d6dfc5347e939b' },
+        { date: '2026.08.19', cat: '畑情報', title: 'きゅうり、お待たせしました！', img: '/_blob/4f2509a8427c1f0ec820a86f3c46e77f' },
+        { date: '2026.07.22', cat: '畑情報', title: '真夏日に冬野菜の準備をします', img: '/_blob/9b4aa24ed8a018b6e597b7eee07ef9c4' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

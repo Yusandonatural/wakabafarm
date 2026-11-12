@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>定期宅配 ページ案</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F4EC}
+a{color:#3E5B3A}a:hover{color:#2A3F27}
+</style>
+</helmet>
+<div style="background: #F7F4EC; color: #23291F; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; line-height: 1.9; letter-spacing: 0.04em">
+
+  <header style="border-bottom: 1px solid #DDD6C6">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="Main.dc.html" style="text-decoration: none; color: #23291F; font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 700; letter-spacing: 0.12em">若葉農園</a>
+      <nav aria-label="メインメニュー" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px">
+        <a href="About.dc.html" style="color: #23291F; text-decoration: none; padding: 10px 0">若葉農園について</a>
+        <a href="Main.dc.html" style="color: #23291F; text-decoration: none; padding: 10px 0">オンラインショップ</a>
+        <a href="Delivery.dc.html" aria-current="page" style="color: {{accent}}; text-decoration: none; padding: 10px 0; border-bottom: 2px solid {{accent}}">定期宅配</a>
+        <a href="Main.dc.html" style="color: #23291F; text-decoration: none; padding: 10px 0">畑だより</a>
+        <a href="#" style="color: #23291F; text-decoration: none; padding: 10px 0">ご利用ガイド</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="position: relative; min-height: 480px; display: flex; align-items: center; overflow: hidden">
+    <img src="/_blob/b642435e187ccb9ff6dad9ab5c4bdf54" alt="かごに入った季節の野菜" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+    <div style="position: absolute; inset: 0; background: rgba(20,24,18,0.5)"></div>
+    <div style="position: relative; max-width: 1200px; width: 100%; margin: 0 auto; padding: 64px 24px; box-sizing: border-box; color: #FFFFFF">
+      <p style="margin: 0 0 8px; font-size: 13px; letter-spacing: 0.24em">VEGETABLE BOX</p>
+      <h1 style="margin: 0 0 20px; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 48px; line-height: 1.4">定期宅配</h1>
+      <p style="margin: 0; max-width: 620px; font-size: 18px; font-family: 'Shippori Mincho', serif; line-height: 2">肥料・農薬を使用しないで「自然農法」で育てた季節のお野菜8品目前後をセットにしてお届けします。</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="plans" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
+    <h2 id="plans" style="margin: 0 0 12px; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 34px; text-align: center">お届けのかたち</h2>
+    <p style="margin: 0 auto 48px; max-width: 640px; text-align: center">若葉農園のお野菜を中心に、自然農法生産者が育てた肥料、農薬を使用しない野菜セットです。お野菜本来の味をお楽しみください。</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
+      <div style="background: #FFFFFF; border: 1px solid #DDD6C6; padding: 40px; display: flex; flex-direction: column; gap: 16px">
+        <p style="margin: 0; font-size: 13px; color: {{accent}}; letter-spacing: 0.16em; font-weight: 500">まずは一度</p>
+        <h3 style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 600">お試しセット</h3>
+        <p style="margin: 0">自然農法のお野菜を一度味わってみてください。季節に合わせて2種類をご用意しています。</p>
+        <ul style="margin: 0; padding: 0; list-style: none; border-top: 1px solid #DDD6C6">
+          <li style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #DDD6C6"><span>常温便（11月〜3月）</span><span style="font-weight: 700">¥3,833</span></li>
+          <li style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #DDD6C6"><span>冷蔵便（4月〜10月）</span><span style="font-weight: 700">¥4,328</span></li>
+        </ul>
+        <p style="margin: 0; font-size: 13px; color: #5F6457">税込・送料別。冷蔵便はクール代込みです。</p>
+        <a href="#" style="margin-top: auto; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; background: {{accent}}; color: #F7F4EC; text-decoration: none; font-weight: 500">お試しセットを購入する</a>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #DDD6C6; padding: 40px; display: flex; flex-direction: column; gap: 16px">
+        <p style="margin: 0; font-size: 13px; color: {{accent}}; letter-spacing: 0.16em; font-weight: 500">続けて楽しむ</p>
+        <h3 style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 600">定期購入</h3>
+        <p style="margin: 0">出荷パターンと出荷曜日をお選びいただけます。マイページからお届けのスキップ・停止ができる仕組みを想定しています。</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <span style="padding: 6px 16px; border: 1px solid #23291F; font-size: 14px">毎週</span>
+          <span style="padding: 6px 16px; border: 1px solid #23291F; font-size: 14px">隔週（2週間に1回）</span>
+          <span style="padding: 6px 16px; border: 1px solid #23291F; font-size: 14px">月に1回</span>
+        </div>
+        <p style="margin: 0; font-size: 14px">出荷曜日：月・水・金<br>近県は翌日、北海道・東北・山梨・新潟・関東・沖縄は2日後着の予定です。</p>
+        <p style="margin: 0; font-size: 13px; color: #5F6457">価格：[定期購入の価格]</p>
+        <a href="#" style="margin-top: auto; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; border: 1px solid #23291F; color: #23291F; text-decoration: none; font-weight: 500">定期購入を申し込む</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="flow" style="background: #EEE8DA">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px">
+      <h2 id="flow" style="margin: 0 0 40px; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 30px">お届けまでの流れ</h2>
+      <ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
+        <li style="background: #F7F4EC; padding: 28px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Shippori Mincho', serif; font-size: 32px; color: {{accent}}; line-height: 1">01</span>
+          <span style="font-weight: 700">お申し込み</span>
+          <span style="font-size: 14px">出荷パターン・出荷曜日・お届け時間帯をお選びください。</span>
+        </li>
+        <li style="background: #F7F4EC; padding: 28px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Shippori Mincho', serif; font-size: 32px; color: {{accent}}; line-height: 1">02</span>
+          <span style="font-weight: 700">確認メール</span>
+          <span style="font-size: 14px">初回の発送日が決まりましたら、金額の確認と合わせてメールでお知らせします。</span>
+        </li>
+        <li style="background: #F7F4EC; padding: 28px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Shippori Mincho', serif; font-size: 32px; color: {{accent}}; line-height: 1">03</span>
+          <span style="font-weight: 700">収穫・出荷</span>
+          <span style="font-size: 14px">その時いちばん状態の良いお野菜を選び、月・水・金に出荷します。</span>
+        </li>
+        <li style="background: #F7F4EC; padding: 28px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Shippori Mincho', serif; font-size: 32px; color: {{accent}}; line-height: 1">04</span>
+          <span style="font-weight: 700">2回目以降</span>
+          <span style="font-size: 14px">お申し込みの出荷パターンに従い、自動でお届けします。</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="ship" style="max-width: 1000px; margin: 0 auto; padding: 96px 24px">
+    <h2 id="ship" style="margin: 0 0 32px; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 30px">送料（1箱につき・税込）</h2>
+    <div style="overflow-x: auto">
+      <table style="width: 100%; min-width: 480px; border-collapse: collapse; font-size: 15px">
+        <thead>
+          <tr style="border-bottom: 1px solid #23291F"><th scope="col" style="text-align: left; padding: 14px 16px">地域</th><th scope="col" style="text-align: right; padding: 14px 16px">送料</th></tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{rates}}" as="r" hint-placeholder-count="7">
+            <tr style="border-bottom: 1px solid #DDD6C6"><th scope="row" style="text-align: left; padding: 14px 16px; font-weight: 400">{{r.area}}</th><td style="text-align: right; padding: 14px 16px">{{r.fee}}</td></tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+    <ul style="margin: 24px 0 0; padding-left: 1.2em; font-size: 14px; color: #3D4237">
+      <li>クール便は送料に税込440円が加算されます（必要に応じてクール便で発送）。</li>
+      <li>3件以上のセット注文の場合、税込715円が加算されます。</li>
+      <li>5,000円以上のお買い上げで送料無料（消費税・代引き手数料を除く）。</li>
+    </ul>
+  </section>
+
+  <section style="border-top: 1px solid #DDD6C6">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+      <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 22px">ご不明な点はお気軽にお問い合わせください。</p>
+      <a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border: 1px solid #23291F; color: #23291F; text-decoration: none; font-weight: 500">お問い合わせ</a>
+    </div>
+  </section>
+
+  <footer style="background: #23291F; color: #E8E3D6; font-size: 14px; padding: 40px 24px; text-align: center">
+    <p style="margin: 0">© 若葉農園 WAKABA FARM</p>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#3E5B3A","options":["#3E5B3A","#5A4632","#2F4F5A"]},"$preview":{"width":1440,"height":3700}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#3E5B3A',
+      rates: [
+        { area: '北海道', fee: '3,025円' },
+        { area: '東北', fee: '1,100円' },
+        { area: '関東・信越・北陸・中部', fee: '880円' },
+        { area: '関西・中国', fee: '770円' },
+        { area: '四国', fee: '660円' },
+        { area: '九州', fee: '880円' },
+        { area: '沖縄', fee: '3,355円' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
