@@ -1,0 +1,80 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "176697701074f62085": {
+      "type": "apps",
+      "blocks": {
+        "trustoo_io_reviews_card_carousel_zyJWQG": {
+          "type": "shopify://apps/trustoo-io-reviews/blocks/card-carousel/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trustoo_io_reviews_card_carousel_zyJWQG"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1766976999ec56e833": {
+      "type": "apps",
+      "blocks": {
+        "trustoo_io_reviews_ai_summary_NgJDQj": {
+          "type": "shopify://apps/trustoo-io-reviews/blocks/ai-summary/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "trustoo_io_reviews_ai_summary_NgJDQj"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "info": {
+          "type": "text",
+          "settings": {
+            "heading": "若葉農園",
+            "subtext": "<p>有限会社若葉農園<br>〒779-3244 徳島県名西郡石井町浦庄字下浦326-6<br>TEL 088-675-2512　FAX 088-603-1052</p>"
+          }
+        },
+        "links": {
+          "type": "link_list",
+          "settings": {
+            "heading": "メニュー",
+            "menu": "footer-2026"
+          }
+        }
+      },
+      "block_order": [
+        "info",
+        "links"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "newsletter_enable": true,
+        "newsletter_heading": "若葉農園のメールマガジンに登録する",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 64,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "176697701074f62085",
+    "1766976999ec56e833",
+    "footer"
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "大地から考えよう　子どもたちの未来",
+            "heading_size": "h0"
+          }
+        },
+        "t": {
+          "type": "text",
+          "settings": {
+            "text": "肥料も、農薬も使わない。種から自分たちで。徳島・石井町で1998年から自然農法を続ける農園です。",
+            "text_style": "body"
+          }
+        },
+        "b": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "お試し野菜セットを見る",
+            "button_link_1": "shopify://pages/delivery",
+            "button_style_secondary_1": false,
+            "button_label_2": "オンラインショップ",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "t",
+        "b"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/wakaba-top-hero.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "pillars": {
+      "type": "multicolumn",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/wakaba-top-carrots.jpg",
+            "title": "自家採種",
+            "text": "<p>あまり改良されていない在来の種子から、自分たちで種を採り、つないでいます。想いのこもった種から育てる野菜です。</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/wakaba-top-field.jpg",
+            "title": "肥料・農薬を使わない",
+            "text": "<p>化学肥料も動物性の有機肥料も使わず、土と野菜が本来持つ力で育てています。（植物性の堆肥のみ部分的に使用）</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/wakaba-top-basket.jpg",
+            "title": "全国の食卓へ",
+            "text": "<p>全国約500名の会員さまへ、月間約1,000パックの野菜セットを、スタッフ一人ひとりが心を込めて出荷しています。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "title": "若葉農園の野菜づくり",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "若葉農園について詳しく",
+        "button_link": "shopify://pages/about",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 96,
+        "padding_bottom": 80
+      }
+    },
+    "box": {
+      "type": "image-with-text",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "VEGETABLE BOX",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "季節のお野菜を、8品目前後セットでお届け",
+            "heading_size": "h1"
+          }
+        },
+        "t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>若葉農園のお野菜を中心に、同じ想いで自然農法に取り組む生産者の野菜を合わせたセットです。内容はその時いちばん状態の良いものをお選びします。</p><p><strong>お試しセット</strong>　常温便 ¥3,833／冷蔵便 ¥4,328（税込・送料別）<br><strong>定期宅配</strong>　毎週／隔週／月に1回（出荷日は月・水・金）</p>",
+            "text_style": "body"
+          }
+        },
+        "btn": {
+          "type": "button",
+          "settings": {
+            "button_label": "定期宅配・お試しセットについて",
+            "button_link": "shopify://pages/delivery",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t",
+        "btn"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/wakaba-top-satsumaimo.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "shop": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 4,
+        "title": "自然栽培の素材から生まれた品",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 96,
+        "padding_bottom": 80
+      }
+    },
+    "voices": {
+      "type": "multicolumn",
+      "blocks": {
+        "v1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>ほうれん草を「おひたし」にして一口食べたら、甘みが増して美味しいです。調理せず生で食べても甘みを感じびっくりしました。</p>"
+          }
+        },
+        "v2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>昔は小松菜は苦くて好きではなかったのですが、自然農法の小松菜は甘みがあり今では大好きになりました。</p>"
+          }
+        },
+        "v3": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>人参を乱切りにしていたら、ピカピカと美味しそうで思わず生のままパクッと。ホント甘くて感動しました。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "settings": {
+        "title": "定期購入会員さまの声",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "journal": {
+      "type": "featured-blog",
+      "settings": {
+        "blog": "ニュース",
+        "post_limit": 3,
+        "heading": "畑だより",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 80
+      }
+    },
+    "kenshu": {
+      "type": "rich-text",
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "自然栽培を学びたい方へ",
+            "heading_size": "h2"
+          }
+        },
+        "t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>若葉農園では研修生を受け入れています。研修生ストーリーや募集のご案内はこちらから。</p>"
+          }
+        },
+        "b": {
+          "type": "button",
+          "settings": {
+            "button_label": "研修について",
+            "button_link": "shopify://blogs/ニュース",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "t",
+        "b"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "pillars",
+    "box",
+    "shop",
+    "voices",
+    "journal",
+    "kenshu"
+  ]
+}
