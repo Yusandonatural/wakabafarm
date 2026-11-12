@@ -1,0 +1,356 @@
+{%- comment -%}
+  若葉農園 LP（ランディングページ）用の汎用セクション
+  ブロックを並べ替えるだけで、お試しセット・ギフト・お米など目的別のLPを作れます。
+  リスト系の項目は「見出し｜本文」を1行ずつ書きます（区切りは全角の｜）。
+{%- endcomment -%}
+<style>
+  .wlp{--g:#163729;--leaf:#82BC3F;--leaf2:#4F7A22;--ink:#3E3A34;--mute:#6F6862;--soft:#F6F4EE;--cream:#FBF6EC;--line:#E6E1D6;--accent:#B85716;--mint:#EEF5E4;
+    background:#fff;color:var(--ink);font-family:var(--font-body-family,'Noto Sans JP',sans-serif);font-size:16px;line-height:1.9;letter-spacing:.03em}
+  .wlp *{box-sizing:border-box}
+  .wlp img{display:block;width:100%;height:100%;object-fit:cover}
+  .wlp__in{max-width:1120px;margin:0 auto;padding:0 24px}
+  .wlp__sec{padding:88px 0}
+  .wlp__sec--soft{background:var(--soft)} .wlp__sec--cream{background:var(--cream)} .wlp__sec--dark{background:var(--g);color:#E4EEE0}
+  .wlp__eb{margin:0;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--leaf2)}
+  .wlp__sec--dark .wlp__eb{color:#B9D98F}
+  .wlp__h2{margin:8px 0 16px;font-family:var(--font-heading-family,'Shippori Mincho',serif);font-weight:400;color:var(--g);font-size:clamp(26px,3.4vw,38px);line-height:1.5;word-break:keep-all;overflow-wrap:anywhere}
+  .wlp__sec--dark .wlp__h2{color:#fff}
+  .wlp__lead{margin:0 0 40px;max-width:680px;color:var(--mute)}
+  .wlp__sec--dark .wlp__lead{color:#CFE0C8}
+  .wlp__c{text-align:center}.wlp__c .wlp__lead{margin-left:auto;margin-right:auto}
+  .wlp__ph{border-radius:18px;overflow:hidden;background:var(--soft)}
+  .wlp__ph:empty{display:block}
+  .wlp__btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 34px;border-radius:12px;background:var(--accent);color:#fff!important;text-decoration:none;font-weight:700;font-size:17px;box-shadow:0 4px 0 #7E3A0C;transition:transform .15s,box-shadow .15s}
+  .wlp__btn:hover{transform:translateY(2px);box-shadow:0 2px 0 #7E3A0C}
+  .wlp__btn--line{background:transparent;color:var(--g)!important;border:1.5px solid var(--g);box-shadow:none}
+  .wlp__chk{flex:none;color:var(--leaf2);margin-top:5px}
+  /* hero */
+  .wlp__hero{background:linear-gradient(180deg,var(--cream),#fff);padding:40px 0 64px}
+  .wlp__hero-g{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .wlp__tag{display:inline-block;margin:0 0 16px;padding:6px 14px;border-radius:999px;background:var(--mint);color:var(--g);font-size:13px;font-weight:700}
+  .wlp__h1{margin:0;font-family:var(--font-heading-family,'Shippori Mincho',serif);font-weight:400;color:var(--g);font-size:clamp(30px,4vw,48px);line-height:1.45;word-break:keep-all;overflow-wrap:anywhere}
+  .wlp__hero-p{margin:18px 0 22px;font-size:17px}
+  .wlp__badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+  .wlp__badges li{padding:6px 12px;border-radius:8px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--g)}
+  .wlp__price{margin:0 0 14px;font-size:34px;font-weight:700;color:var(--g);line-height:1.2}
+  .wlp__price span{font-size:13px;font-weight:500;color:var(--mute);margin-left:6px}
+  .wlp__note{margin:12px 0 0;font-size:13px;color:var(--mute)}
+  .wlp__hero-ph{position:relative}
+  .wlp__hero-ph>.wlp__ph{aspect-ratio:1/1;border-radius:28px}
+  .wlp__hero-mini{position:absolute;left:-24px;bottom:-24px;width:36%;aspect-ratio:1;border:6px solid #fff;border-radius:20px}
+  /* points */
+  .wlp__pts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:pt}
+  .wlp__pt{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;counter-increment:pt}
+  .wlp__sec--soft .wlp__pt,.wlp__sec--cream .wlp__pt{border-color:transparent}
+  .wlp__pt::before{content:"0" counter(pt);display:block;font-family:var(--font-heading-family,serif);font-size:30px;color:var(--leaf);line-height:1}
+  .wlp__pt b{display:block;margin:12px 0 6px;font-size:18px;color:var(--g);line-height:1.5}
+  .wlp__pt p{margin:0;font-size:15px;color:var(--mute)}
+  /* story */
+  .wlp__story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .wlp__story--rev .wlp__story-ph{order:2}
+  .wlp__story-ph{aspect-ratio:4/3}
+  .wlp__story p{margin:0 0 14px}
+  /* products */
+  .wlp__prods{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .wlp__prod{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ink)!important;transition:transform .2s}
+  .wlp__prod:hover{transform:translateY(-3px)}
+  .wlp__prod .wlp__ph{border-radius:0;aspect-ratio:1}
+  .wlp__noimg{display:block;width:100%;height:100%}
+  .wlp__prod .t{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .wlp__prod b{font-size:15px;line-height:1.55;color:var(--g)}
+  .wlp__prod .pr{font-size:17px;font-weight:700;margin-top:auto}
+  .wlp__prod .go{font-size:13px;font-weight:700;color:var(--accent)}
+  /* table */
+  .wlp__tbl{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .wlp__tbl th,.wlp__tbl td{padding:16px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:15px}
+  .wlp__tbl tr:first-child th{background:var(--g);color:#fff;font-weight:700}
+  .wlp__tbl tr:last-child td,.wlp__tbl tr:last-child th{border-bottom:0}
+  .wlp__tbl td:first-child{font-weight:700;color:var(--g);background:#FCFBF8}
+  .wlp__tblw{overflow-x:auto}
+  /* lab */
+  .wlp__lab{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .wlp__labc{background:#fff;border-radius:18px;padding:22px 20px;border:1px solid var(--line)}
+  .wlp__labc h3{margin:0;font-size:15px;color:var(--g)}
+  .wlp__labc .big{margin:8px 0 10px;font-size:30px;font-weight:700;color:var(--accent);line-height:1.1}
+  .wlp__labc .big span{font-size:13px;color:var(--mute);font-weight:500}
+  .wlp__labc .r{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);border-top:1px dotted var(--line);padding-top:6px;margin-top:6px}
+  .wlp__labc .r b{color:var(--ink)}
+  .wlp__src{margin:16px 0 0;font-size:13px;color:var(--mute)}
+  /* steps */
+  .wlp__steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;counter-reset:st}
+  .wlp__steps li{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;counter-increment:st;position:relative}
+  .wlp__steps li::before{content:"STEP " counter(st);display:inline-block;margin-bottom:10px;padding:2px 10px;border-radius:999px;background:var(--mint);color:var(--g);font-size:12px;font-weight:700}
+  .wlp__steps b{display:block;color:var(--g);font-size:16px}
+  .wlp__steps p{margin:6px 0 0;font-size:14px;color:var(--mute)}
+  /* voices */
+  .wlp__voices{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .wlp__voice{margin:0;background:#fff;border-radius:18px;padding:26px;border:1px solid var(--line)}
+  .wlp__voice::before{content:"★★★★★";color:#C98A1E;letter-spacing:2px;font-size:14px}
+  .wlp__voice p{margin:8px 0 12px;font-size:15px}
+  .wlp__voice cite{font-style:normal;font-size:13px;color:var(--mute)}
+  /* faq */
+  .wlp__faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+  .wlp__faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 22px}
+  .wlp__faq summary{cursor:pointer;list-style:none;padding:18px 28px 18px 0;font-weight:700;color:var(--g);position:relative}
+  .wlp__faq summary::-webkit-details-marker{display:none}
+  .wlp__faq summary::before{content:"Q.";color:var(--accent);margin-right:8px}
+  .wlp__faq summary::after{content:"+";position:absolute;right:0;top:14px;font-size:22px;color:var(--leaf2)}
+  .wlp__faq details[open] summary::after{content:"−"}
+  .wlp__faq details p{margin:0 0 18px;font-size:15px}
+  /* notice */
+  .wlp__notice{display:flex;gap:12px;align-items:flex-start;max-width:820px;margin:0 auto;padding:18px 22px;border-radius:14px;background:#FFF6E8;border:1px solid #F0D9B5;font-size:14px}
+  /* cta */
+  .wlp__cta{background:var(--g);color:#DCE8D6;border-radius:28px;padding:52px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center}
+  .wlp__cta h2{margin:0 0 10px;font-family:var(--font-heading-family,serif);font-weight:400;font-size:clamp(24px,3vw,34px);color:#fff;line-height:1.5}
+  .wlp__cta p{margin:0 0 22px}
+  .wlp__cta .wlp__price{color:#fff}.wlp__cta .wlp__price span{color:#CFE0C8}
+  .wlp__cta .wlp__ph{aspect-ratio:1;border-radius:50%;max-width:260px;margin-left:auto;border:6px solid rgba(255,255,255,.15)}
+  /* sticky */
+  .wlp__sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
+  .wlp__sticky.is-on{transform:none}
+  .wlp__sticky p{margin:0;font-size:13px;line-height:1.4;color:var(--g)} .wlp__sticky b{font-size:16px}
+  .wlp__sticky .wlp__btn{min-height:46px;padding:0 20px;font-size:15px}
+  @media (max-width:989px){
+    .wlp__sec{padding:64px 0}
+    .wlp__hero-g,.wlp__story,.wlp__cta{grid-template-columns:1fr}
+    .wlp__hero-ph{order:-1}
+    .wlp__hero-mini{left:auto;right:12px;bottom:-18px;width:30%}
+    .wlp__story--rev .wlp__story-ph{order:0}
+    .wlp__pts{grid-template-columns:1fr}
+    .wlp__lab{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .wlp__cta{padding:36px 24px}.wlp__cta .wlp__ph{display:none}
+    .wlp__sticky{display:flex}
+    .wlp{padding-bottom:72px}
+  }
+  @media (max-width:640px){
+    .wlp__in{padding:0 16px}
+    .wlp__h1{font-size:30px}
+    .wlp__btn{width:100%}
+    .wlp__tbl th,.wlp__tbl td{padding:12px;font-size:14px}
+  }
+</style>
+
+{%- capture chk -%}<svg class="wlp__chk" aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>{%- endcapture -%}
+{%- capture arrow -%}<svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>{%- endcapture -%}
+{%- assign sticky_label = '' -%}{%- assign sticky_price = '' -%}{%- assign sticky_url = '' -%}
+
+<div class="wlp" id="wlp-{{ section.id }}">
+{%- for block in section.blocks -%}
+  {%- assign b = block.settings -%}
+  {%- capture bg -%}{% case b.bg %}{% when 'soft' %} wlp__sec--soft{% when 'cream' %} wlp__sec--cream{% when 'dark' %} wlp__sec--dark{% endcase %}{%- endcapture -%}
+  {%- assign items = b.items | newline_to_br | split: '<br />' -%}
+  {%- case block.type -%}
+
+  {%- when 'hero' -%}
+    {%- assign hp = all_products[b.product] -%}
+    {%- assign hurl = b.link -%}{%- if hurl == blank and hp != blank -%}{%- assign hurl = hp.url -%}{%- endif -%}
+    {%- assign hprice = b.price -%}{%- if hp != blank -%}{%- assign hprice = hp.price | money_without_trailing_zeros -%}{%- endif -%}
+    {%- assign sticky_label = b.sticky_label -%}{%- assign sticky_price = hprice -%}{%- assign sticky_url = hurl -%}
+    <section class="wlp__hero" {{ block.shopify_attributes }}>
+      <div class="wlp__in"><div class="wlp__hero-g">
+        <div class="wlp__hero-t">
+          {%- if b.eyebrow != blank -%}<p class="wlp__tag">{{ b.eyebrow }}</p>{%- endif -%}
+          <h1 class="wlp__h1">{{ b.title | newline_to_br }}</h1>
+          <p class="wlp__hero-p">{{ b.text | newline_to_br }}</p>
+          {%- if b.badges != blank -%}<ul class="wlp__badges">{%- assign bs = b.badges | split: '、' -%}{%- for x in bs -%}<li>{{ x | strip }}</li>{%- endfor -%}</ul>{%- endif -%}
+          {%- if hprice != blank -%}<p class="wlp__price">{{ b.price_prefix }}{{ hprice }}<span>{{ b.price_suffix }}</span></p>{%- endif -%}
+          <a class="wlp__btn wlp__hero-cta" href="{{ hurl }}">{{ b.label }}{{ arrow }}</a>
+          {%- if b.note != blank -%}<p class="wlp__note">{{ b.note }}</p>{%- endif -%}
+        </div>
+        <div class="wlp__hero-ph">
+          <div class="wlp__ph">{% if b.image != blank %}{{ b.image | image_url: width: 1200 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '600,900,1200', sizes: '(min-width: 990px) 540px, 100vw', alt: b.image.alt }}{% endif %}</div>
+          {%- if b.image2 != blank -%}<div class="wlp__ph wlp__hero-mini">{{ b.image2 | image_url: width: 500 | image_tag: widths: '300,500', alt: b.image2.alt }}</div>{%- endif -%}
+        </div>
+      </div></div>
+    </section>
+
+  {%- when 'points' -%}
+    <section class="wlp__sec{{ bg }}" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__c">{%- if b.eyebrow != blank -%}<p class="wlp__eb">{{ b.eyebrow }}</p>{%- endif -%}<h2 class="wlp__h2">{{ b.title }}</h2>{%- if b.lead != blank -%}<p class="wlp__lead">{{ b.lead }}</p>{%- endif -%}</div>
+      <div class="wlp__pts">{%- for it in items -%}{%- assign kv = it | split: '｜' -%}{%- if kv[0] != blank -%}<div class="wlp__pt"><b>{{ kv[0] | strip }}</b><p>{{ kv[1] | strip }}</p></div>{%- endif -%}{%- endfor -%}</div>
+    </div></section>
+
+  {%- when 'story' -%}
+    <section class="wlp__sec{{ bg }}" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__story{% if b.reverse %} wlp__story--rev{% endif %}">
+        <div class="wlp__ph wlp__story-ph">{% if b.image != blank %}{{ b.image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500,1000', alt: b.image.alt }}{% endif %}</div>
+        <div>{%- if b.eyebrow != blank -%}<p class="wlp__eb">{{ b.eyebrow }}</p>{%- endif -%}<h2 class="wlp__h2">{{ b.title | newline_to_br }}</h2>
+          {%- assign ps = b.text | split: '
+
+' -%}{%- for pp in ps -%}<p>{{ pp | newline_to_br }}</p>{%- endfor -%}</div>
+      </div>
+    </div></section>
+
+  {%- when 'products' -%}
+    <section class="wlp__sec{{ bg }}" id="items" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__c">{%- if b.eyebrow != blank -%}<p class="wlp__eb">{{ b.eyebrow }}</p>{%- endif -%}<h2 class="wlp__h2">{{ b.title }}</h2>{%- if b.lead != blank -%}<p class="wlp__lead">{{ b.lead }}</p>{%- endif -%}</div>
+      <div class="wlp__prods">
+        {%- assign hs = b.handles | split: ',' -%}
+        {%- for h in hs -%}{%- assign hh = h | strip -%}{%- assign p = all_products[hh] -%}{%- if p != blank -%}
+        <a class="wlp__prod" href="{{ p.url }}">
+          <div class="wlp__ph">{% if p.featured_image %}{{ p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', widths: '300,500', alt: p.title }}{% else %}<svg class="wlp__noimg" viewBox="0 0 200 200" role="img" aria-label="{{ p.title | escape }}"><rect width="200" height="200" fill="#F3EEE2"/><path d="M70 60h60l10 22v70a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10V82z" fill="#fff" stroke="#163729" stroke-width="3"/><path d="M60 82h80" stroke="#163729" stroke-width="3"/><g fill="#82BC3F"><ellipse cx="88" cy="116" rx="5" ry="9" transform="rotate(-25 88 116)"/><ellipse cx="100" cy="108" rx="5" ry="9"/><ellipse cx="112" cy="116" rx="5" ry="9" transform="rotate(25 112 116)"/></g><path d="M100 118v22" stroke="#163729" stroke-width="2.5"/><text x="100" y="186" text-anchor="middle" font-size="13" fill="#6F6862">写真準備中</text></svg>{% endif %}</div>
+          <div class="t"><b>{{ p.title }}</b><span class="pr">{{ p.price | money_without_trailing_zeros }}<small style="font-size:12px;font-weight:400;color:var(--mute)"> 税込</small></span><span class="go">{% if p.available %}詳しく見る →{% else %}入荷待ち・詳しく見る →{% endif %}</span></div>
+        </a>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div></section>
+
+  {%- when 'table' -%}
+    <section class="wlp__sec{{ bg }}" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__c">{%- if b.eyebrow != blank -%}<p class="wlp__eb">{{ b.eyebrow }}</p>{%- endif -%}<h2 class="wlp__h2">{{ b.title }}</h2>{%- if b.lead != blank -%}<p class="wlp__lead">{{ b.lead }}</p>{%- endif -%}</div>
+      <div class="wlp__tblw"><table class="wlp__tbl">
+        {%- for it in items -%}{%- assign cs = it | split: '｜' -%}{%- if cs.size > 0 -%}<tr>{%- for c in cs -%}{%- if forloop.parentloop.first -%}<th>{{ c | strip }}</th>{%- else -%}<td>{{ c | strip }}</td>{%- endif -%}{%- endfor -%}</tr>{%- endif -%}{%- endfor -%}
+      </table></div>
+      {%- if b.note != blank -%}<p class="wlp__src">{{ b.note }}</p>{%- endif -%}
+    </div></section>
+
+  {%- when 'lab' -%}
+    <section class="wlp__sec{{ bg }}" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__c">{%- if b.eyebrow != blank -%}<p class="wlp__eb">{{ b.eyebrow }}</p>{%- endif -%}<h2 class="wlp__h2">{{ b.title }}</h2>{%- if b.lead != blank -%}<p class="wlp__lead">{{ b.lead }}</p>{%- endif -%}</div>
+      <div class="wlp__lab">
+        <div class="wlp__labc"><h3>糖度</h3><p class="big">約1.5<span>倍</span></p><div class="r"><span>若葉農園</span><b>12.3％</b></div><div class="r"><span>全国平均</span><b>8.2％</b></div></div>
+        <div class="wlp__labc"><h3>抗酸化力</h3><p class="big">約2.2<span>倍</span></p><div class="r"><span>若葉農園</span><b>197.1</b></div><div class="r"><span>全国平均</span><b>88.3</b></div></div>
+        <div class="wlp__labc"><h3>ビタミンC</h3><p class="big">約1.3<span>倍</span></p><div class="r"><span>若葉農園</span><b>87.7mg</b></div><div class="r"><span>全国平均</span><b>65.9mg</b></div></div>
+        <div class="wlp__labc"><h3>硝酸イオン</h3><p class="big">5未満<span> mg/L</span></p><div class="r"><span>若葉農園</span><b>5未満</b></div><div class="r"><span>全国平均</span><b>2,111.7</b></div></div>
+      </div>
+      <p class="wlp__src wlp__c">青果物メディカル研究所によるほうれん草の成分検査（全国平均は2006〜2010年）。抗酸化力の単位は TE mg/100g、ビタミンCは100gあたり。</p>
+    </div></section>
+
+  {%- when 'steps' -%}
+    <section class="wlp__sec{{ bg }}" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__c">{%- if b.eyebrow != blank -%}<p class="wlp__eb">{{ b.eyebrow }}</p>{%- endif -%}<h2 class="wlp__h2">{{ b.title }}</h2></div>
+      <ol class="wlp__steps">{%- for it in items -%}{%- assign kv = it | split: '｜' -%}{%- if kv[0] != blank -%}<li><b>{{ kv[0] | strip }}</b><p>{{ kv[1] | strip }}</p></li>{%- endif -%}{%- endfor -%}</ol>
+    </div></section>
+
+  {%- when 'voices' -%}
+    <section class="wlp__sec{{ bg }}" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__c">{%- if b.eyebrow != blank -%}<p class="wlp__eb">{{ b.eyebrow }}</p>{%- endif -%}<h2 class="wlp__h2">{{ b.title }}</h2></div>
+      <div class="wlp__voices">{%- for it in items -%}{%- assign kv = it | split: '｜' -%}{%- if kv[0] != blank -%}<figure class="wlp__voice"><p>{{ kv[0] | strip }}</p><cite>{{ kv[1] | strip | default: 'お客さま' }}</cite></figure>{%- endif -%}{%- endfor -%}</div>
+    </div></section>
+
+  {%- when 'faq' -%}
+    <section class="wlp__sec{{ bg }}" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__c"><p class="wlp__eb">FAQ</p><h2 class="wlp__h2">{{ b.title }}</h2></div>
+      <div class="wlp__faq">{%- capture ld -%}{%- endcapture -%}
+        {%- for it in items -%}{%- assign kv = it | split: '｜' -%}{%- if kv[0] != blank -%}<details><summary>{{ kv[0] | strip }}</summary><p>{{ kv[1] | strip }}</p></details>{%- capture ld -%}{{ ld }}{"@type":"Question","name":{{ kv[0] | strip | json }},"acceptedAnswer":{"@type":"Answer","text":{{ kv[1] | strip | json }}}},{%- endcapture -%}{%- endif -%}{%- endfor -%}
+      </div>
+      <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ ld | remove_last: ',' }}]}</script>
+    </div></section>
+
+  {%- when 'notice' -%}
+    <section class="wlp__sec{{ bg }}" style="padding:32px 0" {{ block.shopify_attributes }}><div class="wlp__in"><div class="wlp__notice"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B85716" stroke-width="2" stroke-linecap="round" style="flex:none;margin-top:3px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg><div>{{ b.text | newline_to_br }}</div></div></div></section>
+
+  {%- when 'cta' -%}
+    {%- assign cp = all_products[b.product] -%}
+    {%- assign curl = b.link -%}{%- if curl == blank and cp != blank -%}{%- assign curl = cp.url -%}{%- endif -%}{%- if curl == blank -%}{%- assign curl = sticky_url -%}{%- endif -%}
+    {%- assign cprice = b.price -%}{%- if cp != blank -%}{%- assign cprice = cp.price | money_without_trailing_zeros -%}{%- endif -%}
+    <section class="wlp__sec" {{ block.shopify_attributes }}><div class="wlp__in">
+      <div class="wlp__cta">
+        <div><h2>{{ b.title | newline_to_br }}</h2><p>{{ b.text }}</p>
+          {%- if cprice != blank -%}<p class="wlp__price">{{ b.price_prefix }}{{ cprice }}<span>{{ b.price_suffix }}</span></p>{%- endif -%}
+          <a class="wlp__btn wlp__cta-btn" href="{{ curl }}">{{ b.label }}{{ arrow }}</a></div>
+        <div class="wlp__ph">{% if b.image != blank %}{{ b.image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600', alt: b.image.alt }}{% endif %}</div>
+      </div>
+    </div></section>
+
+  {%- endcase -%}
+{%- endfor -%}
+
+  {%- if sticky_url != blank -%}
+  <div class="wlp__sticky" aria-hidden="true"><p>{{ sticky_label }}<br><b>{{ sticky_price }}</b></p><a class="wlp__btn" href="{{ sticky_url }}" tabindex="-1">申し込む</a></div>
+  <script>
+    (function(){
+      var root=document.getElementById('wlp-{{ section.id }}');if(!root||!('IntersectionObserver' in window))return;
+      var bar=root.querySelector('.wlp__sticky'),targets=root.querySelectorAll('.wlp__hero-cta,.wlp__cta');var vis=new Set();
+      function upd(){var on=vis.size===0&&window.scrollY>300;bar.classList.toggle('is-on',on);bar.setAttribute('aria-hidden',on?'false':'true');bar.querySelector('a').tabIndex=on?0:-1;}
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target)});upd();});
+      targets.forEach(function(t){io.observe(t)});
+      window.addEventListener('scroll',upd,{passive:true});
+    })();
+  </script>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "若葉農園 LP",
+  "tag": "div",
+  "settings": [],
+  "blocks": [
+    { "type": "hero", "name": "ファーストビュー", "limit": 1, "settings": [
+      { "type": "text", "id": "eyebrow", "label": "小見出し" },
+      { "type": "textarea", "id": "title", "label": "大見出し" },
+      { "type": "textarea", "id": "text", "label": "説明文" },
+      { "type": "text", "id": "badges", "label": "バッジ（「、」区切り）" },
+      { "type": "text", "id": "product", "label": "商品ハンドル（価格とリンクに使用）" },
+      { "type": "text", "id": "link", "label": "ボタンのリンク（空欄なら商品へ）" },
+      { "type": "text", "id": "price", "label": "価格の表示（商品がない時）" },
+      { "type": "text", "id": "price_prefix", "label": "価格の前の文字" },
+      { "type": "text", "id": "price_suffix", "label": "価格の後の文字", "default": "税込・送料別" },
+      { "type": "text", "id": "label", "label": "ボタンの文言", "default": "申し込む" },
+      { "type": "text", "id": "note", "label": "ボタン下の注記" },
+      { "type": "text", "id": "sticky_label", "label": "スマホ下部ボタンの説明" },
+      { "type": "image_picker", "id": "image", "label": "写真" },
+      { "type": "image_picker", "id": "image2", "label": "小さい写真" } ] },
+    { "type": "points", "name": "選ばれる理由", "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "soft" },
+      { "type": "text", "id": "eyebrow", "label": "小見出し" },
+      { "type": "text", "id": "title", "label": "見出し" },
+      { "type": "textarea", "id": "lead", "label": "リード文" },
+      { "type": "textarea", "id": "items", "label": "項目（1行に「見出し｜本文」）" } ] },
+    { "type": "story", "name": "写真と文章", "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "white" },
+      { "type": "checkbox", "id": "reverse", "label": "写真を右に", "default": false },
+      { "type": "image_picker", "id": "image", "label": "写真" },
+      { "type": "text", "id": "eyebrow", "label": "小見出し" },
+      { "type": "textarea", "id": "title", "label": "見出し" },
+      { "type": "textarea", "id": "text", "label": "本文（空行で段落）" } ] },
+    { "type": "products", "name": "商品", "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "cream" },
+      { "type": "text", "id": "eyebrow", "label": "小見出し" },
+      { "type": "text", "id": "title", "label": "見出し" },
+      { "type": "textarea", "id": "lead", "label": "リード文" },
+      { "type": "textarea", "id": "handles", "label": "商品ハンドル（「,」区切り）" } ] },
+    { "type": "table", "name": "比較表", "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "white" },
+      { "type": "text", "id": "eyebrow", "label": "小見出し" },
+      { "type": "text", "id": "title", "label": "見出し" },
+      { "type": "textarea", "id": "lead", "label": "リード文" },
+      { "type": "textarea", "id": "items", "label": "行（1行目は見出し。列は「｜」区切り）" },
+      { "type": "text", "id": "note", "label": "注記" } ] },
+    { "type": "lab", "name": "成分検査", "limit": 1, "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "white" },
+      { "type": "text", "id": "eyebrow", "label": "小見出し", "default": "LAB TEST" },
+      { "type": "text", "id": "title", "label": "見出し", "default": "「おいしい」を、数字でもたしかめました" },
+      { "type": "textarea", "id": "lead", "label": "リード文" } ] },
+    { "type": "steps", "name": "流れ", "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "white" },
+      { "type": "text", "id": "eyebrow", "label": "小見出し" },
+      { "type": "text", "id": "title", "label": "見出し" },
+      { "type": "textarea", "id": "items", "label": "ステップ（1行に「見出し｜本文」）" } ] },
+    { "type": "voices", "name": "お客さまの声", "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "soft" },
+      { "type": "text", "id": "eyebrow", "label": "小見出し", "default": "VOICE" },
+      { "type": "text", "id": "title", "label": "見出し" },
+      { "type": "textarea", "id": "items", "label": "声（1行に「本文｜お名前」）" } ] },
+    { "type": "faq", "name": "よくある質問", "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "white" },
+      { "type": "text", "id": "title", "label": "見出し", "default": "よくあるご質問" },
+      { "type": "textarea", "id": "items", "label": "質問（1行に「質問｜答え」）" } ] },
+    { "type": "notice", "name": "お知らせ枠", "settings": [
+      { "type": "select", "id": "bg", "label": "背景", "options": [{"value":"white","label":"白"},{"value":"soft","label":"グレージュ"},{"value":"cream","label":"生成り"}], "default": "white" },
+      { "type": "textarea", "id": "text", "label": "本文" } ] },
+    { "type": "cta", "name": "申し込み（締め）", "settings": [
+      { "type": "textarea", "id": "title", "label": "見出し" },
+      { "type": "textarea", "id": "text", "label": "本文" },
+      { "type": "text", "id": "product", "label": "商品ハンドル" },
+      { "type": "text", "id": "link", "label": "リンク（空欄なら商品へ）" },
+      { "type": "text", "id": "price", "label": "価格の表示（商品がない時）" },
+      { "type": "text", "id": "price_prefix", "label": "価格の前の文字" },
+      { "type": "text", "id": "price_suffix", "label": "価格の後の文字", "default": "税込・送料別" },
+      { "type": "text", "id": "label", "label": "ボタンの文言", "default": "申し込む" },
+      { "type": "image_picker", "id": "image", "label": "写真" } ] }
+  ],
+  "presets": [ { "name": "若葉農園 LP" } ]
+}
+{% endschema %}

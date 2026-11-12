@@ -1,0 +1,93 @@
+{
+  "sections": {
+    "main": {
+      "type": "wakaba-lp",
+      "blocks": {
+        "b0": {
+          "type": "hero",
+          "settings": {
+            "eyebrow": "肥料・農薬を使わずに育てたお米",
+            "title": "田んぼの年数で選ぶ、\n自然農法のお米。",
+            "text": "若葉農園の田んぼ（約400a）で、肥料も農薬も使わずに育てたお米です。\n自然農法に切り替えてからの年数ごとに分けて、無酸素パックでお届けします。",
+            "badges": "肥料・農薬不使用、白米4.5kg／玄米5kg、無酸素パック、お1人さま8パックまで",
+            "link": "#items",
+            "price": "¥5,346",
+            "price_suffix": "〜（税込・送料別）",
+            "label": "お米を選ぶ",
+            "sticky_label": "自然農法のお米",
+            "image": "shopify://shop_images/wakaba-top-field.jpg",
+            "image2": "shopify://shop_images/wakaba-c-seedling.jpg"
+          }
+        },
+        "b1": {
+          "type": "points",
+          "settings": {
+            "bg": "soft",
+            "eyebrow": "POINT",
+            "title": "若葉農園のお米のこと",
+            "items": "肥料・農薬を使いません｜手間ひまをかけ、肥料にも農薬にも頼らずに育てた、若葉農園自慢のお米です。\n田んぼの年数で選べる｜自然農法に転換してから「1〜2年目」「3〜5年目」「6年目以上」の田んぼごとに分けてお届けします。\n無酸素パックで安心｜開封するまで虫がつく心配がないので、安心して保存できます。"
+          }
+        },
+        "b3": {
+          "type": "products",
+          "settings": {
+            "bg": "cream",
+            "eyebrow": "ITEMS",
+            "title": "お米を選ぶ",
+            "handles": "hakumai-4-5kg-6years,hakumai-4-5kg-3-5years,hakumai-4-5kg-1-2years,genmai-5kg-6years,genmai-5kg-3-5years,genmai-5kg-1-2years"
+          }
+        },
+        "b4": {
+          "type": "notice",
+          "settings": {
+            "bg": "cream",
+            "text": "ご用意できる数量に限りがあるため、ご購入はお1人さまにつき8パックまでとさせていただいています。"
+          }
+        },
+        "b5": {
+          "type": "story",
+          "settings": {
+            "bg": "white",
+            "image": "shopify://shop_images/wakaba-c-sunset.jpg",
+            "eyebrow": "FARM",
+            "title": "水田約400a、\n有機率100％。",
+            "text": "若葉農園は1998年の創業から、徳島県石井町で肥料・農薬を使わない農業を続けています。水田約400a、畑約800aで、お米と約40品目の野菜を育てています。\n\n毎年の田植えには、従業員総出で稲苗の準備をします。"
+          }
+        },
+        "b6": {
+          "type": "faq",
+          "settings": {
+            "bg": "soft",
+            "title": "よくあるご質問",
+            "items": "無酸素パックとは何ですか？｜袋の中の酸素を取り除いたパックです。開封するまで虫がつく心配がありません。\n何パックまで買えますか？｜数量に限りがあるため、お1人さまにつき8パックまでです。\n送料はいくらですか？｜1箱につき、四国660円・関西・中国770円・関東・信越・北陸・中部・九州880円・東北1,100円・北海道3,025円・沖縄3,355円（税込）です。クール便は440円が加わります。"
+          }
+        },
+        "b7": {
+          "type": "cta",
+          "settings": {
+            "title": "肥料も農薬も使わない田んぼの、\nお米を食卓に。",
+            "text": "白米4.5kg・玄米5kg。田んぼの年数を選んでお求めください。",
+            "link": "#items",
+            "price": "¥5,346",
+            "price_suffix": "〜（税込）",
+            "label": "お米を選ぶ",
+            "image": "shopify://shop_images/wakaba-c-seedling.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

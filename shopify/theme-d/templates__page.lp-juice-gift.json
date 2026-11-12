@@ -1,0 +1,98 @@
+{
+  "sections": {
+    "main": {
+      "type": "wakaba-lp",
+      "blocks": {
+        "b0": {
+          "type": "hero",
+          "settings": {
+            "eyebrow": "贈りもの・自分へのごほうびに",
+            "title": "人参と、すだちだけ。\n畑から生まれた\nジュースを贈る。",
+            "text": "自然栽培の人参100％のプレミアム人参ジュース。\n若葉農園のブランドカラー、濃いグリーンと白のギフトボックスでお届けします。",
+            "badges": "原材料は人参とすだちだけ、添加物不使用、自社農場の人参、350ml・1,000ml",
+            "link": "#items",
+            "price": "¥1,530",
+            "price_prefix": "",
+            "price_suffix": "〜（税込・350ml 1本）",
+            "label": "ギフトを選ぶ",
+            "sticky_label": "プレミアム人参ジュース",
+            "image": "shopify://shop_images/wakaba-c-juice-basket.jpg",
+            "image2": "shopify://shop_images/wakaba-top-carrots.jpg"
+          }
+        },
+        "b1": {
+          "type": "points",
+          "settings": {
+            "bg": "soft",
+            "eyebrow": "POINT",
+            "title": "贈りものに選ばれる3つの理由",
+            "items": "原材料は2つだけ｜自社農場で自然栽培した人参と、pH調整用の四国産自然栽培すだち。添加物は使っていません。\n種から育てた人参｜在来の種から自家採種をくり返した種で、肥料や農薬に頼らずに育てた人参を使っています。\n甘くて濃厚な味わい｜人参のおいしさがギュッと詰まった、やわらかな甘みとすっきりとした後味です。"
+          }
+        },
+        "b2": {
+          "type": "story",
+          "settings": {
+            "bg": "white",
+            "reverse": true,
+            "image": "shopify://shop_images/wakaba-c-juice-field.jpg",
+            "eyebrow": "STORY",
+            "title": "長い年月をかけて育てた人参から。",
+            "text": "人参には本来、肥料に頼らなくても育つ力が備わっています。ただ現代の種は改良をくり返し、肥料や農薬なしでは育たなくなっています。\n\n若葉農園では、あまり改良されていない在来の種から自家採種をくり返した種を使っています。そうやって長い年月をかけて育てられた人参からできた、プレミアムなジュースです。"
+          }
+        },
+        "b3": {
+          "type": "products",
+          "settings": {
+            "bg": "cream",
+            "eyebrow": "GIFT",
+            "title": "ギフトセット",
+            "lead": "本数とサイズを選べます。ご自宅用には単品もどうぞ。",
+            "handles": "winter-gift-carrot-juice-350ml-1,winter-gift-carrot-juice-350ml-2,winter-gift-carrot-juice-350ml-3,winter-gift-carrot-juice-1000ml-1,winter-gift-carrot-juice-1000ml-2,carrotjuice350,carrotjuice1000"
+          }
+        },
+        "b4": {
+          "type": "table",
+          "settings": {
+            "bg": "white",
+            "eyebrow": "SPEC",
+            "title": "商品について",
+            "items": "項目｜内容\n原材料｜人参（自社農場産・自然栽培）、すだち（四国産・自然栽培）\n添加物｜使用していません（pH調整は自然栽培のすだちで）\n内容量｜350ml（飲み切りサイズ）／1,000ml\nお届け｜濃いグリーンと白のギフトボックス（ギフトセット）"
+          }
+        },
+        "b5": {
+          "type": "faq",
+          "settings": {
+            "bg": "soft",
+            "title": "よくあるご質問",
+            "items": "原材料は何ですか？｜自社農場で自然栽培した人参と、四国産の自然栽培すだちだけです。添加物は使っていません。\n350mlと1,000mlはどう選べばいいですか？｜350mlは1回で飲み切りやすいサイズです。ご家族で召し上がる場合は1,000mlがおすすめです。\n送料はいくらですか？｜1箱につき、四国660円・関西・中国770円・関東・信越・北陸・中部・九州880円・東北1,100円・北海道3,025円・沖縄3,355円（税込）です。クール便は440円が加わります。 5,000円以上のお買い上げで送料無料です。"
+          }
+        },
+        "b6": {
+          "type": "cta",
+          "settings": {
+            "title": "ありがとうの気持ちを、\nからだにやさしいかたちで。",
+            "text": "大切な方への贈りものにも、毎日の一杯にも。",
+            "link": "#items",
+            "price": "¥1,530",
+            "price_suffix": "〜（税込）",
+            "label": "ギフトを選ぶ",
+            "image": "shopify://shop_images/wakaba-c-juice-basket.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
