@@ -1,0 +1,390 @@
+{
+ "sections": {
+  "hero": {
+   "type": "slideshow",
+   "blocks": {
+    "s1": {
+     "type": "slide",
+     "settings": {
+      "image": "shopify://shop_images/wakaba-top-hero.jpg",
+      "image_overlay_opacity": 30,
+      "heading": "大地から考えよう",
+      "heading_size": "hxl",
+      "subheading": "子どもたちの未来のために。徳島・石井町、自然農法の農園です。",
+      "button_label": "お試し野菜セット",
+      "link": "shopify://pages/delivery",
+      "button_style_secondary": true,
+      "show_text_box": false,
+      "box_align": "middle-left",
+      "text_alignment": "left",
+      "text_alignment_mobile": "left",
+      "color_scheme": "scheme-4"
+     }
+    },
+    "s2": {
+     "type": "slide",
+     "settings": {
+      "image": "shopify://shop_images/wakaba-b-field.jpg",
+      "image_overlay_opacity": 30,
+      "heading": "種をつなぐ",
+      "heading_size": "hxl",
+      "subheading": "自家採種の種から、肥料も農薬も使わずに。",
+      "button_label": "若葉農園について",
+      "link": "shopify://pages/about",
+      "button_style_secondary": true,
+      "show_text_box": false,
+      "box_align": "middle-left",
+      "text_alignment": "left",
+      "text_alignment_mobile": "left",
+      "color_scheme": "scheme-4"
+     }
+    }
+   },
+   "block_order": [
+    "s1",
+    "s2"
+   ],
+   "settings": {
+    "layout": "full_bleed",
+    "slide_height": "large",
+    "slider_visual": "dots",
+    "auto_rotate": true,
+    "change_slides_speed": 5,
+    "image_behavior": "none",
+    "show_text_below": false,
+    "accessibility_info": "若葉農園のスライドショー"
+   }
+  },
+  "statement": {
+   "type": "rich-text",
+   "blocks": {
+    "c": {
+     "type": "caption",
+     "settings": {
+      "caption": "WAKABA FARM — SINCE 1998",
+      "text_style": "caption-with-letter-spacing",
+      "text_size": "small"
+     }
+    },
+    "h": {
+     "type": "heading",
+     "settings": {
+      "heading": "肥料も、農薬も使わない。種から自分たちで。",
+      "heading_size": "h1"
+     }
+    },
+    "t": {
+     "type": "text",
+     "settings": {
+      "text": "<p>土には本来、何も投入しなくても野菜を育てる力があります。若葉農園では、あまり改良されていない在来の種子から自家採種を繰り返し、その力を信じて野菜を育てています。</p>"
+     }
+    }
+   },
+   "block_order": [
+    "c",
+    "h",
+    "t"
+   ],
+   "settings": {
+    "desktop_content_position": "center",
+    "content_alignment": "center",
+    "color_scheme": "scheme-1",
+    "full_width": false,
+    "padding_top": 100,
+    "padding_bottom": 96
+   }
+  },
+  "rows": {
+   "type": "multirow",
+   "blocks": {
+    "r1": {
+     "type": "row",
+     "settings": {
+      "image": "shopify://shop_images/wakaba-top-carrots.jpg",
+      "caption": "01 ／ SEEDS",
+      "heading": "自家採種",
+      "text": "<p>数十年前は、ほとんどの農家が自分の野菜から種を取っていました。若葉農園では、多くの方の想いのこもった種から野菜を育て、また種を採り、次の世代へとつないでいます。</p>",
+      "button_label": "",
+      "button_link": ""
+     }
+    },
+    "r2": {
+     "type": "row",
+     "settings": {
+      "image": "shopify://shop_images/wakaba-top-field.jpg",
+      "caption": "02 ／ SOIL",
+      "heading": "肥料・農薬を使わない",
+      "text": "<p>化学肥料はもちろん、動物性の有機肥料や油粕も使いません（植物性の堆肥のみ部分的に使用）。土と野菜が本来持つ力で育てています。</p>",
+      "button_label": "",
+      "button_link": ""
+     }
+    },
+    "r3": {
+     "type": "row",
+     "settings": {
+      "image": "shopify://shop_images/wakaba-b-harvest.jpg",
+      "caption": "03 ／ TABLE",
+      "heading": "全国の食卓へ",
+      "text": "<p>全国約500名の会員さまへ、月間約1,000パックの野菜セットを出荷しています。スタッフ一人ひとりが、心を込めて。</p>",
+      "button_label": "若葉農園について",
+      "button_link": "shopify://pages/about"
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3"
+   ],
+   "settings": {
+    "image_height": "large",
+    "desktop_image_width": "large",
+    "image_layout": "alternate-left",
+    "heading_size": "h1",
+    "text_style": "body",
+    "button_style": "secondary",
+    "desktop_content_position": "middle",
+    "desktop_content_alignment": "left",
+    "mobile_content_alignment": "left",
+    "section_color_scheme": "scheme-1",
+    "row_color_scheme": "scheme-1",
+    "padding_top": 24,
+    "padding_bottom": 72
+   }
+  },
+  "teiki": {
+   "type": "image-banner",
+   "blocks": {
+    "h": {
+     "type": "heading",
+     "settings": {
+      "heading": "季節のお野菜を、8品目前後のセットで",
+      "heading_size": "h1"
+     }
+    },
+    "t": {
+     "type": "text",
+     "settings": {
+      "text": "お試しセット 常温便 ¥3,833／冷蔵便 ¥4,328（税込・送料別）。定期宅配は毎週・隔週・月に1回からお選びいただけます。",
+      "text_style": "body"
+     }
+    },
+    "b": {
+     "type": "buttons",
+     "settings": {
+      "button_label_1": "定期宅配について",
+      "button_link_1": "shopify://pages/delivery",
+      "button_style_secondary_1": false,
+      "button_label_2": "",
+      "button_link_2": "",
+      "button_style_secondary_2": false
+     }
+    }
+   },
+   "block_order": [
+    "h",
+    "t",
+    "b"
+   ],
+   "settings": {
+    "image": "shopify://shop_images/wakaba-top-basket.jpg",
+    "image_overlay_opacity": 0,
+    "image_height": "large",
+    "image_behavior": "none",
+    "desktop_content_position": "middle-right",
+    "desktop_content_alignment": "left",
+    "show_text_box": true,
+    "color_scheme": "scheme-1",
+    "stack_images_on_mobile": true,
+    "mobile_content_alignment": "left",
+    "show_text_below": true
+   }
+  },
+  "collage": {
+   "type": "collage",
+   "blocks": {
+    "i": {
+     "type": "image",
+     "settings": {
+      "image": "shopify://shop_images/wakaba-b-dashi.jpg"
+     }
+    },
+    "p": {
+     "type": "product",
+     "settings": {
+      "product": "carrotjuice1000",
+      "second_image": true
+     }
+    },
+    "c": {
+     "type": "collection",
+     "settings": {
+      "collection": "all"
+     }
+    }
+   },
+   "block_order": [
+    "i",
+    "p",
+    "c"
+   ],
+   "settings": {
+    "heading": "自然栽培の素材から生まれた品",
+    "heading_size": "h1",
+    "desktop_layout": "left",
+    "mobile_layout": "collage",
+    "card_styles": "none",
+    "color_scheme": "scheme-1",
+    "padding_top": 96,
+    "padding_bottom": 48
+   }
+  },
+  "shop": {
+   "type": "featured-collection",
+   "settings": {
+    "collection": "all",
+    "products_to_show": 8,
+    "title": "定番の品",
+    "heading_size": "h2",
+    "description": "",
+    "show_description": false,
+    "description_style": "body",
+    "columns_desktop": 4,
+    "enable_desktop_slider": true,
+    "full_width": false,
+    "show_view_all": true,
+    "view_all_style": "link",
+    "color_scheme": "scheme-1",
+    "image_ratio": "portrait",
+    "image_shape": "default",
+    "show_secondary_image": true,
+    "show_vendor": false,
+    "show_rating": false,
+    "quick_add": "none",
+    "columns_mobile": "2",
+    "swipe_on_mobile": true,
+    "padding_top": 24,
+    "padding_bottom": 96
+   }
+  },
+  "voices": {
+   "type": "multicolumn",
+   "blocks": {
+    "v1": {
+     "type": "column",
+     "settings": {
+      "title": "",
+      "text": "<p>ほうれん草を「おひたし」にして一口食べたら、甘みが増して美味しいです。調理せず生で食べても甘みを感じびっくりしました。</p>"
+     }
+    },
+    "v2": {
+     "type": "column",
+     "settings": {
+      "title": "",
+      "text": "<p>昔は小松菜は苦くて好きではなかったのですが、自然農法の小松菜は甘みがあり今では大好きになりました。</p>"
+     }
+    },
+    "v3": {
+     "type": "column",
+     "settings": {
+      "title": "",
+      "text": "<p>人参を乱切りにしていたら、ピカピカと美味しそうで思わず生のままパクッと。ホント甘くて感動しました。</p>"
+     }
+    }
+   },
+   "block_order": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "settings": {
+    "title": "会員さまの声",
+    "heading_size": "h2",
+    "image_width": "full",
+    "image_ratio": "adapt",
+    "button_label": "",
+    "button_link": "",
+    "columns_desktop": 3,
+    "column_alignment": "center",
+    "background_style": "none",
+    "color_scheme": "scheme-2",
+    "columns_mobile": "1",
+    "swipe_on_mobile": false,
+    "padding_top": 96,
+    "padding_bottom": 96
+   }
+  },
+  "journal": {
+   "type": "featured-blog",
+   "settings": {
+    "blog": "ニュース",
+    "post_limit": 3,
+    "heading": "畑だより",
+    "heading_size": "h1",
+    "columns_desktop": 3,
+    "show_view_all": true,
+    "show_image": true,
+    "show_date": true,
+    "show_author": false,
+    "color_scheme": "scheme-1",
+    "padding_top": 96,
+    "padding_bottom": 72
+   }
+  },
+  "kenshu": {
+   "type": "rich-text",
+   "blocks": {
+    "c": {
+     "type": "caption",
+     "settings": {
+      "caption": "TRAINING",
+      "text_style": "caption-with-letter-spacing",
+      "text_size": "small"
+     }
+    },
+    "h": {
+     "type": "heading",
+     "settings": {
+      "heading": "自然栽培を学びたい方へ",
+      "heading_size": "h2"
+     }
+    },
+    "b": {
+     "type": "button",
+     "settings": {
+      "button_label": "研修について",
+      "button_link": "shopify://blogs/ニュース",
+      "button_style_secondary": true,
+      "button_label_2": "",
+      "button_link_2": "",
+      "button_style_secondary_2": false
+     }
+    }
+   },
+   "block_order": [
+    "c",
+    "h",
+    "b"
+   ],
+   "settings": {
+    "desktop_content_position": "center",
+    "content_alignment": "center",
+    "color_scheme": "scheme-3",
+    "full_width": true,
+    "padding_top": 88,
+    "padding_bottom": 88
+   }
+  }
+ },
+ "order": [
+  "hero",
+  "statement",
+  "rows",
+  "teiki",
+  "collage",
+  "shop",
+  "voices",
+  "journal",
+  "kenshu"
+ ]
+}

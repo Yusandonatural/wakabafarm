@@ -1,0 +1,114 @@
+{
+ "current": {
+  "logo": "shopify://shop_images/2.jpg",
+  "logo_width": 80,
+  "favicon": "shopify://shop_images/2.jpg",
+  "type_header_font": "shippori_mincho_n4",
+  "heading_scale": 130,
+  "type_body_font": "noto_sans_japanese_n4",
+  "body_scale": 105,
+  "page_width": 1400,
+  "spacing_sections": 48,
+  "spacing_grid_horizontal": 24,
+  "spacing_grid_vertical": 40,
+  "animations_reveal_on_scroll": true,
+  "animations_hover_elements": "vertical-lift",
+  "buttons_border_thickness": 1,
+  "buttons_radius": 0,
+  "inputs_radius": 0,
+  "variant_pills_radius": 0,
+  "card_style": "standard",
+  "card_color_scheme": "scheme-1",
+  "collection_card_color_scheme": "scheme-1",
+  "blog_card_color_scheme": "scheme-1",
+  "media_border_thickness": 0,
+  "badge_corner_radius": 0,
+  "badge_position": "top left",
+  "sale_badge_color_scheme": "scheme-4",
+  "sold_out_badge_color_scheme": "scheme-2",
+  "social_instagram_link": "https://www.instagram.com/wakabanouen/",
+  "social_facebook_link": "https://www.facebook.com/shumei.wakabafarm/",
+  "predictive_search_enabled": true,
+  "currency_code_enabled": false,
+  "cart_type": "drawer",
+  "sections": {
+   "main-password-header": {
+    "type": "main-password-header",
+    "settings": {
+     "color_scheme": "scheme-1"
+    }
+   },
+   "main-password-footer": {
+    "type": "main-password-footer",
+    "settings": {
+     "color_scheme": "scheme-1"
+    }
+   }
+  },
+  "content_for_index": [],
+  "blocks": {
+   "1143683040400472741": {
+    "type": "shopify://apps/trustoo-io-reviews/blocks/trustoo-review-switch/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+    "disabled": false,
+    "settings": {}
+   }
+  },
+  "color_schemes": {
+   "scheme-1": {
+    "settings": {
+     "background": "#FAF8F3",
+     "background_gradient": "",
+     "text": "#1E1E1C",
+     "button": "#1E1E1C",
+     "button_label": "#FAF8F3",
+     "secondary_button_label": "#1E1E1C",
+     "shadow": "#1E1E1C"
+    }
+   },
+   "scheme-2": {
+    "settings": {
+     "background": "#F0ECE3",
+     "background_gradient": "",
+     "text": "#1E1E1C",
+     "button": "#1E1E1C",
+     "button_label": "#F0ECE3",
+     "secondary_button_label": "#1E1E1C",
+     "shadow": "#1E1E1C"
+    }
+   },
+   "scheme-3": {
+    "settings": {
+     "background": "#5E6B4E",
+     "background_gradient": "",
+     "text": "#FAF8F3",
+     "button": "#FAF8F3",
+     "button_label": "#1E1E1C",
+     "secondary_button_label": "#FAF8F3",
+     "shadow": "#1E1E1C"
+    }
+   },
+   "scheme-4": {
+    "settings": {
+     "background": "#1E1E1C",
+     "background_gradient": "",
+     "text": "#EAE6DC",
+     "button": "#EAE6DC",
+     "button_label": "#1E1E1C",
+     "secondary_button_label": "#EAE6DC",
+     "shadow": "#1E1E1C"
+    }
+   },
+   "scheme-5": {
+    "settings": {
+     "background": "#FFFFFF",
+     "background_gradient": "",
+     "text": "#1E1E1C",
+     "button": "#1E1E1C",
+     "button_label": "#FFFFFF",
+     "secondary_button_label": "#1E1E1C",
+     "shadow": "#1E1E1C"
+    }
+   }
+  }
+ }
+}

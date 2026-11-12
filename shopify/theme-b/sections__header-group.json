@@ -1,0 +1,53 @@
+{
+ "name": "t:sections.header.name",
+ "type": "header",
+ "sections": {
+  "announcement-bar": {
+   "type": "announcement-bar",
+   "blocks": {
+    "announcement-bar-0": {
+     "type": "announcement",
+     "settings": {
+      "text": "5,000円以上のお買い上げで送料無料",
+      "link": "shopify://pages/guide"
+     }
+    }
+   },
+   "block_order": [
+    "announcement-bar-0"
+   ],
+   "settings": {
+    "auto_rotate": false,
+    "change_slides_speed": 5,
+    "color_scheme": "scheme-2",
+    "show_line_separator": false,
+    "show_social": false,
+    "enable_country_selector": false,
+    "enable_language_selector": false
+   }
+  },
+  "header": {
+   "type": "header",
+   "settings": {
+    "logo_position": "middle-center",
+    "mobile_logo_position": "center",
+    "menu": "main-menu-2026",
+    "menu_type_desktop": "dropdown",
+    "sticky_header_type": "reduce-logo-size",
+    "show_line_separator": false,
+    "color_scheme": "scheme-1",
+    "menu_color_scheme": "scheme-1",
+    "enable_country_selector": false,
+    "enable_language_selector": false,
+    "enable_customer_avatar": true,
+    "margin_bottom": 0,
+    "padding_top": 24,
+    "padding_bottom": 24
+   }
+  }
+ },
+ "order": [
+  "announcement-bar",
+  "header"
+ ]
+}
