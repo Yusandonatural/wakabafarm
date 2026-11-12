@@ -35,9 +35,12 @@ for url, m in manifest.items():
     issues = []
     if not local:
         host = url.split("/")[2]
+        if "wakaba.jpn.com" not in host:
+            rec["status"] = "対象外"  # Facebook 等の外部画像は移行しない（確認済み）
+            rows.append(rec)
+            continue
         rec["status"] = "未取得"
-        issues.append("外部サイトの画像（%s）。新サイトでは使用不可・差し替え要" % host
-                      if "wakaba.jpn.com" not in host else "旧サーバーから取得できず（リンク切れの可能性）")
+        issues.append("旧サーバーから取得できず（リンク切れの可能性）")
         rec["指摘"] = " / ".join(issues)
         rows.append(rec)
         continue
