@@ -65,6 +65,13 @@
             "q": "届いた野菜が傷んでいたら？",
             "a": "生鮮食品のため原則として返品はご遠慮いただいていますが、当園の過失による場合は返品を承り、送料も当園が負担します。お問い合わせフォームからご連絡ください。"
           }
+        },
+        "f6": {
+          "type": "faq",
+          "settings": {
+            "q": "送料はいくらですか？",
+            "a": "1箱につき、四国660円・関西・中国770円・関東・信越・北陸・中部・九州880円・東北1,100円・北海道3,025円・沖縄3,355円（税込）です。クール便は440円が加わります。加工品などは5,000円以上のお買い上げで送料無料です。"
+          }
         }
       },
       "block_order": [
@@ -74,6 +81,7 @@
         "f0",
         "f1",
         "f2",
+        "f6",
         "f3",
         "f4",
         "f5"
@@ -83,36 +91,23 @@
         "hero_image_2": "shopify://shop_images/wakaba-c-tomato.jpg",
         "week_image": "shopify://shop_images/wakaba-top-basket.jpg",
         "seed_image": "shopify://shop_images/wakaba-c-seedling.jpg",
-        "flow_image_1": "shopify://shop_images/wakaba-c-greenhouse.jpg",
-        "flow_image_2": "shopify://shop_images/wakaba-c-harvest.jpg",
+        "flow_image_1": "shopify://shop_images/wakaba-top-hero.jpg",
+        "flow_image_2": "shopify://shop_images/wakaba-top-field.jpg",
         "flow_image_3": "shopify://shop_images/wakaba-c-box.jpg",
         "flow_image_4": "shopify://shop_images/wakaba-c-greens.jpg",
         "people_image": "shopify://shop_images/wakaba-c-sunset.jpg",
         "final_image": "shopify://shop_images/wakaba-c-eggplant.jpg",
         "trial_product": "otameshi-yasai-set-joon",
-        "addon_handles": "carrotjuice350,mugichatb,sudachiponzu,chunosauce"
-      }
-    },
-    "journal": {
-      "type": "featured-blog",
-      "settings": {
-        "blog": "ニュース",
-        "post_limit": 3,
-        "heading": "畑だより・レシピ",
-        "heading_size": "h1",
-        "columns_desktop": 3,
-        "show_view_all": true,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "color_scheme": "scheme-2",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "addon_handles": "carrotjuice350,mugichatb,sudachiponzu,dashi",
+        "hero_title": "種から育てた、\n本来の味。",
+        "trial_product_summer": "otameshi-yasai-set-reizo",
+        "journal_blog": "ニュース",
+        "week_title": "お野菜セットのラインナップ",
+        "week_link_label": "畑だよりを読む"
       }
     }
   },
   "order": [
-    "main",
-    "journal"
+    "main"
   ]
 }

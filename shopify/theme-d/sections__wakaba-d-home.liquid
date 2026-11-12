@@ -4,11 +4,9 @@
   「はじめての人が迷わず申し込める」流れと「栽培基準をはっきり見せる」ことを重視した構成。
   文言・写真・今週のお野菜・プラン・声・質問はテーマエディタで編集できます。
 {%- endcomment -%}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  .wkd{--g:#163729;--g2:#2A5A40;--leaf:#82BC3F;--leaf2:#5E8F2A;--ink:#3E3A34;--mute:#77706A;--bg:#FFFFFF;--soft:#F6F4EE;--cream:#FBF6EC;--line:#E6E1D6;--carrot:#E07A2E;--mint:#EEF5E4;
-    background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;line-height:1.9;letter-spacing:.03em}
+  .wkd{--g:#163729;--g2:#2A5A40;--leaf:#82BC3F;--leaf2:#4F7A22;--ink:#3E3A34;--mute:#77706A;--bg:#FFFFFF;--soft:#F6F4EE;--cream:#FBF6EC;--line:#E6E1D6;--carrot:#B85716;--mint:#EEF5E4;
+    background:var(--bg);color:var(--ink);font-family:var(--font-body-family,'Noto Sans JP',sans-serif);--serif:var(--font-heading-family,'Shippori Mincho',serif);font-size:16px;line-height:1.9;letter-spacing:.03em}
   .wkd *{box-sizing:border-box}
   .wkd a{color:var(--g)}
   .wkd img{display:block;width:100%;height:100%;object-fit:cover}
@@ -17,11 +15,12 @@
   .wkd__sec--soft{background:var(--soft)}
   .wkd__sec--cream{background:var(--cream)}
   .wkd__eyebrow{margin:0;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--leaf2)}
-  .wkd__h2{margin:8px 0 18px;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--g);font-size:clamp(26px,3.4vw,38px);line-height:1.5}
+  .wkd__h1,.wkd__h2,.wkd__final h2{text-wrap:balance;word-break:auto-phrase}
+  .wkd__h2{margin:8px 0 18px;font-family:var(--serif);font-weight:400;color:var(--g);font-size:clamp(26px,3.4vw,38px);line-height:1.5}
   .wkd__lead{margin:0 0 44px;max-width:700px;color:var(--mute)}
   .wkd__center{text-align:center}.wkd__center .wkd__lead{margin-left:auto;margin-right:auto}
-  .wkd__btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 32px;border-radius:12px;background:var(--carrot);color:#fff!important;text-decoration:none;font-weight:700;font-size:17px;box-shadow:0 4px 0 #B85D1C;transition:transform .15s,box-shadow .15s}
-  .wkd__btn:hover{transform:translateY(2px);box-shadow:0 2px 0 #B85D1C}
+  .wkd__btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 32px;border-radius:12px;background:var(--carrot);color:#fff!important;text-decoration:none;font-weight:700;font-size:17px;box-shadow:0 4px 0 #7E3A0C;transition:transform .15s,box-shadow .15s}
+  .wkd__btn:hover{transform:translateY(2px);box-shadow:0 2px 0 #7E3A0C}
   .wkd__btn--g{background:var(--g);box-shadow:0 4px 0 #0B2117}
   .wkd__btn--line{background:#fff;color:var(--g)!important;border:1.5px solid var(--g);box-shadow:none}
   .wkd__btn--line:hover{transform:none;background:var(--mint)}
@@ -33,7 +32,7 @@
   .wkd__hero{background:linear-gradient(180deg,var(--cream) 0%,#fff 100%);padding:48px 0 72px}
   .wkd__hero-g{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
   .wkd__tag{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:6px 14px;border-radius:999px;background:var(--mint);color:var(--g);font-size:13px;font-weight:700}
-  .wkd__h1{margin:0;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--g);font-size:clamp(34px,4.8vw,56px);line-height:1.4}
+  .wkd__h1{margin:0;font-family:var(--serif);font-weight:400;color:var(--g);font-size:clamp(34px,4.8vw,56px);line-height:1.4}
   .wkd__h1 em{font-style:normal;color:var(--leaf2)}
   .wkd__hero-p{margin:20px 0 28px;font-size:17px;max-width:520px}
   .wkd__offer{background:#fff;border:2px solid var(--g);border-radius:20px;padding:22px 24px;max-width:520px;box-shadow:0 12px 28px rgba(22,55,41,.10);position:relative}
@@ -70,6 +69,8 @@
   .wkd__chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
   .wkd__chips span{padding:8px 16px;border-radius:999px;background:var(--mint);color:var(--g);font-weight:700;font-size:15px}
   .wkd__chips span.more{background:transparent;border:1.5px dashed var(--leaf2)}
+  .wkd__live{display:inline-flex;align-items:center;gap:6px;margin-left:8px;font-size:12px;font-weight:700;color:var(--leaf2)}
+  .wkd__live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 4px rgba(130,188,63,.25)}
   .wkd__week-note{font-size:14px;color:var(--mute);margin:0 0 20px}
 
   /* standards */
@@ -83,7 +84,7 @@
   .wkd__table small{display:block;font-weight:400;color:var(--mute);font-size:13px;margin-top:2px}
   .wkd__std-note{margin:14px 0 0;font-size:13px;color:var(--mute)}
   .wkd__seed{background:var(--g);color:#fff;border-radius:20px;padding:32px}
-  .wkd__seed h3{margin:0 0 12px;font-family:'Shippori Mincho',serif;font-weight:600;font-size:22px;color:#fff}
+  .wkd__seed h3{margin:0 0 12px;font-family:var(--serif);font-weight:400;font-size:22px;color:#fff}
   .wkd__seed p{margin:0 0 14px;font-size:15px;color:#E4EEE0}
   .wkd__seed .wkd__ph{aspect-ratio:16/10;margin-top:8px}
 
@@ -157,6 +158,17 @@
   .wkd__voice p{margin:10px 0 14px;font-size:15px}
   .wkd__voice cite{font-style:normal;font-size:13px;color:var(--mute)}
 
+  /* journal */
+  .wkd__jr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .wkd__jr a{display:block;text-decoration:none;color:var(--ink)!important;background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);transition:transform .2s}
+  .wkd__jr a:hover{transform:translateY(-3px)}
+  .wkd__jr .wkd__ph{border-radius:0;aspect-ratio:3/2}
+  .wkd__jr .t{padding:16px 18px 20px}
+  .wkd__jr time{font-size:12px;color:var(--mute)}
+  .wkd__jr b{display:block;margin-top:4px;font-size:16px;line-height:1.6;color:var(--g)}
+  .wkd__jr .tg{display:inline-block;margin-top:8px;font-size:12px;padding:2px 10px;border-radius:999px;background:var(--mint);color:var(--g)}
+  .wkd__jr-h{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+
   /* faq */
   .wkd__faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
   .wkd__faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 22px}
@@ -169,7 +181,7 @@
 
   /* final */
   .wkd__final{background:var(--g);color:#fff;border-radius:28px;padding:56px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-  .wkd__final h2{margin:0 0 12px;font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(24px,3vw,34px);color:#fff;line-height:1.5}
+  .wkd__final h2{margin:0 0 12px;font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,34px);color:#fff;line-height:1.5}
   .wkd__final p{margin:0;color:#DCE8D6}
   .wkd__final .wkd__ph{aspect-ratio:1;border-radius:50%;max-width:260px;margin-left:auto;border:6px solid rgba(255,255,255,.15)}
   .wkd__final-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
@@ -178,6 +190,8 @@
   .wkd__sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:none;align-items:center;justify-content:space-between;gap:12px}
   .wkd__sticky p{margin:0;font-size:13px;line-height:1.4;color:var(--g)} .wkd__sticky b{font-size:16px}
   .wkd__sticky .wkd__btn{min-height:46px;padding:0 20px;font-size:15px}
+  .wkd__sticky{transform:translateY(110%);transition:transform .25s}
+  .wkd__sticky.is-on{transform:none}
 
   @media (max-width:989px){
     .wkd__sec{padding:72px 0}
@@ -187,6 +201,7 @@
     .wkd__trust,.wkd__prom,.wkd__lab,.wkd__prods{grid-template-columns:repeat(2,minmax(0,1fr))}
     .wkd__flow{grid-template-columns:repeat(2,minmax(0,1fr))}
     .wkd__voices{grid-template-columns:1fr}
+    .wkd__jr{grid-template-columns:1fr}
     .wkd__ship-g{grid-template-columns:repeat(2,minmax(0,1fr))}
     .wkd__week-b{padding:28px}
     .wkd__week .wkd__ph{min-height:240px}
@@ -202,13 +217,24 @@
     .wkd__table th{width:38%}
     .wkd__table th,.wkd__table td{padding:14px 12px;font-size:14px}
     .wkd__offer{padding:20px 18px}
+    .wkd__prom{grid-template-columns:1fr}
+    .wkd__h1{font-size:32px}
+    .wkd__week-b .wkd__h2{font-size:22px!important}
+    .wkd__week-b .wkd__btn,.wkd__links .wkd__btn,.wkd__jr-h .wkd__btn,.wkd__final-cta .wkd__btn{width:100%}
     .wkd__trust b{font-size:24px}
   }
 </style>
 
 {%- liquid
   assign s = section.settings
-  assign trial = all_products[s.trial_product]
+  assign month = 'now' | date: '%m' | plus: 0
+  assign trial_handle = s.trial_product
+  assign trial_season = '常温便（11〜3月）'
+  if month >= 4 and month <= 10
+    assign trial_handle = s.trial_product_summer
+    assign trial_season = '冷蔵便（4〜10月）'
+  endif
+  assign trial = all_products[trial_handle]
   assign trial_url = s.trial_link
   if trial_url == blank and trial != blank
     assign trial_url = trial.url
@@ -238,7 +264,7 @@
       <div class="wkd__hero-g">
         <div>
           <p class="wkd__tag"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27V15"/><path d="M16 17c0-5 3.6-8.5 8.5-8.5 0 5-3.6 8.5-8.5 8.5z"/><path d="M16 21c0-4-3-7-7-7 0 4 3 7 7 7z"/></svg>{{ s.hero_tag }}</p>
-          <h1 class="wkd__h1">{{ s.hero_title }}</h1>
+          <h1 class="wkd__h1">{{ s.hero_title | newline_to_br }}</h1>
           <p class="wkd__hero-p">{{ s.hero_text }}</p>
           <div class="wkd__offer">
             <span class="wkd__offer-flag">はじめての方へ</span>
@@ -256,7 +282,7 @@
           </div>
         </div>
         <div class="wkd__hero-ph">
-          <div class="wkd__ph">{% if s.hero_image != blank %}{{ s.hero_image | image_url: width: 1300 | image_tag: loading: 'eager', widths: '600,900,1300', alt: s.hero_image.alt }}{% endif %}</div>
+          <div class="wkd__ph">{% if s.hero_image != blank %}{{ s.hero_image | image_url: width: 1300 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '600,900,1300', sizes: '(min-width: 990px) 560px, 100vw', alt: s.hero_image.alt }}{% endif %}</div>
           <div class="wkd__ph wkd__hero-mini">{% if s.hero_image_2 != blank %}{{ s.hero_image_2 | image_url: width: 500 | image_tag: widths: '300,500', alt: s.hero_image_2.alt }}{% endif %}</div>
         </div>
       </div>
@@ -292,7 +318,7 @@
       <div class="wkd__week">
         <div class="wkd__ph">{% if s.week_image != blank %}{{ s.week_image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500,1000', alt: s.week_image.alt }}{% endif %}</div>
         <div class="wkd__week-b">
-          <p class="wkd__week-date">{{ s.week_date }}</p>
+          <p class="wkd__week-date">{{ s.week_date }}</p><span class="wkd__live">毎週更新</span>
           <h3 class="wkd__h2" style="font-size:26px;margin:0">{{ s.week_title }}</h3>
           <div class="wkd__chips">
             {%- assign veg = s.week_items | split: '、' -%}
@@ -300,7 +326,7 @@
             {%- if s.week_more != blank -%}<span class="more">{{ s.week_more }}</span>{%- endif -%}
           </div>
           <p class="wkd__week-note">{{ s.week_note }}</p>
-          <a class="wkd__btn wkd__btn--line" href="{{ week_url }}">これまでのラインナップを見る{{ ic_arrow }}</a>
+          <a class="wkd__btn wkd__btn--line" href="{{ week_url }}">{{ s.week_link_label }}{{ ic_arrow }}</a>
         </div>
       </div>
     </div>
@@ -377,7 +403,7 @@
           <ul>
             <li>{{ ic_check }}季節の野菜 約8品目</li>
             <li>{{ ic_check }}定期の申し込みは不要</li>
-            <li>{{ ic_check }}11〜3月は常温便、4〜10月は冷蔵便</li>
+            <li>{{ ic_check }}今の時期は{{ trial_season }}でお届け</li>
           </ul>
           <a class="wkd__btn" href="{{ trial_url }}">お試しセットを申し込む{{ ic_arrow }}</a>
         </div>
@@ -419,10 +445,10 @@
         <h2 class="wkd__h2">畑から食卓まで</h2>
       </div>
       <ol class="wkd__flow">
-        <li><div class="wkd__ph">{% if s.flow_image_1 != blank %}{{ s.flow_image_1 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}{% endif %}</div><div class="t"><b>お申し込み</b><p>お届け日は、ご注文日から4日目以降でご指定いただけます。</p></div></li>
-        <li><div class="wkd__ph">{% if s.flow_image_2 != blank %}{{ s.flow_image_2 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}{% endif %}</div><div class="t"><b>畑で収穫・箱詰め</b><p>その時いちばん状態の良い野菜を、スタッフが選んで詰めます。</p></div></li>
-        <li><div class="wkd__ph">{% if s.flow_image_3 != blank %}{{ s.flow_image_3 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}{% endif %}</div><div class="t"><b>月・水・金に発送</b><p>近県は翌日、北海道・東北・関東・山梨・新潟・沖縄は2日後のお届けです。</p></div></li>
-        <li><div class="wkd__ph">{% if s.flow_image_4 != blank %}{{ s.flow_image_4 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}{% endif %}</div><div class="t"><b>食卓へ</b><p>まずはシンプルに。おひたしや生のままで、野菜本来の甘さを。</p></div></li>
+        <li><div class="wkd__ph">{% if s.flow_image_1 != blank %}{{ s.flow_image_1 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600', alt: '季節の野菜' }}{% endif %}</div><div class="t"><b>お申し込み</b><p>お届け日は、ご注文日から4日目以降でご指定いただけます。</p></div></li>
+        <li><div class="wkd__ph">{% if s.flow_image_2 != blank %}{{ s.flow_image_2 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600', alt: '畑での作業' }}{% endif %}</div><div class="t"><b>畑で収穫・箱詰め</b><p>その時いちばん状態の良い野菜を、スタッフが選んで詰めます。</p></div></li>
+        <li><div class="wkd__ph">{% if s.flow_image_3 != blank %}{{ s.flow_image_3 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600', alt: '出荷する野菜' }}{% endif %}</div><div class="t"><b>月・水・金に発送</b><p>近県は翌日、北海道・東北・関東・山梨・新潟・沖縄は2日後のお届けです。</p></div></li>
+        <li><div class="wkd__ph">{% if s.flow_image_4 != blank %}{{ s.flow_image_4 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600', alt: '食卓へ' }}{% endif %}</div><div class="t"><b>食卓へ</b><p>まずはシンプルに。おひたしや生のままで、野菜本来の甘さを。</p></div></li>
       </ol>
     </div>
   </section>
@@ -491,6 +517,27 @@
     </div>
   </section>
 
+  {%- comment -%} 10.5 畑だより（最新3件） {%- endcomment -%}
+  {%- assign jblog = blogs[s.journal_blog] -%}
+  {%- if jblog.articles_count > 0 -%}
+  <section class="wkd__sec">
+    <div class="wkd__in">
+      <div class="wkd__jr-h">
+        <div><p class="wkd__eyebrow">JOURNAL</p><h2 class="wkd__h2" style="margin-bottom:0">畑だより</h2></div>
+        <a class="wkd__btn wkd__btn--line" href="{{ jblog.url }}">すべての記事を見る{{ ic_arrow }}</a>
+      </div>
+      <div class="wkd__jr">
+        {%- for a in jblog.articles limit: 3 -%}
+        <a href="{{ a.url }}">
+          <div class="wkd__ph">{% if a.image %}{{ a.image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600', alt: a.title }}{% endif %}</div>
+          <div class="t"><time datetime="{{ a.published_at | date: '%Y-%m-%d' }}">{{ a.published_at | date: '%Y.%m.%d' }}</time><b>{{ a.title }}</b>{%- for tg in a.tags -%}{%- unless tg == '旧サイト移行' -%}<span class="tg">{{ tg }}</span>{%- break -%}{%- endunless -%}{%- endfor -%}</div>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
   {%- comment -%} 11. よくある質問 {%- endcomment -%}
   <section class="wkd__sec">
     <div class="wkd__in">
@@ -503,6 +550,8 @@
         <details {{ block.shopify_attributes }}><summary>{{ block.settings.q }}</summary><p>{{ block.settings.a }}</p></details>
         {%- endif -%}{%- endfor -%}
       </div>
+      {%- capture faq_ld -%}{%- for block in section.blocks -%}{%- if block.type == 'faq' -%}{"@type":"Question","name":{{ block.settings.q | json }},"acceptedAnswer":{"@type":"Answer","text":{{ block.settings.a | json }}}},{%- endif -%}{%- endfor -%}{%- endcapture -%}
+      <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ faq_ld | remove_last: ',' }}]}</script>
     </div>
   </section>
 
@@ -524,11 +573,21 @@
   </section>
 
   {%- comment -%} スマホ用：画面下に固定の申し込みボタン {%- endcomment -%}
-  <div class="wkd__sticky">
+  <div class="wkd__sticky" aria-hidden="true">
     <p>お試し1回 <b>{{ trial_price }}</b><br>定期申し込み不要</p>
-    <a class="wkd__btn" href="{{ trial_url }}">申し込む</a>
+    <a class="wkd__btn" href="{{ trial_url }}" tabindex="-1">申し込む</a>
   </div>
 </div>
+<script>
+  (function(){
+    var bar=document.querySelector('.wkd__sticky'),offer=document.querySelector('.wkd__offer'),fin=document.querySelector('.wkd__final');
+    if(!bar||!offer||!('IntersectionObserver' in window))return;
+    var seen={offer:true,fin:false};
+    function upd(){var on=!seen.offer&&!seen.fin;bar.classList.toggle('is-on',on);bar.setAttribute('aria-hidden',on?'false':'true');bar.querySelector('a').tabIndex=on?0:-1;}
+    new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target===offer?'offer':'fin']=e.isIntersecting;});upd();}).observe(offer);
+    if(fin){new IntersectionObserver(function(es){es.forEach(function(e){seen.fin=e.isIntersecting;});upd();}).observe(fin);}
+  })();
+</script>
 
 {% schema %}
 {
@@ -537,12 +596,13 @@
   "settings": [
     { "type": "header", "content": "ヒーロー" },
     { "type": "text", "id": "hero_tag", "label": "小見出し", "default": "肥料も農薬も使わない、自然農法の野菜" },
-    { "type": "textarea", "id": "hero_title", "label": "大見出し", "default": "種から育てた、本来の味。" },
+    { "type": "textarea", "id": "hero_title", "label": "大見出し", "default": "種から育てた、\n本来の味。" },
     { "type": "textarea", "id": "hero_text", "label": "説明文", "default": "徳島の若葉農園から、季節の野菜セットをお届けします。" },
     { "type": "image_picker", "id": "hero_image", "label": "メイン写真" },
     { "type": "image_picker", "id": "hero_image_2", "label": "小さい写真" },
     { "type": "header", "content": "お試しセット" },
-    { "type": "text", "id": "trial_product", "label": "お試し商品のハンドル", "default": "otameshi-yasai-set-joon" },
+    { "type": "text", "id": "trial_product", "label": "お試し商品のハンドル（11〜3月）", "default": "otameshi-yasai-set-joon" },
+    { "type": "text", "id": "trial_product_summer", "label": "お試し商品のハンドル（4〜10月）", "default": "otameshi-yasai-set-reizo" },
     { "type": "url", "id": "trial_link", "label": "申し込みボタンのリンク（空欄なら上の商品へ）" },
     { "type": "text", "id": "trial_name", "label": "名前", "default": "お試し野菜セット" },
     { "type": "text", "id": "trial_sub", "label": "補足", "default": "季節の野菜 約8品目" },
@@ -553,11 +613,12 @@
     { "type": "header", "content": "今週のお野菜" },
     { "type": "image_picker", "id": "week_image", "label": "写真" },
     { "type": "text", "id": "week_date", "label": "発送日", "default": "11月11日発送" },
-    { "type": "text", "id": "week_title", "label": "見出し", "default": "今週のお野菜セット" },
+    { "type": "text", "id": "week_title", "label": "見出し", "default": "お野菜セットのラインナップ" },
     { "type": "text", "id": "week_items", "label": "野菜（「、」区切り）", "default": "冬瓜、人参、大根葉" },
     { "type": "text", "id": "week_more", "label": "その他", "default": "＋5品目" },
     { "type": "textarea", "id": "week_note", "label": "ひとこと", "default": "寒さで甘みがのってきた人参が入りはじめました。" },
-    { "type": "url", "id": "week_link", "label": "ラインナップ一覧へのリンク" },
+    { "type": "url", "id": "week_link", "label": "ボタンのリンク（空欄なら畑だより）" },
+    { "type": "text", "id": "week_link_label", "label": "ボタンの文言", "default": "畑だよりを読む" },
     { "type": "header", "content": "写真" },
     { "type": "image_picker", "id": "seed_image", "label": "種・苗の写真" },
     { "type": "image_picker", "id": "flow_image_1", "label": "流れ1" },
@@ -566,6 +627,7 @@
     { "type": "image_picker", "id": "flow_image_4", "label": "流れ4" },
     { "type": "image_picker", "id": "people_image", "label": "畑の写真" },
     { "type": "image_picker", "id": "final_image", "label": "最後の写真" },
+    { "type": "text", "id": "journal_blog", "label": "畑だよりのブログ（ハンドル）", "default": "ニュース" },
     { "type": "header", "content": "加工品" },
     { "type": "text", "id": "addon_handles", "label": "商品ハンドル（「,」区切り・4つ）", "default": "carrotjuice350,mugichatb,sudachiponzu,chunosauce" }
   ],
