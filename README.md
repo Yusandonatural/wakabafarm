@@ -35,7 +35,10 @@ data/
 └── images_manifest.csv            ★ 全画像の台帳（使用箇所・alt・著作権確認欄・対応方針欄）
 data/audit/                        移行前チェック結果（文章・画像）
 docs/                              会員機能の調査、WordPress→Shopify 変更点
+shopify/pages/                     Shopify に作成した固定ページの HTML
+data/shopify/                      ブログ投入用データ（articles.jsonl / files.jsonl / 旧→新 URL 対応表）
 scripts/scrape.py                  取得スクリプト（再実行可能）
+scripts/shopify_blog_import.py     ブログ記事の整形・Shopify 投入
 scripts/audit_images.py            画像チェック
 scripts/build_review.py            チェック結果の統合（Excel 作成）
 ```
@@ -57,7 +60,7 @@ scripts/build_review.py            チェック結果の統合（Excel 作成）
 - `content_review.csv` … 文章の指摘（Excel で開ける CSV）
 - `images_audit.csv` / `images_duplicates.csv` … 画像ごとのチェック結果・重複画像
 
-関連資料：[`docs/会員機能について.md`](docs/会員機能について.md) ／ [`docs/WordPressからShopifyへの変更点.md`](docs/WordPressからShopifyへの変更点.md)
+関連資料：[`docs/Shopify現状確認_2026-11-12.md`](docs/Shopify現状確認_2026-11-12.md)（Shopify で実施した作業）／ [`docs/会員機能について.md`](docs/会員機能について.md) ／ [`docs/WordPressからShopifyへの変更点.md`](docs/WordPressからShopifyへの変更点.md)
 
 ## 3. 旧サイトの構成と Shopify での置き換え先
 
