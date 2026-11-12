@@ -1,0 +1,366 @@
+{%- comment -%}
+  若葉農園 C案（温かみ版）トップページ用セクション
+  生成り色の背景・丸みのある写真で、畑の空気感を伝える。
+  写真・文言・商品・声・質問はテーマエディタで編集できます。
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+<style>
+  .wkw{--g:#163729;--leaf:#82BC3F;--leaf2:#6E9F35;--ink:#4A4038;--mute:#7A6E62;--cream:#FBF6EC;--paper:#FFFDF8;--peach:#FFECDF;--sand:#F3EADB;--carrot:#E58A3A;--line:#E8DDCB;
+    background:var(--cream);color:var(--ink);font-family:'Zen Maru Gothic',sans-serif;font-size:16px;line-height:1.95;letter-spacing:.04em}
+  .wkw *{box-sizing:border-box}
+  .wkw a{color:var(--g)}
+  .wkw img{display:block;width:100%;height:100%;object-fit:cover}
+  .wkw__in{max-width:1200px;margin:0 auto;padding:0 24px}
+  .wkw__sec{padding:104px 0;position:relative}
+  .wkw__lbl{display:inline-flex;align-items:center;gap:10px;margin:0;font-size:14px;font-weight:700;color:var(--leaf2);letter-spacing:.12em}
+  .wkw__lbl::before{content:"";width:28px;height:2px;border-radius:2px;background:var(--leaf)}
+  .wkw__h2{margin:10px 0 24px;font-family:'Sawarabi Mincho',serif;font-weight:400;color:var(--g);font-size:clamp(28px,3.6vw,42px);line-height:1.5}
+  .wkw__h2 .u{background:linear-gradient(transparent 62%,rgba(130,188,63,.35) 62%);padding:0 2px}
+  .wkw__lead{margin:0 0 48px;max-width:720px;color:var(--mute)}
+  .wkw__btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 34px;border-radius:999px;background:var(--g);color:#fff!important;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 6px 16px rgba(22,55,41,.18);transition:transform .2s,box-shadow .2s}
+  .wkw__btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(22,55,41,.22)}
+  .wkw__btn--ghost{background:transparent;color:var(--g)!important;border:1.5px solid var(--g);box-shadow:none}
+  .wkw__ph{border-radius:24px;overflow:hidden;background:var(--sand)}
+  .wkw__cap{margin:10px 4px 0;font-size:13px;color:var(--mute)}
+  .wkw__hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding:56px 0 72px}
+  .wkw__badge{display:inline-block;margin:0 0 22px;padding:6px 18px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--g);font-size:13px;font-weight:700}
+  .wkw__h1{margin:0;font-family:'Sawarabi Mincho',serif;font-weight:400;color:var(--g);font-size:clamp(38px,5.4vw,64px);line-height:1.35}
+  .wkw__h1 em{font-style:normal;color:var(--leaf2)}
+  .wkw__hero-p{margin:26px 0 34px;font-size:17px;max-width:500px}
+  .wkw__note{margin:18px 0 0;font-size:13px;color:var(--mute)}
+  .wkw__collage{position:relative;height:560px}
+  .wkw__collage .a{position:absolute;right:0;top:0;width:72%;height:78%;border-radius:200px 200px 28px 28px}
+  .wkw__collage .b{position:absolute;left:0;bottom:24px;width:46%;height:42%;border:6px solid var(--cream)}
+  .wkw__collage .c{position:absolute;left:12%;top:4%;width:30%;aspect-ratio:1;height:auto;border-radius:50%;border:6px solid var(--cream)}
+  .wkw__stat{position:absolute;right:6%;bottom:0;background:var(--paper);border-radius:20px;padding:16px 22px;box-shadow:0 12px 28px rgba(74,64,56,.14)}
+  .wkw__stat small{display:block;font-size:12px;color:var(--mute)}
+  .wkw__stat b{display:block;font-size:38px;line-height:1.1;color:var(--g)} .wkw__stat b span{font-size:16px}
+  .wkw__strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 24px 12px;max-width:1440px;margin:0 auto}
+  .wkw__strip figure{margin:0;flex:0 0 240px;scroll-snap-align:start}
+  .wkw__strip .wkw__ph{height:300px}
+  .wkw__strip figure:nth-child(even) .wkw__ph{height:240px;margin-top:40px}
+  .wkw__nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:64px}
+  .wkw__num{background:var(--paper);border-radius:20px;padding:24px;text-align:center;border:1px solid var(--line)}
+  .wkw__num b{display:block;font-size:34px;line-height:1.2;color:var(--g)} .wkw__num b span{font-size:15px}
+  .wkw__num p{margin:6px 0 0;font-size:13px;color:var(--mute);line-height:1.6}
+  .wkw__proof{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
+  .wkw__proof-ph{height:300px;margin-top:24px}
+  .wkw__card{background:var(--paper);border-radius:28px;padding:40px;box-shadow:0 10px 30px rgba(74,64,56,.08)}
+  .wkw__bar{margin-bottom:24px}
+  .wkw__bar-h{display:flex;justify-content:space-between;gap:12px;margin-bottom:8px}
+  .wkw__bar-h b{font-size:16px} .wkw__bar-h span{font-size:12px;color:var(--mute)}
+  .wkw__row{display:flex;align-items:center;gap:12px;margin-bottom:6px;font-size:13px}
+  .wkw__row>span:first-child{width:80px;flex:none}
+  .wkw__track{flex:1;height:18px;border-radius:999px;background:var(--sand);overflow:hidden}
+  .wkw__fill{height:100%;border-radius:999px}
+  .wkw__row>span:last-child{width:64px;flex:none;text-align:right;font-weight:700}
+  .wkw__steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .wkw__step{background:var(--paper);border-radius:28px;overflow:hidden;box-shadow:0 8px 24px rgba(74,64,56,.07)}
+  .wkw__step .wkw__ph{border-radius:0;height:220px}
+  .wkw__step-b{padding:26px 28px 30px}
+  .wkw__step-n{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--peach);color:var(--carrot);font-weight:700;margin-bottom:10px}
+  .wkw__step h3{margin:0 0 8px;font-family:'Sawarabi Mincho',serif;font-weight:400;color:var(--g);font-size:22px}
+  .wkw__step p{margin:0;font-size:15px;color:var(--mute)}
+  .wkw__voicewrap{background:var(--peach);border-radius:40px;padding:72px 56px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+  .wkw__voicewrap .wkw__ph{height:420px;border-radius:200px 200px 24px 24px}
+  .wkw__voices{display:flex;flex-direction:column;gap:18px}
+  .wkw__voice{margin:0;background:var(--paper);border-radius:24px 24px 24px 6px;padding:24px 28px;position:relative}
+  .wkw__voice:nth-child(even){border-radius:24px 24px 6px 24px;margin-left:32px}
+  .wkw__voice blockquote{margin:0;font-family:'Sawarabi Mincho',serif;font-size:17px;line-height:1.9}
+  .wkw__voice figcaption{margin-top:8px;font-size:12px;color:var(--mute)}
+  .wkw__how{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .wkw__how-ph{position:relative;height:520px}
+  .wkw__how-ph .a{position:absolute;inset:0 18% 12% 0}
+  .wkw__how-ph .b{position:absolute;right:0;bottom:0;width:42%;height:46%;border:6px solid var(--paper)}
+  .wkw__flow{margin:0;padding:0;list-style:none}
+  .wkw__flow li{display:flex;gap:20px;padding:20px 0;border-bottom:1px dashed var(--line)}
+  .wkw__flow b{flex:none;width:44px;height:44px;border-radius:50%;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px}
+  .wkw__flow strong{color:var(--g)}
+  .wkw__flow p{margin:4px 0 0;font-size:15px;color:var(--mute)}
+  .wkw__seasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-bottom:28px}
+  .wkw__season .wkw__ph{height:200px}
+  .wkw__season p{margin:10px 4px 0;font-weight:700;color:var(--g)} .wkw__season p span{font-weight:400;font-size:13px;color:var(--mute);margin-left:6px}
+  .wkw__cal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+  .wkw__mon{background:var(--paper);border-radius:16px;padding:14px 16px;border:1px solid var(--line)}
+  .wkw__mon.is-now{background:#EEF6E4;border-color:var(--leaf)}
+  .wkw__mon b{display:block;font-size:20px;color:var(--g);line-height:1.2} .wkw__mon b span{font-size:12px}
+  .wkw__mon p{margin:4px 0 0;font-size:12.5px;line-height:1.7;color:var(--mute)}
+  .wkw__offer{background:var(--g);color:#fff;border-radius:40px;overflow:hidden;display:grid;grid-template-columns:.9fr 1.1fr}
+  .wkw__offer .wkw__ph{border-radius:0;height:100%;min-height:420px}
+  .wkw__offer-b{padding:56px}
+  .wkw__offer .wkw__h2,.wkw__offer .wkw__lbl{color:#fff} .wkw__offer .wkw__lbl::before{background:#fff}
+  .wkw__plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0 20px}
+  .wkw__plan{background:var(--paper);color:var(--ink);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:6px}
+  .wkw__plan small{font-size:12px;color:var(--leaf2);font-weight:700}
+  .wkw__plan h3{margin:0;font-family:'Sawarabi Mincho',serif;font-weight:400;font-size:19px;color:var(--g)}
+  .wkw__price{margin:0;font-size:34px;font-weight:700;line-height:1.2;color:var(--g)} .wkw__price span{font-size:12px;font-weight:500;color:var(--mute)}
+  .wkw__plan .wkw__btn{min-height:48px;margin-top:8px;font-size:15px}
+  .wkw__checks{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;font-size:14px;opacity:.95}
+  .wkw__faq{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .wkw__faq details{background:var(--paper);border-radius:20px;padding:0 26px;border:1px solid var(--line)}
+  .wkw__faq summary{cursor:pointer;padding:20px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px;color:var(--g)}
+  .wkw__faq summary::-webkit-details-marker{display:none}
+  .wkw__faq summary span{color:var(--carrot);font-size:20px;line-height:1}
+  .wkw__faq p{margin:0 0 20px;color:var(--mute)}
+  .wkw__sticky{display:none}
+  @media (max-width:989px){
+    .wkw__hero,.wkw__proof,.wkw__how,.wkw__voicewrap,.wkw__offer{grid-template-columns:1fr}
+    .wkw__steps{grid-template-columns:1fr}
+    .wkw__nums,.wkw__seasons{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .wkw__cal{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .wkw__collage{height:440px}
+    .wkw__voicewrap{padding:48px 24px}
+    .wkw__voicewrap .wkw__ph{height:300px}
+    .wkw__offer-b{padding:36px 24px}
+  }
+  @media (max-width:749px){
+    .wkw__sec{padding:72px 0}
+    .wkw__plans{grid-template-columns:1fr}
+    .wkw__how-ph{height:380px}
+    .wkw__voice:nth-child(even){margin-left:16px}
+    .wkw__sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 16px 14px;background:var(--paper);border-top:1px solid var(--line)}
+    .wkw__sticky .wkw__btn{width:100%;min-height:52px}
+    .wkw{padding-bottom:84px}
+  }
+</style>
+
+{%- liquid
+  assign s = section.settings
+  assign leaf = '#82BC3F'
+-%}
+
+<div class="wkw">
+  <div class="wkw__in">
+    <div class="wkw__hero">
+      <div>
+        <p class="wkw__badge">{{ s.badge }}</p>
+        <h1 class="wkw__h1">{{ s.heading_1 }}<br><em>{{ s.heading_2 }}</em></h1>
+        <p class="wkw__hero-p">{{ s.hero_text }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="wkw__btn" href="{{ s.cta_link | default: '#wkw-offer' }}">{{ s.cta_label }}</a>
+          <a class="wkw__btn wkw__btn--ghost" href="#wkw-story">若葉農園のこと</a>
+        </div>
+        <p class="wkw__note">{{ s.hero_note }}</p>
+      </div>
+      <div class="wkw__collage">
+        <div class="wkw__ph a">{% if s.hero_image != blank %}{{ s.hero_image | image_url: width: 1200 | image_tag: loading: 'eager', widths: '600,900,1200' }}{% endif %}</div>
+        <div class="wkw__ph b">{% if s.hero_image_2 != blank %}{{ s.hero_image_2 | image_url: width: 700 | image_tag: widths: '400,700' }}{% endif %}</div>
+        <div class="wkw__ph c">{% if s.hero_image_3 != blank %}{{ s.hero_image_3 | image_url: width: 500 | image_tag: widths: '300,500' }}{% endif %}</div>
+        <div class="wkw__stat"><small>若葉農園のほうれん草の糖度</small><b>12.3<span>%</span></b><small>全国平均 8.2%</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wkw__strip" aria-label="畑の毎日">
+    {%- for block in section.blocks -%}{%- if block.type == 'photo' and block.settings.image != blank -%}
+      <figure {{ block.shopify_attributes }}>
+        <div class="wkw__ph">{{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,600' }}</div>
+        {%- if block.settings.caption != blank -%}<figcaption class="wkw__cap">{{ block.settings.caption }}</figcaption>{%- endif -%}
+      </figure>
+    {%- endif -%}{%- endfor -%}
+  </div>
+
+  <div class="wkw__in">
+    <div class="wkw__nums">
+      <div class="wkw__num"><b>1998<span>年〜</span></b><p>肥料も農薬も使わない<br>栽培を続けて28年</p></div>
+      <div class="wkw__num"><b>約40<span>品目</span></b><p>季節ごとに<br>多品目を栽培</p></div>
+      <div class="wkw__num"><b>約500<span>名</span></b><p>全国の<br>購入会員さま</p></div>
+      <div class="wkw__num"><b>約1,000<span>パック</span></b><p>毎月、スタッフが<br>一つずつ詰めて出荷</p></div>
+    </div>
+  </div>
+
+  <section class="wkw__sec" id="wkw-story">
+    <div class="wkw__in wkw__proof">
+      <div>
+        <p class="wkw__lbl">甘さの理由 1</p>
+        <h2 class="wkw__h2">違いは、<span class="u">数字にも</span><br>あらわれています。</h2>
+        <p>青果物メディカル研究所に、若葉農園のほうれん草の成分検査をしていただきました。「葉に厚みがあり食感が強く、甘味が非常に強くえぐ味が少ない」という講評もいただいています。</p>
+        <div class="wkw__ph wkw__proof-ph">{% if s.proof_image != blank %}{{ s.proof_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '500,900' }}{% endif %}</div>
+      </div>
+      <div class="wkw__card">
+        {%- assign bars = '糖度|％|12.3|8.2|100|67,抗酸化力|TE mg/100g|197.1|88.3|100|45,ビタミンC|mg/100g|87.7|65.9|100|75,硝酸イオン|mg/L・少ないほどえぐみが少ない|5未満|2111.7|1|100' | split: ',' -%}
+        {%- for b in bars -%}{%- assign v = b | split: '|' -%}
+          <div class="wkw__bar">
+            <div class="wkw__bar-h"><b>{{ v[0] }}</b><span>{{ v[1] }}</span></div>
+            <div class="wkw__row"><span><strong>若葉農園</strong></span><div class="wkw__track"><div class="wkw__fill" style="width:{{ v[4] }}%;background:{{ leaf }}"></div></div><span>{{ v[2] }}</span></div>
+            <div class="wkw__row"><span style="color:#7A6E62">全国平均</span><div class="wkw__track"><div class="wkw__fill" style="width:{{ v[5] }}%;background:#CDBFAA"></div></div><span style="font-weight:400;color:#7A6E62">{{ v[3] }}</span></div>
+          </div>
+        {%- endfor -%}
+        <p style="margin:0;font-size:12px;color:#7A6E62">※全国平均は2006〜2010年。硝酸イオンは機械の最低計測値（5mg/L）未満のため計測されませんでした。数値は単一サンプルの検査結果です。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wkw__sec" style="background:var(--paper)">
+    <div class="wkw__in">
+      <p class="wkw__lbl">甘さの理由 2</p>
+      <h2 class="wkw__h2">種から、<span class="u">自分たちでつなぐ</span>。</h2>
+      <p class="wkw__lead">若葉農園は在来の種から自家採種を繰り返し、肥料に頼らなくても育つ力を、畑で受け継いできました。</p>
+      <ol class="wkw__steps">
+        <li class="wkw__step"><div class="wkw__ph">{% if s.step_image_1 != blank %}{{ s.step_image_1 | image_url: width: 700 | image_tag: loading: 'lazy', widths: '400,700' }}{% endif %}</div>
+          <div class="wkw__step-b"><span class="wkw__step-n">1</span><h3>種をまき、苗を育てる</h3><p>育った野菜の中から元気な株を選んで種を採り、その種から苗を育てます。</p></div></li>
+        <li class="wkw__step"><div class="wkw__ph">{% if s.step_image_2 != blank %}{{ s.step_image_2 | image_url: width: 700 | image_tag: loading: 'lazy', widths: '400,700' }}{% endif %}</div>
+          <div class="wkw__step-b"><span class="wkw__step-n">2</span><h3>土の力で育てる</h3><p>化学肥料も動物性の有機肥料も使いません（植物性の堆肥のみ部分的に使用）。</p></div></li>
+        <li class="wkw__step"><div class="wkw__ph">{% if s.step_image_3 != blank %}{{ s.step_image_3 | image_url: width: 700 | image_tag: loading: 'lazy', widths: '400,700' }}{% endif %}</div>
+          <div class="wkw__step-b"><span class="wkw__step-n">3</span><h3>収穫して、また種へ</h3><p>食卓へ届けるぶんを収穫し、残した株からまた種を採る。この循環を28年。</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="wkw__sec">
+    <div class="wkw__in">
+      <div class="wkw__voicewrap">
+        <div class="wkw__ph">{% if s.voice_image != blank %}{{ s.voice_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,800' }}{% endif %}</div>
+        <div>
+          <p class="wkw__lbl">甘さの理由 3</p>
+          <h2 class="wkw__h2">食べた人が、<span class="u">驚いています</span>。</h2>
+          <div class="wkw__voices">
+            {%- for block in section.blocks -%}{%- if block.type == 'voice' -%}
+              <figure class="wkw__voice" {{ block.shopify_attributes }}><blockquote>{{ block.settings.text }}</blockquote><figcaption>— {{ block.settings.name }}</figcaption></figure>
+            {%- endif -%}{%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wkw__sec" style="background:var(--paper)">
+    <div class="wkw__in wkw__how">
+      <div class="wkw__how-ph">
+        <div class="wkw__ph a">{% if s.box_image != blank %}{{ s.box_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '500,900' }}{% endif %}</div>
+        <div class="wkw__ph b">{% if s.box_image_2 != blank %}{{ s.box_image_2 | image_url: width: 500 | image_tag: loading: 'lazy', widths: '300,500' }}{% endif %}</div>
+      </div>
+      <div>
+        <p class="wkw__lbl">届くまで</p>
+        <h2 class="wkw__h2">畑から、<span class="u">あなたの台所へ</span>。</h2>
+        <ol class="wkw__flow">
+          <li><b>1</b><div><strong>ご注文</strong><p>お届け日の指定はご注文日から4日目以降。指定がなければ4日以内に発送します。</p></div></li>
+          <li><b>2</b><div><strong>その日いちばんの野菜を収穫</strong><p>状態の良い季節の野菜を約8品目選び、スタッフが一つずつ箱に詰めます（品目の指定はできません）。</p></div></li>
+          <li><b>3</b><div><strong>月・水・金に出荷</strong><p>近県は翌日、北海道・東北・関東・山梨・新潟・沖縄は2日後に届きます。</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="wkw__sec" id="wkw-season">
+    <div class="wkw__in">
+      <p class="wkw__lbl">旬のカレンダー</p>
+      <h2 class="wkw__h2">箱を開けるたび、<span class="u">季節が変わる</span>。</h2>
+      <p class="wkw__lead">これまでに出荷した約1,100回分の野菜セットの記録から、月ごとによく届く野菜をまとめました。</p>
+      <div class="wkw__seasons">
+        {%- assign snames = '春|夏|秋|冬' | split: '|' -%}
+        {%- assign sveg = '葉玉ねぎ・レタス・小松菜|きゅうり・ナス・ミニトマト|冬瓜・シシトウ・里芋|大根・白菜・ブロッコリー' | split: '|' -%}
+        {%- for n in snames -%}
+          {%- case forloop.index -%}{%- when 1 -%}{%- assign im = s.season_1 -%}{%- when 2 -%}{%- assign im = s.season_2 -%}{%- when 3 -%}{%- assign im = s.season_3 -%}{%- else -%}{%- assign im = s.season_4 -%}{%- endcase -%}
+          <div class="wkw__season"><div class="wkw__ph">{% if im != blank %}{{ im | image_url: width: 500 | image_tag: loading: 'lazy', widths: '300,500' }}{% endif %}</div><p>{{ n }}<span>{{ sveg[forloop.index0] }}</span></p></div>
+        {%- endfor -%}
+      </div>
+      {%- assign now_m = 'now' | date: '%-m' | plus: 0 -%}
+      {%- assign cal = '大根・人参・小松菜・白菜|人参・レタス・大根・カブ|小松菜・レタス・人参・カブ|人参・小松菜・葉玉ねぎ・じゃがいも|人参・ズッキーニ・玉ねぎ・三度豆|枝豆・玉ねぎ・じゃがいも・きゅうり|玉ねぎ・オクラ・空芯菜・ナス|オクラ・きゅうり・ナス・ミニトマト|冬瓜・オクラ・空芯菜・すだち|冬瓜・里芋・サツマイモ・生姜|小松菜・レタス・里芋・春菊|小松菜・人参・ねぎ・ブロッコリー' | split: '|' -%}
+      <div class="wkw__cal">
+        {%- for veg in cal -%}
+          <div class="wkw__mon{% if forloop.index == now_m %} is-now{% endif %}"><b>{{ forloop.index }}<span>月</span></b><p>{{ veg }}</p></div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <section class="wkw__sec" id="wkw-offer" style="padding-top:24px">
+    <div class="wkw__in">
+      <div class="wkw__offer">
+        <div class="wkw__ph">{% if s.offer_image != blank %}{{ s.offer_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '500,900' }}{% endif %}</div>
+        <div class="wkw__offer-b">
+          <p class="wkw__lbl">はじめての方へ</p>
+          <h2 class="wkw__h2">まずは一箱、<br>確かめてください。</h2>
+          <p style="margin:0">定期購入の前に、1回だけのお試しセットをご用意しています。</p>
+          <div class="wkw__plans">
+            {%- for p in (1..2) -%}
+              {%- if p == 1 -%}{%- assign prod = s.product_1 -%}{%- assign cap = s.plan_1_caption -%}{%- assign fname = s.plan_1_name -%}{%- assign fprice = s.plan_1_price -%}{%- else -%}{%- assign prod = s.product_2 -%}{%- assign cap = s.plan_2_caption -%}{%- assign fname = s.plan_2_name -%}{%- assign fprice = s.plan_2_price -%}{%- endif -%}
+              <div class="wkw__plan">
+                <small>{{ cap }}</small>
+                <h3>{% if prod != blank %}{{ prod.title }}{% else %}{{ fname }}{% endif %}</h3>
+                <p class="wkw__price">{% if prod != blank %}{{ prod.price | money_without_trailing_zeros }}{% else %}{{ fprice }}{% endif %}<span>（税込・送料別）</span></p>
+                <a class="wkw__btn" href="{% if prod != blank %}{{ prod.url }}{% else %}#{% endif %}">詳しく見る</a>
+              </div>
+            {%- endfor -%}
+          </div>
+          <ul class="wkw__checks">
+            <li>✓ 発送日の4日前までキャンセル可</li>
+            <li>✓ 5,000円以上で送料無料</li>
+            <li>✓ 気に入ったら定期便へ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wkw__sec" style="padding-top:40px">
+    <div class="wkw__in">
+      <div style="text-align:center"><p class="wkw__lbl">よくあるご質問</p><h2 class="wkw__h2" style="margin-bottom:36px">気になることは、こちらに。</h2></div>
+      <div class="wkw__faq">
+        {%- for block in section.blocks -%}{%- if block.type == 'faq' -%}
+          <details {{ block.shopify_attributes }}><summary>{{ block.settings.q }}<span aria-hidden="true">＋</span></summary><p>{{ block.settings.a }}</p></details>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <div class="wkw__sticky"><a class="wkw__btn" href="{{ s.cta_link | default: '#wkw-offer' }}">{{ s.sticky_label }}</a></div>
+</div>
+
+{% schema %}
+{
+  "name": "若葉農園 C案トップ（温かみ）",
+  "tag": "section",
+  "class": "section-wakaba-c-warm",
+  "settings": [
+    { "type": "header", "content": "ファーストビュー" },
+    { "type": "text", "id": "badge", "label": "バッジ", "default": "徳島・石井町　自然農法 28年" },
+    { "type": "text", "id": "heading_1", "label": "見出し 1行目", "default": "その甘さには、" },
+    { "type": "text", "id": "heading_2", "label": "見出し 2行目（若葉色）", "default": "理由がある。" },
+    { "type": "textarea", "id": "hero_text", "label": "説明文", "default": "肥料も、農薬も使わない。種は自分たちで採ってつなぐ。1998年から続けてきたやり方で育てた野菜を、畑から直接お届けします。" },
+    { "type": "image_picker", "id": "hero_image", "label": "写真（大）" },
+    { "type": "image_picker", "id": "hero_image_2", "label": "写真（小・左下）" },
+    { "type": "image_picker", "id": "hero_image_3", "label": "写真（丸・左上）" },
+    { "type": "text", "id": "cta_label", "label": "ボタンの文言", "default": "お試しセットで味わう" },
+    { "type": "url", "id": "cta_link", "label": "ボタンのリンク（空欄でお試しセット欄へ移動）" },
+    { "type": "text", "id": "hero_note", "label": "補足", "default": "季節の野菜 約8品目｜発送は月・水・金｜5,000円以上で送料無料" },
+    { "type": "text", "id": "sticky_label", "label": "スマホ下部の固定ボタン", "default": "お試しセットを見る" },
+    { "type": "header", "content": "各セクションの写真" },
+    { "type": "image_picker", "id": "proof_image", "label": "甘さの理由1 の写真" },
+    { "type": "image_picker", "id": "step_image_1", "label": "種の循環 1 の写真" },
+    { "type": "image_picker", "id": "step_image_2", "label": "種の循環 2 の写真" },
+    { "type": "image_picker", "id": "step_image_3", "label": "種の循環 3 の写真" },
+    { "type": "image_picker", "id": "voice_image", "label": "会員の声 の写真" },
+    { "type": "image_picker", "id": "box_image", "label": "届くまで の写真（大）" },
+    { "type": "image_picker", "id": "box_image_2", "label": "届くまで の写真（小）" },
+    { "type": "image_picker", "id": "season_1", "label": "旬：春 の写真" },
+    { "type": "image_picker", "id": "season_2", "label": "旬：夏 の写真" },
+    { "type": "image_picker", "id": "season_3", "label": "旬：秋 の写真" },
+    { "type": "image_picker", "id": "season_4", "label": "旬：冬 の写真" },
+    { "type": "image_picker", "id": "offer_image", "label": "お試しセット の写真" },
+    { "type": "header", "content": "お試しセット" },
+    { "type": "product", "id": "product_1", "label": "商品 1" },
+    { "type": "text", "id": "plan_1_caption", "label": "商品 1 の補足", "default": "11月〜3月" },
+    { "type": "text", "id": "plan_1_name", "label": "商品 1 の名前（非公開時の表示）", "default": "お試しセット 常温便" },
+    { "type": "text", "id": "plan_1_price", "label": "商品 1 の価格（非公開時の表示）", "default": "¥3,833" },
+    { "type": "product", "id": "product_2", "label": "商品 2" },
+    { "type": "text", "id": "plan_2_caption", "label": "商品 2 の補足", "default": "4月〜10月／2日かかる地域" },
+    { "type": "text", "id": "plan_2_name", "label": "商品 2 の名前（非公開時の表示）", "default": "お試しセット 冷蔵便" },
+    { "type": "text", "id": "plan_2_price", "label": "商品 2 の価格（非公開時の表示）", "default": "¥4,328" }
+  ],
+  "blocks": [
+    { "type": "photo", "name": "畑の毎日（写真）", "settings": [
+      { "type": "image_picker", "id": "image", "label": "写真" },
+      { "type": "text", "id": "caption", "label": "ひとこと" } ] },
+    { "type": "voice", "name": "会員さまの声", "settings": [
+      { "type": "textarea", "id": "text", "label": "本文" },
+      { "type": "text", "id": "name", "label": "お名前・肩書き", "default": "定期購入会員さま" } ] },
+    { "type": "faq", "name": "よくある質問", "settings": [
+      { "type": "text", "id": "q", "label": "質問" },
+      { "type": "textarea", "id": "a", "label": "回答" } ] }
+  ],
+  "presets": [ { "name": "若葉農園 C案トップ（温かみ）" } ]
+}
+{% endschema %}
