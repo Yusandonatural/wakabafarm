@@ -1,0 +1,19 @@
+{%- comment -%} 全ページ共通の見た目の調整（ヘッダーグループに配置）。表示要素はありません。 {%- endcomment -%}
+<style>
+  .rte table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border-collapse:collapse}
+  .rte th,.rte td{padding:10px 12px;border:1px solid #E6E1D6;vertical-align:top}
+  .rte thead th,.rte tbody th{background:#F6F4EE;color:#163729}
+  .main-page-title,.article-template__title{color:#163729}
+  .page-width--narrow .rte h2,.article-template__content h2{margin-top:2.4em;padding-left:.7em;border-left:4px solid #82BC3F;color:#163729;font-size:calc(var(--font-heading-scale)*2rem)}
+  .page-width--narrow .rte h3,.article-template__content h3{color:#163729}
+  .rte a{color:#163729;text-underline-offset:.2em}
+  .rte img{border-radius:12px}
+  .article-template__content p:empty{display:none}
+  .article-template__content p{margin:0 0 .9em}
+  .wk-trust{display:grid;gap:8px;margin:4px 0 0;padding:14px 16px;list-style:none;border:1px solid #E6E1D6;border-radius:12px;background:#FCFBF8;font-size:1.4rem;line-height:1.6;color:#3E3A34}
+  .wk-trust li{display:flex;gap:8px;align-items:flex-start}
+  .wk-trust li::before{content:"";flex:none;width:8px;height:8px;margin-top:.55em;border-radius:50%;background:#82BC3F}
+</style>
+{% schema %}
+{ "name": "共通スタイル（若葉農園）", "settings": [], "presets": [ { "name": "共通スタイル（若葉農園）" } ] }
+{% endschema %}

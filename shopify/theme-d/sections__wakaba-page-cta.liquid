@@ -1,0 +1,40 @@
+{%- comment -%} ページ下部の案内帯（固定ページ・記事の最後に表示） {%- endcomment -%}
+<div class="wk-cta">
+  <div class="wk-cta__in">
+    <div>
+      <p class="wk-cta__eb">{{ section.settings.eyebrow }}</p>
+      <p class="wk-cta__t">{{ section.settings.title }}</p>
+      <p class="wk-cta__p">{{ section.settings.text }}</p>
+    </div>
+    <div class="wk-cta__btns">
+      <a class="wk-cta__btn" href="{{ section.settings.link | default: '/pages/otameshi' }}">{{ section.settings.label }}</a>
+      {%- if section.settings.link2 != blank -%}<a class="wk-cta__btn wk-cta__btn--line" href="{{ section.settings.link2 }}">{{ section.settings.label2 }}</a>{%- endif -%}
+    </div>
+  </div>
+</div>
+<style>
+  .wk-cta{padding:24px 16px 64px}
+  .wk-cta__in{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between;padding:32px;border-radius:20px;background:#163729;color:#DCE8D6}
+  .wk-cta__eb{margin:0;font-size:1.2rem;font-weight:700;letter-spacing:.14em;color:#B9D98F}
+  .wk-cta__t{margin:4px 0 6px;font-family:var(--font-heading-family);font-size:2.4rem;line-height:1.5;color:#fff}
+  .wk-cta__p{margin:0;font-size:1.4rem;line-height:1.7}
+  .wk-cta__btns{display:flex;flex-wrap:wrap;gap:10px}
+  .wk-cta__btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:12px;background:#B85716;color:#fff;font-weight:700;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 0 #7E3A0C}
+  .wk-cta__btn--line{background:transparent;border:1.5px solid rgba(255,255,255,.6);box-shadow:none}
+  @media (max-width:749px){.wk-cta__in{padding:24px}.wk-cta__btns,.wk-cta__btn{width:100%}}
+</style>
+{% schema %}
+{
+  "name": "ページ下部の案内（若葉農園）",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "小見出し", "default": "はじめての方へ" },
+    { "type": "text", "id": "title", "label": "見出し", "default": "まずは、お試し野菜セットから。" },
+    { "type": "text", "id": "text", "label": "本文", "default": "肥料も農薬も使わずに育てた季節の野菜を約8品目。定期の申し込みは要りません。" },
+    { "type": "text", "id": "label", "label": "ボタン1の文言", "default": "お試しセットを見る" },
+    { "type": "text", "id": "link", "label": "ボタン1のリンク", "default": "/pages/otameshi" },
+    { "type": "text", "id": "label2", "label": "ボタン2の文言", "default": "定期宅配について" },
+    { "type": "text", "id": "link2", "label": "ボタン2のリンク", "default": "/pages/delivery" }
+  ],
+  "presets": [ { "name": "ページ下部の案内（若葉農園）" } ]
+}
+{% endschema %}

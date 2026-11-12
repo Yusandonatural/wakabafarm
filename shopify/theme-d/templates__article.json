@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "シェアする"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content",
+        "share"
+      ],
+      "settings": {}
+    },
+    "cta": {
+      "type": "wakaba-page-cta",
+      "settings": {
+        "eyebrow": "若葉農園の野菜を食卓へ",
+        "title": "畑の野菜を、ご自宅で味わってみませんか。",
+        "text": "肥料も農薬も使わずに育てた季節の野菜を約8品目。定期の申し込み不要のお試しセットがあります。"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cta"
+  ]
+}
