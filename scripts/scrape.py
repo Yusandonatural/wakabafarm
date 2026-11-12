@@ -349,6 +349,8 @@ def image_local_path(url):
 
 def download_image(url):
     dest = image_local_path(url)
+    if urlparse(url).hostname not in ("www.wakaba.jpn.com", "wakaba.jpn.com"):
+        return url, dest, False  # 外部サイト（Facebook 等）の画像は取得対象外
     if dest.exists() and dest.stat().st_size > 0:
         return url, dest, True
     data = get(url, binary=True)
