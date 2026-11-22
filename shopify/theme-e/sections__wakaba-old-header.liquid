@@ -1,0 +1,111 @@
+{%- comment -%}
+  若葉農園 旧サイト再現ヘッダー（E案）
+  PC：中央にロゴと「自然農法 若葉農園」、その下に「｜」区切りのメニュー。右上に検索・会員・カート。
+  スマホ：左に小さいロゴ、右に会員・カート・MENUボタン。
+{%- endcomment -%}
+<style>
+  .wko-h{background:#fff;color:#163729;font-family:"Noto Sans Japanese","Noto Sans JP",YuGothic,"Yu Gothic Medium","Hiragino Kaku Gothic Pro",Meiryo,sans-serif;position:relative;z-index:20}
+  .wko-h a{color:#163729;text-decoration:none}
+  .wko-h__in{max-width:1170px;margin:0 auto;padding:18px 15px 0;position:relative}
+  .wko-h__brand{text-align:center}
+  .wko-h__logo{display:inline-block;width:320px;max-width:70%}
+  .wko-h__logo img{display:block;width:100%;height:auto}
+  .wko-h__copy{margin:12px 0 0;font-size:14px;letter-spacing:.1em}
+  .wko-h__icons{position:absolute;top:22px;right:15px;display:flex;gap:12px;margin:0;padding:0;list-style:none}
+  .wko-h__icons a{position:relative;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#163729;color:#fff}
+  .wko-h__icons svg{width:18px;height:18px}
+  .wko-h__count{position:absolute;top:-4px;right:-6px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:#555;color:#fff;font-size:11px;line-height:18px;text-align:center}
+  .wko-nav{margin:18px 0 0;padding:0 0 14px;list-style:none;text-align:center;font-size:0}
+  .wko-nav>li{display:inline-block;position:relative;font-size:15px}
+  .wko-nav>li+li::before{content:"";position:absolute;left:0;top:50%;width:1px;height:14px;margin-top:-7px;background:#163729}
+  .wko-nav>li>a{display:block;padding:12px 22px;line-height:1;position:relative}
+  .wko-nav>li>a::after{content:"";position:absolute;left:50%;bottom:-1px;width:0;height:3px;background:#82BC3F;transition:all .3s ease}
+  .wko-nav>li>a:hover::after,.wko-nav>li>a[aria-current]::after{left:22px;width:calc(100% - 44px)}
+  .wko-nav__has>a{padding-bottom:16px!important}
+  .wko-nav__has>a span{display:block;font-size:9px;line-height:1;margin-top:3px}
+  .wko-sub{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:180px;margin:0;padding:8px 0;list-style:none;background:#fff;border:1px solid #dedede;box-shadow:0 4px 12px rgba(0,0,0,.08);text-align:left;z-index:30}
+  .wko-nav__has:hover .wko-sub,.wko-nav__has:focus-within .wko-sub{display:block}
+  .wko-sub a{display:block;padding:8px 16px;font-size:14px;line-height:1.5}
+  .wko-sub a:hover{background:#f6f6f6}
+  .wko-h__sp{display:none}
+  .wko-drawer{display:none}
+  @media (max-width:989px){
+    .wko-h__in{display:none}
+    .wko-h__sp{display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 0 0 12px;border-bottom:1px solid #ececec}
+    .wko-h__sp .wko-h__logo{width:150px;max-width:none}
+    .wko-h__sp-r{display:flex;align-items:center;height:100%}
+    .wko-h__sp-r>a{position:relative;display:flex;align-items:center;justify-content:center;width:44px;height:100%}
+    .wko-h__sp-r svg{width:22px;height:22px;color:#163729}
+    .wko-h__sp-r .wko-h__count{top:8px;right:2px}
+    .wko-menu-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;width:56px;height:56px;margin-left:4px;background:#163729;color:#fff;border:0;font-size:10px;letter-spacing:.05em;cursor:pointer}
+    .wko-menu-btn i{display:block;width:24px;height:2px;margin:2px 0;background:#fff}
+    .wko-drawer[open]{display:block}
+    .wko-drawer{position:absolute;left:0;right:0;top:56px;background:#163729;padding:8px 0 16px;z-index:40}
+    .wko-drawer a{display:block;padding:14px 20px;color:#fff!important;border-bottom:1px solid rgba(255,255,255,.12);font-size:15px}
+    .wko-drawer .wko-drawer__sub a{padding-left:36px;font-size:14px;color:#DCE8D6!important}
+  }
+</style>
+
+{%- liquid
+  assign menu = linklists[section.settings.menu]
+  assign logo = section.settings.logo
+  assign logo_sp = section.settings.logo_sp | default: logo
+-%}
+{%- capture ic_search -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></svg>{%- endcapture -%}
+{%- capture ic_user -%}<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 21c.6-4.6 4.1-7.2 8.5-7.2s7.9 2.6 8.5 7.2z"/></svg>{%- endcapture -%}
+{%- capture ic_cart -%}<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3h3l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h9.2a1.5 1.5 0 0 0 1.4-1.1L21.5 7H6.2"/><circle cx="9.5" cy="19.5" r="1.6"/><circle cx="17.5" cy="19.5" r="1.6"/></svg>{%- endcapture -%}
+
+<header class="wko-h">
+  <div class="wko-h__in">
+    <div class="wko-h__brand">
+      <a class="wko-h__logo" href="{{ routes.root_url }}">{% if logo != blank %}{{ logo | image_url: width: 640 | image_tag: alt: shop.name, loading: 'eager' }}{% else %}<span style="font-size:32px">{{ shop.name }}</span>{% endif %}</a>
+      <p class="wko-h__copy">{{ section.settings.copy }}</p>
+    </div>
+    <ul class="wko-h__icons">
+      <li><a href="{{ routes.search_url }}" aria-label="検索">{{ ic_search }}</a></li>
+      {%- if shop.customer_accounts_enabled -%}<li><a href="{{ routes.account_url }}" aria-label="会員ページ">{{ ic_user }}</a></li>{%- endif -%}
+      <li><a href="{{ routes.cart_url }}" aria-label="カート">{{ ic_cart }}<span class="wko-h__count">{{ cart.item_count }}</span></a></li>
+    </ul>
+    <nav aria-label="メインメニュー">
+      <ul class="wko-nav">
+        {%- for link in menu.links -%}
+          {%- if link.links.size > 0 -%}
+            <li class="wko-nav__has"><a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}<span aria-hidden="true">⌄</span></a>
+              <ul class="wko-sub">{%- for c in link.links -%}<li><a href="{{ c.url }}">{{ c.title }}</a></li>{%- endfor -%}</ul></li>
+          {%- else -%}
+            <li><a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+
+  <div class="wko-h__sp">
+    <a class="wko-h__logo" href="{{ routes.root_url }}">{% if logo_sp != blank %}{{ logo_sp | image_url: width: 320 | image_tag: alt: shop.name, loading: 'eager' }}{% else %}{{ shop.name }}{% endif %}</a>
+    <div class="wko-h__sp-r">
+      {%- if shop.customer_accounts_enabled -%}<a href="{{ routes.account_url }}" aria-label="会員ページ">{{ ic_user }}</a>{%- endif -%}
+      <a href="{{ routes.cart_url }}" aria-label="カート">{{ ic_cart }}<span class="wko-h__count">{{ cart.item_count }}</span></a>
+      <button class="wko-menu-btn" type="button" aria-expanded="false" aria-controls="wko-drawer" onclick="var d=document.getElementById('wko-drawer');var o=d.hasAttribute('open');o?d.removeAttribute('open'):d.setAttribute('open','');this.setAttribute('aria-expanded',!o);"><i></i><i></i><i></i>MENU</button>
+    </div>
+  </div>
+  <nav class="wko-drawer" id="wko-drawer" aria-label="メニュー">
+    {%- for link in menu.links -%}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      {%- if link.links.size > 0 -%}<div class="wko-drawer__sub">{%- for c in link.links -%}<a href="{{ c.url }}">{{ c.title }}</a>{%- endfor -%}</div>{%- endif -%}
+    {%- endfor -%}
+    <a href="{{ routes.search_url }}">検索</a>
+  </nav>
+</header>
+
+{% schema %}
+{
+  "name": "旧サイト風ヘッダー",
+  "class": "wko-header-section",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "ロゴ（PC）" },
+    { "type": "image_picker", "id": "logo_sp", "label": "ロゴ（スマホ・空欄ならPCと同じ）" },
+    { "type": "text", "id": "copy", "label": "ロゴ下の文字", "default": "自然農法 若葉農園" },
+    { "type": "link_list", "id": "menu", "label": "メニュー", "default": "main-menu" }
+  ]
+}
+{% endschema %}

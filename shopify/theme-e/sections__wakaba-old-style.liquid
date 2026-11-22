@@ -1,0 +1,21 @@
+{%- comment -%} 旧サイト風の全体スタイル（ヘッダーグループに配置）。表示要素はありません。 {%- endcomment -%}
+<style>
+  body{color:#163729;font-family:"Noto Sans Japanese","Noto Sans JP",YuGothic,"Yu Gothic Medium","Hiragino Kaku Gothic Pro",Meiryo,sans-serif;background:#fff}
+  :root{--font-heading-family:"Noto Sans Japanese","Noto Sans JP",YuGothic,"Yu Gothic Medium","Hiragino Kaku Gothic Pro",Meiryo,sans-serif;--font-heading-weight:400}
+  h1,h2,h3,.h0,.h1,.h2,.h3{letter-spacing:.05em}
+  .main-page-title,.article-template__title,.collection-hero__title,.title--primary{font-size:28px!important;font-weight:400;text-align:center;color:#163729}
+  .page-width--narrow .rte h2,.article-template__content h2{margin:2.2em 0 1em;padding:0 0 .4em;border-bottom:1px solid #82BC3F;color:#163729;font-size:22px;font-weight:500}
+  .rte h3{color:#163729;font-weight:500}
+  .rte a{color:#163729}
+  .rte table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse}
+  .rte th,.rte td{padding:10px 12px;border:1px solid #dedede;vertical-align:top}
+  .rte th,.rte thead td{background:#f6f6f6}
+  .article-template__content p:empty{display:none}
+  .button,.shopify-payment-button__button--unbranded{border-radius:0!important}
+  .button--primary,.product-form__submit{background:#163729!important;color:#fff!important}
+  .card__heading a,.card-information{color:#163729}
+  .wk-trust{display:grid;gap:6px;margin:4px 0 0;padding:12px 14px;list-style:none;border:1px solid #82BC3F;font-size:1.4rem;line-height:1.6;color:#163729}
+</style>
+{% schema %}
+{ "name": "旧サイト風スタイル", "settings": [], "presets": [ { "name": "旧サイト風スタイル" } ] }
+{% endschema %}
