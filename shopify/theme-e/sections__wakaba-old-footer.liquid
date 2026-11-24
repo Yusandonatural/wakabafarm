@@ -13,7 +13,7 @@
   .wko-f__nav a{display:block;padding:0 22px;line-height:1;border-left:1px solid #163729}
   .wko-f__nav li:first-child a{border-left:none}
   .wko-f__nav a:hover{text-decoration:underline}
-  .wko-f__copy{margin:0;padding:1em 15px 3em;background:#B8CE4E;text-align:center;font-size:15px;line-height:1.8}
+  .wko-f__copy{margin:0;padding:1em 15px 8em;background:#B8CE4E;text-align:center;font-size:15px;line-height:1.8}
   .wko-f__copy small{display:block;margin-top:.8em;font-size:12px}
   .wko-f__copy .sp{display:none}
   .wko-fixed{display:none}
@@ -21,7 +21,9 @@
     .wko-f__nav{display:none}
     .wko-f__copy{padding-bottom:110px}
     .wko-f__copy .sp{display:inline}.wko-f__copy .pc{display:none}
-    .wko-fixed{position:fixed;left:0;right:0;bottom:8px;z-index:50;display:flex;justify-content:center;gap:8px;pointer-events:none}
+    .wko-fixed{position:fixed;left:0;right:0;bottom:8px;z-index:50;display:flex;justify-content:center;gap:8px;pointer-events:none;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s}
+    .wko-fixed.is-on{opacity:1;transform:none}
+    .wko-fixed:not(.is-on) a{pointer-events:none}
     .wko-fixed a{pointer-events:auto;display:flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:50%;color:#fff!important;font-size:11px;line-height:1.35;text-align:center;opacity:.95;box-shadow:0 2px 6px rgba(0,0,0,.15)}
     .wko-fixed .h{background:#163729}.wko-fixed .a{background:#CFD621}.wko-fixed .b{background:#009F93}.wko-fixed .c{background:#F1A63B}
   }
@@ -43,6 +45,7 @@
     <a class="b" href="{{ section.settings.btn_b_link }}">{{ section.settings.btn_b | newline_to_br }}</a>
     <a class="c" href="{{ section.settings.btn_c_link }}">{{ section.settings.btn_c | newline_to_br }}</a>
   </nav>
+  <script>(function(){var n=document.querySelector('.wko-fixed');if(!n)return;function u(){n.classList.toggle('is-on',window.scrollY>300)}window.addEventListener('scroll',u,{passive:true});u();})();</script>
 </footer>
 {% schema %}
 {

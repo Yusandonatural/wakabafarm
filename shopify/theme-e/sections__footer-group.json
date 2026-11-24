@@ -1,0 +1,18 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "wakaba-old-footer",
+      "settings": {
+        "logo": "shopify://shop_images/wkold-footer-logo.png",
+        "band": "shopify://shop_images/wkold-footer-bg.png",
+        "menu": "old-main-menu",
+        "legal": "old-legal"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

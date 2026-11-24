@@ -1,0 +1,22 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "wakaba-old-header",
+      "settings": {
+        "logo": "shopify://shop_images/wkold-logo.png",
+        "copy": "自然農法 若葉農園",
+        "menu": "old-main-menu"
+      }
+    },
+    "style": {
+      "type": "wakaba-old-style",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "style"
+  ]
+}

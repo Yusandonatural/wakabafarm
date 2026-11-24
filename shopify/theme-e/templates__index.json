@@ -1,0 +1,117 @@
+{
+  "sections": {
+    "main": {
+      "type": "wakaba-old-home",
+      "blocks": {
+        "s1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/wkold-top5.jpg",
+            "link": ""
+          }
+        },
+        "t1": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-tile1.jpg",
+            "title": "お客様の声",
+            "link": "/pages/about",
+            "banner": false
+          }
+        },
+        "t2": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-tile2.jpg",
+            "title": "お野菜ラインナップ",
+            "link": "/pages/delivery",
+            "banner": false
+          }
+        },
+        "t3": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-tile3.jpg",
+            "title": "畑情報",
+            "link": "/blogs/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/tagged/%E7%95%91%E6%83%85%E5%A0%B1",
+            "banner": false
+          }
+        },
+        "t4": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-tile4.jpg",
+            "title": "レシピ",
+            "link": "/blogs/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/tagged/%E3%83%AC%E3%82%B7%E3%83%94",
+            "banner": false
+          }
+        },
+        "t5": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-tile5.jpg",
+            "title": "研修申し込み",
+            "link": "/pages/kenshu",
+            "banner": false
+          }
+        },
+        "t6": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-tile6.jpg",
+            "title": "研修生ストーリー",
+            "link": "/pages/kenshu",
+            "banner": false
+          }
+        },
+        "t7": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-tile7.png",
+            "title": "お知らせ",
+            "link": "/blogs/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/tagged/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+            "banner": false
+          }
+        },
+        "fb": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-facebook.png",
+            "title": "Facebook（若葉農園）",
+            "link": "https://www.facebook.com/shumei.wakabafarm/",
+            "banner": true
+          }
+        },
+        "ig": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/wkold-instagram.png",
+            "title": "Instagram（若葉農園）",
+            "link": "https://www.instagram.com/wakabanouen/",
+            "banner": true
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "fb",
+        "ig"
+      ],
+      "settings": {
+        "feat1_image": "shopify://shop_images/wkold-feature-shop.jpg",
+        "feat2_image": "shopify://shop_images/wkold-feature-deli.jpg",
+        "more_link": "/blogs/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
