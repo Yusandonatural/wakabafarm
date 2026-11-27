@@ -1,0 +1,76 @@
+{%- comment -%}
+  若葉農園 旧サイト再現フッター（E案）
+  ロゴ／「｜」区切りのメニュー／新芽の並ぶ黄緑の帯に会社情報。スマホは画面下に丸ボタンを固定。
+{%- endcomment -%}
+<style>
+  .wko-f{background:#fff;color:#163729;font-family:"Noto Sans Japanese","Noto Sans JP",YuGothic,"Yu Gothic Medium","Hiragino Kaku Gothic Pro",Meiryo,sans-serif;padding-top:1em}
+  .wko-f a{color:#163729;text-decoration:none}
+  .wko-f__inner{padding-bottom:50px;min-height:50px;background-repeat:no-repeat;background-position:center bottom}
+  .wko-f__logo{max-width:138px;margin:0 auto 2em;padding:0 15px}
+  .wko-f__logo img{display:block;width:100%;height:auto}
+  .wko-f__nav{margin:0 auto;padding:0 15px 1em;list-style:none;text-align:center;font-size:0;max-width:1170px}
+  .wko-f__nav li{display:inline-block;margin-bottom:.5em;font-size:15px}
+  .wko-f__nav a{display:block;padding:0 22px;line-height:1;border-left:1px solid #163729}
+  .wko-f__nav li:first-child a{border-left:none}
+  .wko-f__nav a:hover{text-decoration:underline}
+  .wko-f__copy{margin:0;padding:1em 15px 8em;background:#B8CE4E;text-align:center;font-size:15px;line-height:1.8}
+  .wko-f__copy small{display:block;margin-top:.8em;font-size:12px}
+  .wko-f__copy .sp{display:none}
+  @keyframes wkoBob2{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .wko-fixed{position:fixed;right:18px;bottom:24px;z-index:50;display:flex;flex-direction:column;gap:12px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+  .wko-fixed.is-on{opacity:1;visibility:visible}
+  .wko-fixed a{display:flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:50%;color:#fff!important;font-size:13px;line-height:1.4;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.18);animation:wkoBob2 3s ease-in-out infinite;transition:filter .2s}
+  .wko-fixed a:hover{filter:brightness(1.08)}
+  .wko-fixed a:nth-child(2){animation-delay:.4s}.wko-fixed a:nth-child(3){animation-delay:.8s}.wko-fixed a:nth-child(4){animation-delay:1.2s}
+  .wko-fixed .h{display:none;background:#163729}.wko-fixed .a{background:#CFD621}.wko-fixed .b{background:#009F93}.wko-fixed .c{background:#F1A63B}
+  @media (prefers-reduced-motion:reduce){.wko-fixed a{animation:none}}
+  @media (max-width:989px){
+    .wko-f__nav{display:none}
+    .wko-f__copy{padding-bottom:110px}
+    .wko-f__copy .sp{display:inline}.wko-f__copy .pc{display:none}
+    .wko-fixed{left:0;right:0;bottom:8px;flex-direction:row;justify-content:center;gap:8px}
+    .wko-fixed a{width:70px;height:70px;font-size:11px;line-height:1.35}
+    .wko-fixed .h{display:flex}
+  }
+</style>
+{%- assign menu = linklists[section.settings.menu] -%}
+<footer class="wko-f">
+  <div class="wko-f__inner"{% if section.settings.band != blank %} style="background-image:url({{ section.settings.band | image_url: width: 1920 }})"{% endif %}>
+    <div class="wko-f__logo"><a href="{{ routes.root_url }}">{% if section.settings.logo != blank %}{{ section.settings.logo | image_url: width: 276 | image_tag: alt: shop.name, loading: 'lazy' }}{% else %}{{ shop.name }}{% endif %}</a></div>
+    <ul class="wko-f__nav">{%- for link in menu.links -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}</ul>
+  </div>
+  <p class="wko-f__copy">
+    <span class="pc">{{ section.settings.company }}　{{ section.settings.address }}　{{ section.settings.tel }}　{{ section.settings.fax }}</span>
+    <span class="sp">{{ section.settings.company }}<br>{{ section.settings.address }}<br>{{ section.settings.tel }}<br>{{ section.settings.fax }}</span>
+    <small>{%- for l in linklists[section.settings.legal].links -%}{% unless forloop.first %}　｜　{% endunless %}<a href="{{ l.url }}">{{ l.title }}</a>{%- endfor -%}</small>
+  </p>
+  <nav class="wko-fixed" aria-label="クイックメニュー">
+    <a class="h" href="{{ routes.root_url }}">HOME</a>
+    <a class="a" href="{{ section.settings.btn_a_link }}">{{ section.settings.btn_a | newline_to_br }}</a>
+    <a class="b" href="{{ section.settings.btn_b_link }}">{{ section.settings.btn_b | newline_to_br }}</a>
+    <a class="c" href="{{ section.settings.btn_c_link }}">{{ section.settings.btn_c | newline_to_br }}</a>
+  </nav>
+  <script>(function(){var n=document.querySelector('.wko-fixed');if(!n)return;function u(){n.classList.toggle('is-on',window.scrollY>(window.innerWidth>989?520:300))}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</footer>
+{% schema %}
+{
+  "name": "旧サイト風フッター",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "ロゴ" },
+    { "type": "image_picker", "id": "band", "label": "新芽の帯（横長の画像）" },
+    { "type": "link_list", "id": "menu", "label": "メニュー", "default": "main-menu" },
+    { "type": "link_list", "id": "legal", "label": "規約などのリンク", "default": "footer" },
+    { "type": "text", "id": "company", "label": "会社名", "default": "有限会社若葉農園" },
+    { "type": "text", "id": "address", "label": "住所", "default": "〒779-3244 徳島県名西郡石井町浦庄字下浦326-6" },
+    { "type": "text", "id": "tel", "label": "電話", "default": "TEL.088-675-2512" },
+    { "type": "text", "id": "fax", "label": "FAX", "default": "FAX.088-603-1052" },
+    { "type": "header", "content": "スマホ下部の丸ボタン" },
+    { "type": "textarea", "id": "btn_a", "label": "ボタン1", "default": "若葉農園\nとは" },
+    { "type": "text", "id": "btn_a_link", "label": "ボタン1のリンク", "default": "/pages/about" },
+    { "type": "textarea", "id": "btn_b", "label": "ボタン2", "default": "オンライン\nショップ" },
+    { "type": "text", "id": "btn_b_link", "label": "ボタン2のリンク", "default": "/collections/all" },
+    { "type": "textarea", "id": "btn_c", "label": "ボタン3", "default": "定期宅配\n野菜セット" },
+    { "type": "text", "id": "btn_c_link", "label": "ボタン3のリンク", "default": "/pages/delivery" }
+  ]
+}
+{% endschema %}

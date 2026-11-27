@@ -1,0 +1,85 @@
+{%- comment -%}
+  若葉農園 商品一覧（F案）
+  旧サイト風の見た目で、商品ごとに「短い説明文」を一覧に表示します。
+  説明文は、SEO用の説明（検索結果の説明文）→ 商品説明の冒頭 の順で使います。
+{%- endcomment -%}
+<style>
+  .wkc{max-width:1170px;margin:0 auto;padding:24px 15px 56px;color:#163729;font-family:"Noto Sans Japanese","Noto Sans JP",YuGothic,"Yu Gothic Medium","Hiragino Kaku Gothic Pro",Meiryo,sans-serif}
+  .wkc a{color:#163729;text-decoration:none}
+  .wkc__title{margin:0 0 .4em;font-size:28px;font-weight:400;text-align:center;letter-spacing:.05em}
+  .wkc__desc{max-width:760px;margin:0 auto 2em;text-align:center;font-size:15px;line-height:1.9}
+  .wkc__cats{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 2.2em;padding:0;list-style:none}
+  .wkc__cats a{display:block;padding:6px 16px;border:1px solid #82BC3F;font-size:14px;line-height:1.5}
+  .wkc__cats a[aria-current="page"]{background:#163729;border-color:#163729;color:#fff}
+  .wkc__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.4em 30px;margin:0;padding:0;list-style:none}
+  .wkc__img{display:block;aspect-ratio:1;overflow:hidden;background:#f6f6f6;margin-bottom:.8em}
+  .wkc__img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .wkc__item:hover .wkc__img img{transform:scale(1.03)}
+  .wkc__name{display:block;padding:6px .4em;border:1px solid #82BC3F;text-align:center;font-size:16px;font-weight:500;line-height:1.5}
+  .wkc__price{margin:.6em 0 .3em;text-align:center;font-size:16px;font-weight:500}
+  .wkc__price small{font-size:12px;font-weight:400;color:#555;margin-left:4px}
+  .wkc__soldout{display:inline-block;margin-left:8px;padding:1px 8px;border:1px solid #999;color:#666;font-size:12px;vertical-align:middle}
+  .wkc__text{margin:0 0 .8em;font-size:14px;line-height:1.8;color:#3E3A34}
+  .wkc__more{display:block;text-align:right;font-size:13px;color:#163729}
+  .wkc__more::after{content:" ›"}
+  .wkc__pager{display:flex;justify-content:center;gap:10px;margin:3em 0 0;font-size:15px}
+  .wkc__pager a,.wkc__pager span{display:block;min-width:36px;padding:6px 10px;border:1px solid #dedede;text-align:center}
+  .wkc__pager .current{background:#163729;border-color:#163729;color:#fff}
+  @media (max-width:989px){.wkc__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:2em 14px}.wkc__text{font-size:13px}}
+</style>
+
+{%- paginate collection.products by section.settings.per_page -%}
+<div class="wkc">
+  <h1 class="wkc__title">{% if collection.handle == 'all' %}{{ section.settings.all_title }}{% else %}{{ collection.title }}{% endif %}</h1>
+  {%- if collection.description != blank -%}<div class="wkc__desc">{{ collection.description }}</div>{%- elsif collection.handle == 'all' and section.settings.all_text != blank -%}<div class="wkc__desc">{{ section.settings.all_text }}</div>{%- endif -%}
+
+  {%- assign catmenu = linklists[section.settings.cat_menu] -%}
+  {%- if catmenu.links.size > 0 -%}
+  <ul class="wkc__cats">
+    {%- for l in catmenu.links -%}<li><a href="{{ l.url }}"{% if l.current or l.url == collection.url %} aria-current="page"{% endif %}>{{ l.title }}</a></li>{%- endfor -%}
+  </ul>
+  {%- endif -%}
+
+  <ul class="wkc__grid">
+    {%- for p in collection.products -%}
+      {%- liquid
+        assign summary = p.metafields.global.description_tag.value | default: p.metafields.global.description_tag
+        if summary == blank
+          assign summary = p.description | strip_html | strip_newlines
+        endif
+        assign summary = summary | strip | truncate: section.settings.length
+      -%}
+      <li class="wkc__item">
+        <a class="wkc__img" href="{{ p.url }}">{%- if p.featured_media -%}{{ p.featured_media | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600', sizes: '(min-width: 990px) 360px, 50vw', alt: p.title }}{%- endif -%}</a>
+        <a class="wkc__name" href="{{ p.url }}">{{ p.title }}</a>
+        <p class="wkc__price">{{ p.price_min | money_without_trailing_zeros }}{% if p.price_varies %}〜{% endif %}<small>税込</small>{% unless p.available %}<span class="wkc__soldout">売り切れ</span>{% endunless %}</p>
+        {%- if summary != blank -%}<p class="wkc__text">{{ summary }}</p>{%- endif -%}
+        <a class="wkc__more" href="{{ p.url }}">詳しく見る</a>
+      </li>
+    {%- else -%}
+      <li>商品がまだありません。</li>
+    {%- endfor -%}
+  </ul>
+
+  {%- if paginate.pages > 1 -%}
+  <nav class="wkc__pager" aria-label="ページ">
+    {%- for part in paginate.parts -%}
+      {%- if part.is_link -%}<a href="{{ part.url }}">{{ part.title }}</a>{%- elsif part.title == paginate.current_page -%}<span class="current">{{ part.title }}</span>{%- else -%}<span>{{ part.title }}</span>{%- endif -%}
+    {%- endfor -%}
+  </nav>
+  {%- endif -%}
+</div>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "旧サイト風 商品一覧",
+  "settings": [
+    { "type": "text", "id": "all_title", "label": "「すべての商品」の見出し", "default": "WEBショップ" },
+    { "type": "textarea", "id": "all_text", "label": "「すべての商品」の説明文", "default": "素材をありのままに生かした商品の数々。肥料も農薬も使わずに育てた野菜・お米と、それらから作った加工品をお届けします。" },
+    { "type": "link_list", "id": "cat_menu", "label": "カテゴリーの切り替えボタン（メニュー）" },
+    { "type": "range", "id": "length", "label": "説明文の長さ（文字数）", "min": 30, "max": 120, "step": 5, "default": 70 },
+    { "type": "range", "id": "per_page", "label": "1ページの商品数", "min": 6, "max": 48, "step": 3, "default": 24 }
+  ]
+}
+{% endschema %}

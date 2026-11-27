@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "wakaba-old-collection",
+      "settings": {
+        "all_title": "WEBショップ",
+        "cat_menu": "old-shop-cats",
+        "length": 70,
+        "per_page": 24
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

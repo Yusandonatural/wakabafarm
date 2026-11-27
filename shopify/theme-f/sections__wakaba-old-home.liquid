@@ -1,0 +1,187 @@
+{%- comment -%}
+  若葉農園 旧サイト再現トップ（E案）
+  スライダー／丸ボタン3つと説明文／大きな2枚のカード／カテゴリのタイル／SNSバナー／READ MORE
+{%- endcomment -%}
+<style>
+  .wko{background:#fff;color:#163729;font-family:"Noto Sans Japanese","Noto Sans JP",YuGothic,"Yu Gothic Medium","Hiragino Kaku Gothic Pro",Meiryo,sans-serif;font-size:16px;line-height:1.8}
+  .wko a{color:#163729;text-decoration:none}
+  .wko img{display:block;max-width:100%;height:auto}
+  .wko__in{max-width:1170px;margin:0 auto;padding:0 15px}
+  .wko-slider{position:relative;overflow:hidden;margin:0 0 10px}
+  .wko-slider__track{display:flex;transition:transform .8s ease}
+  .wko-slider__slide{flex:0 0 100%}
+  .wko-slider__slide{position:relative}
+  .wko-slider__slide img{width:100%}
+  .wko-slider__slide--hero img{height:clamp(320px,46vw,560px);object-fit:cover}
+  .wko-hero-cap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;color:#fff;background:rgba(0,0,0,var(--ov,.35))}
+  .wko-hero-cap h1{margin:0;font-size:clamp(26px,3.6vw,44px);font-weight:500;letter-spacing:.12em;line-height:1.5;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+  .wko-hero-cap p{margin:16px 0 0;max-width:640px;font-size:clamp(14px,1.4vw,17px);line-height:1.9;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+  .wko-slider__dots{display:flex;justify-content:center;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+  .wko-slider__dots button{width:12px;height:12px;padding:0;border:0;border-radius:50%;background:#dedede;cursor:pointer}
+  .wko-slider__dots button[aria-current="true"]{background:#163729}
+  .wko-intro{display:grid;grid-template-columns:1fr 1.2fr 1fr;align-items:center;gap:10px;padding:10px 0 40px}
+  .wko-intro__txt{text-align:center;font-size:15px;line-height:1.8;padding-top:20px}
+  .wko-intro__l{display:flex;justify-content:flex-start}
+  .wko-intro__r{display:flex;justify-content:flex-end;gap:10px}
+  .wko-circle{display:flex;align-items:center;justify-content:center;width:130px;height:130px;border-radius:50%;color:#fff!important;font-size:15px;line-height:1.4;text-align:center;transition:opacity .2s}
+  .wko-circle:hover{opacity:.85}
+  @keyframes wkoBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .wko-circle{animation:wkoBob 3.2s ease-in-out infinite}
+  .wko-circle--b{animation-delay:.5s}.wko-circle--c{animation-delay:1s}
+  @media (prefers-reduced-motion:reduce){.wko-circle{animation:none}}
+  .wko-circle--a{background:#CFD621}.wko-circle--b{background:#009F93}.wko-circle--c{background:#F1A63B}
+  .wko-feat{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:0 0 3em}
+  .wko-feat__img{display:block;aspect-ratio:640/330;overflow:hidden}
+  .wko-feat__img img{width:100%;height:100%;object-fit:cover}
+  .wko-label{display:block;margin:.5em 0 .25em;padding:6px .25em;border:1px solid #82BC3F;text-align:center;font-size:16px;font-weight:500;line-height:1.4}
+  .wko-feat p{margin:0;text-align:center;font-size:15px}
+  .wko-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2em 30px;margin:0;padding:0;list-style:none}
+  .wko-tile__img{display:block;aspect-ratio:1;overflow:hidden;margin-bottom:1em}
+  .wko-tile__img img{width:100%;height:100%;object-fit:cover}
+  .wko-tile__banner{display:block;border-radius:4px;overflow:hidden}
+  .wko-more{text-align:center;margin:3em 0 2em;font-size:15px;letter-spacing:.05em}
+  .wko-fixed{display:none}
+  @media (max-width:989px){
+    .wko-intro{grid-template-columns:1fr;padding:10px 0 30px}
+    .wko-intro__txt{order:-1;padding-top:30px}
+    .wko-intro__l,.wko-intro__r{justify-content:center}
+    .wko-intro__l{display:contents}
+    .wko-btns{display:flex;justify-content:center;gap:10px}
+    .wko-circle{width:96px;height:96px;font-size:12px}
+    .wko-feat{grid-template-columns:1fr;gap:2.5em}
+    .wko-feat p{text-align:left}
+    .wko-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5em 14px}
+  }
+</style>
+
+{%- liquid
+  assign s = section.settings
+  assign slides = section.blocks | where: 'type', 'slide'
+  assign tiles = section.blocks | where: 'type', 'tile'
+-%}
+
+<div class="wko" id="wko-{{ section.id }}">
+  <div class="wko__in">
+    {%- if slides.size > 0 -%}
+    <div class="wko-slider" data-wko-slider>
+      <div class="wko-slider__track">
+        {%- for b in slides -%}
+        <div class="wko-slider__slide{% if b.settings.heading != blank %} wko-slider__slide--hero{% endif %}" {{ b.shopify_attributes }}>
+          {%- if b.settings.link != blank -%}<a href="{{ b.settings.link }}">{%- endif -%}
+          {%- assign ld = 'lazy' -%}{%- if forloop.first -%}{%- assign ld = 'eager' -%}{%- endif -%}
+          {%- if b.settings.image != blank -%}{{ b.settings.image | image_url: width: 1140 | image_tag: loading: ld, widths: '570,1140', alt: shop.name }}{%- endif -%}
+          {%- if b.settings.heading != blank -%}<div class="wko-hero-cap" style="--ov:{{ b.settings.overlay | divided_by: 100.0 }}">{% if forloop.first %}<h1>{% else %}<p class="h">{% endif %}{{ b.settings.heading | newline_to_br }}{% if forloop.first %}</h1>{% else %}</p>{% endif %}{%- if b.settings.text != blank -%}<p>{{ b.settings.text }}</p>{%- endif -%}</div>{%- endif -%}
+          {%- if b.settings.link != blank -%}</a>{%- endif -%}
+        </div>
+        {%- endfor -%}
+      </div>
+      {%- if slides.size > 1 -%}
+      <ul class="wko-slider__dots">{%- for b in slides -%}<li><button type="button" aria-label="スライド{{ forloop.index }}"{% if forloop.first %} aria-current="true"{% endif %}></button></li>{%- endfor -%}</ul>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    <section class="wko-intro">
+      <div class="wko-intro__l"><a class="wko-circle wko-circle--a wko-pc-only" href="{{ s.btn_a_link }}">{{ s.btn_a | newline_to_br }}</a></div>
+      <div class="wko-intro__txt">{{ s.intro | newline_to_br }}</div>
+      <div class="wko-intro__r">
+        <a class="wko-circle wko-circle--a wko-sp-only" href="{{ s.btn_a_link }}">{{ s.btn_a | newline_to_br }}</a>
+        <a class="wko-circle wko-circle--b" href="{{ s.btn_b_link }}">{{ s.btn_b | newline_to_br }}</a>
+        <a class="wko-circle wko-circle--c" href="{{ s.btn_c_link }}">{{ s.btn_c | newline_to_br }}</a>
+      </div>
+    </section>
+
+    <div class="wko-feat">
+      {%- for i in (1..2) -%}
+        {%- liquid
+          if i == 1
+            assign fi = s.feat1_image
+            assign ft = s.feat1_title
+            assign fx = s.feat1_text
+            assign fl = s.feat1_link
+          else
+            assign fi = s.feat2_image
+            assign ft = s.feat2_title
+            assign fx = s.feat2_text
+            assign fl = s.feat2_link
+          endif
+        -%}
+        <div>
+          <a class="wko-feat__img" href="{{ fl }}">{% if fi != blank %}{{ fi | image_url: width: 640 | image_tag: loading: 'lazy', alt: ft }}{% endif %}</a>
+          <a class="wko-label" href="{{ fl }}">{{ ft }}</a>
+          <p>{{ fx }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <ul class="wko-tiles">
+      {%- for b in tiles -%}
+      <li {{ b.shopify_attributes }}>
+        {%- assign img = b.settings.image -%}
+        {%- if b.settings.banner -%}
+          <a class="wko-tile__banner" href="{{ b.settings.link }}"{% if b.settings.link contains 'http' %} target="_blank" rel="noopener"{% endif %}>{% if img != blank %}{{ img | image_url: width: 480 | image_tag: loading: 'lazy', alt: b.settings.title }}{% endif %}</a>
+        {%- else -%}
+          <a class="wko-tile__img" href="{{ b.settings.link }}">{% if img != blank %}{{ img | image_url: width: 480 | image_tag: loading: 'lazy', alt: b.settings.title }}{% endif %}</a>
+          <a class="wko-label" href="{{ b.settings.link }}">{{ b.settings.title }}</a>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    {%- if s.more_link != blank -%}<p class="wko-more"><a href="{{ s.more_link }}">[ READ MORE ]</a></p>{%- endif -%}
+  </div>
+</div>
+<style>
+  .wko-sp-only{display:none!important}
+  @media (max-width:989px){.wko-pc-only{display:none!important}.wko-sp-only{display:flex!important}.wko-intro__r{gap:10px}}
+</style>
+<script>
+  (function(){
+    var root=document.querySelector('#wko-{{ section.id }} [data-wko-slider]');if(!root)return;
+    var track=root.querySelector('.wko-slider__track'),dots=root.querySelectorAll('.wko-slider__dots button'),n=dots.length,i=0,t;
+    if(n<2)return;
+    function go(k){i=(k+n)%n;track.style.transform='translateX('+(-100*i)+'%)';dots.forEach(function(d,j){d.setAttribute('aria-current',j===i?'true':'false')});}
+    function play(){clearInterval(t);t=setInterval(function(){go(i+1)},{{ s.speed | times: 1000 }});}
+    dots.forEach(function(d,j){d.addEventListener('click',function(){go(j);play();})});
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)play();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "旧サイト風トップ",
+  "settings": [
+    { "type": "range", "id": "speed", "label": "スライドの切り替え（秒）", "min": 3, "max": 10, "step": 1, "default": 5 },
+    { "type": "textarea", "id": "intro", "label": "中央の文章", "default": "このWEBサイトに掲載の写真は、\nすべて肥料・農薬を使わず育てられた野菜です。" },
+    { "type": "textarea", "id": "btn_a", "label": "丸ボタン1（黄緑）", "default": "若葉農園とは" },
+    { "type": "text", "id": "btn_a_link", "label": "丸ボタン1のリンク", "default": "/pages/about" },
+    { "type": "textarea", "id": "btn_b", "label": "丸ボタン2（青緑）", "default": "オンライン\nショップ" },
+    { "type": "text", "id": "btn_b_link", "label": "丸ボタン2のリンク", "default": "/collections/all" },
+    { "type": "textarea", "id": "btn_c", "label": "丸ボタン3（オレンジ）", "default": "定期宅配\n野菜セット" },
+    { "type": "text", "id": "btn_c_link", "label": "丸ボタン3のリンク", "default": "/pages/delivery" },
+    { "type": "image_picker", "id": "feat1_image", "label": "大きいカード1の写真" },
+    { "type": "text", "id": "feat1_title", "label": "大きいカード1の見出し", "default": "若葉農園オンラインショップ" },
+    { "type": "text", "id": "feat1_text", "label": "大きいカード1の説明", "default": "素材をありのままに生かした商品の数々。" },
+    { "type": "text", "id": "feat1_link", "label": "大きいカード1のリンク", "default": "/collections/all" },
+    { "type": "image_picker", "id": "feat2_image", "label": "大きいカード2の写真" },
+    { "type": "text", "id": "feat2_title", "label": "大きいカード2の見出し", "default": "若葉農園の定期宅配野菜セット" },
+    { "type": "text", "id": "feat2_text", "label": "大きいカード2の説明", "default": "季節のお野菜 8種類前後をお届けします。" },
+    { "type": "text", "id": "feat2_link", "label": "大きいカード2のリンク", "default": "/pages/delivery" },
+    { "type": "text", "id": "more_link", "label": "READ MORE のリンク", "default": "/blogs" }
+  ],
+  "blocks": [
+    { "type": "slide", "name": "スライド", "settings": [
+      { "type": "image_picker", "id": "image", "label": "写真（横1140×縦450が目安）" },
+      { "type": "text", "id": "link", "label": "リンク" },
+      { "type": "textarea", "id": "heading", "label": "写真に重ねる見出し（空欄なら写真だけ）" },
+      { "type": "textarea", "id": "text", "label": "写真に重ねる説明文" },
+      { "type": "range", "id": "overlay", "label": "写真の暗さ（％）", "min": 0, "max": 70, "step": 5, "default": 35 } ] },
+    { "type": "tile", "name": "タイル", "settings": [
+      { "type": "image_picker", "id": "image", "label": "写真" },
+      { "type": "text", "id": "title", "label": "名前" },
+      { "type": "text", "id": "link", "label": "リンク" },
+      { "type": "checkbox", "id": "banner", "label": "バナーとして表示（名前の枠なし）", "default": false } ] }
+  ],
+  "presets": [ { "name": "旧サイト風トップ" } ]
+}
+{% endschema %}
